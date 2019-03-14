@@ -5,7 +5,7 @@ data:extend({
   },
   
   ------------------------------
-  --  MATTER INFUSED AUTOMATION
+  --  MATTER INFUSED AUTOMATION SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
@@ -21,7 +21,7 @@ data:extend({
   },
   
   ------------------------------
-  --  MATTER INFUSED LOGISTIC
+  --  MATTER INFUSED LOGISTIC SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
@@ -38,7 +38,7 @@ data:extend({
   },
   
   ------------------------------
-  --  MATTER INFUSED MILITARY
+  --  MATTER INFUSED MILITARY SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
@@ -47,33 +47,36 @@ data:extend({
 	energy_required = 20,
 	ingredients =
 	{
+		{"ax-cooked-matter-plate",4},
 		{"military-science-pack",1},
-		{"ax-matter-science-matter-infused-automation",4},
-		{"ax-matter-science-matter-infused-logistic",4}
+		{"firearm-magazine",2}
 	},
 	result = "ax-matter-science-matter-infused-military"
   },
   
   ------------------------------
-  --  MATTER INFUSED CHEMICAL
+  --  MATTER INFUSED CHEMICAL SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-chemical",
 	enabled = false,
 	energy_required = 20,
+	category="crafting-with-fluid",
 	ingredients =
 	{
 		{"chemical-science-pack",1},
-		{"ax-matter-science-matter-infused-automation",4},
-		{"ax-matter-science-matter-infused-logistic",4},
-		{"ax-matter-science-matter-infused-military",4}
+		{"ax-matter-science-matter-infused-automation",1},
+		{"ax-matter-science-matter-infused-logistic",1},
+		{"ax-cooked-matter-plate",4},
+		{type="fluid",name="ax-liquid-matter",amount=50}
+		--{"ax-matter-science-matter-infused-military",4}
 	},
 	result = "ax-matter-science-matter-infused-chemical"
   },
   
   ------------------------------
-  --  MATTER INFUSED PRODUCTION
+  --  MATTER INFUSED PRODUCTION SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
@@ -92,7 +95,7 @@ data:extend({
   },
   
   ------------------------------
-  --  MATTER INFUSED SPACE
+  --  MATTER INFUSED SPACE SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",

@@ -1,5 +1,3 @@
-require("science")
-
 data:extend({
 ------------------------------
 -- ORES
@@ -13,7 +11,63 @@ data:extend({
     order = "g[matter-ore]",
     stack_size = 50
   },
-  
+
+-------------------------------
+-- WEAPONRY
+-------------------------------
+  {
+    type = "item",
+    name = "ax-matter-bullets",
+    icon = "__ax_matter__/graphics/icons/matter-bullets.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "b[ax-matter-ore]",
+    stack_size = 100
+  },
+  {
+    type = "ammo",
+    name = "ax-matter-magazine",
+    icon = "__ax_matter__/graphics/icons/matter-magazine.png",
+    icon_size = 32,
+    ammo_type =
+    {
+      category = "bullet",
+      action =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            {
+              type = "instant",
+              source_effects =
+              {
+                {
+                  type = "create-explosion",
+                  entity_name = "explosion-gunshot"
+                }
+              },
+              target_effects =
+              {
+                {
+                  type = "create-entity",
+                  entity_name = "explosion-hit"
+                },
+                {
+                  type = "damage",
+                  damage = { amount = 14.5 , type = "physical"}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    magazine_size = 24,
+    subgroup = "ammo",
+    order = "a[piercing-rounds-magazine]-b[uranium-rounds-magazine]",
+    stack_size = 200
+  },
 -------------------------------
 -- MATERIALS
 -------------------------------
