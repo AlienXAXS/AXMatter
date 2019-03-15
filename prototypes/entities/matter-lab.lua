@@ -165,14 +165,7 @@ data:extend({
       "ax-matter-science-matter-infused-military",
       "ax-matter-science-matter-infused-production",
       "ax-matter-science-matter-infused-utility",
-      "ax-matter-science-matter-infused-space",
-      "automation-science-pack",
-      "logistic-science-pack",
-      "chemical-science-pack",
-      "military-science-pack",
-      "production-science-pack",
-      "utility-science-pack",
-      "space-science-pack"
+      "ax-matter-science-matter-infused-space"
     },
     module_specification =
     {
