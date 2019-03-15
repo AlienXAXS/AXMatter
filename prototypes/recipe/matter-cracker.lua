@@ -32,12 +32,12 @@ data:extend({
     {
       {
         name = "ax-cracked-matter-9001",
-        probability = 0.80,
+        probability = 0.10,
         amount = 1
       },
       {
         name = "ax-cracked-matter-9000",
-        probability = 0.10,
+        probability = 0.80,
         amount = 1
       }
     }
