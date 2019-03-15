@@ -238,7 +238,7 @@ data:extend({
     {
       {
         effect = "uranium-glow", -- changes alpha based on energy source light intensity
-        light = {intensity = 0.6, size = 9.9, shift = {0.0, 0.0}, color = {r = 0.0, g = 1.0, b = 0.0}}
+        light = {intensity = 0.6, size = 9.9, shift = {0.0, 0.0}, color = {r=0.2, g=0.25, b=0.80}}
       }
     },
     open_sound = { filename = "__base__/sound/machine-open.ogg", volume = 0.85 },
