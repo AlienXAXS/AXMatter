@@ -7,7 +7,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-uncooked-matter-plate",
 	enabled = false,
-	energy_required = 4,
+	energy_required = 2.5,
 	category = "crafting-with-fluid",
 	ingredients =
 	{
@@ -22,7 +22,7 @@ data:extend({
 	name = "ax-cooked-matter-plate",
 	category = "smelting",
 	enabled = false,
-	energy_required = 12,
+	energy_required = 7,
 	ingredients =
 	{
 		{"ax-uncooked-matter-plate",1}
