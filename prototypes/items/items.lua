@@ -37,8 +37,8 @@ data:extend({
     name = "ax-matter-bullets",
     icon = "__ax_matter__/graphics/icons/matter-bullets.png",
     icon_size = 32,
-    subgroup = "raw-resource",
-    order = "b[ax-matter-ore]",
+    subgroup = "ammo",
+    order = "c[firearm-magazine]",
     stack_size = 100
   },
   {
