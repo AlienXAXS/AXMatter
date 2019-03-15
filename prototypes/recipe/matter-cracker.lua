@@ -22,7 +22,7 @@ data:extend({
     name = "ax-matter-processing",
     energy_required = 12,
     enabled = false,
-    category = "centrifuging",
+    category = "ax-matter-cracker",
     ingredients = {{"ax-matter-ore", 2}},
     icon = "__ax_matter__/graphics/icons/matter-cracker-processing.png",
     icon_size = 32,
