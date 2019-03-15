@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "ax-matter-pre-weaponry",
+    name = "ax-matter-military-science-pack",
     icon = "__ax_matter__/graphics/technology/matter-weaponry.png",
     icon_size = "128",
     prerequisites = {"ax-matter-weird-material", "ax-matter-glowing-fluids", "military-science-pack", "military", "military-2"},

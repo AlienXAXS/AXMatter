@@ -11,7 +11,24 @@ data:extend({
     order = "g[matter-ore]",
     stack_size = 50
   },
-
+  
+-------------------------------
+-- FUELS
+-------------------------------
+  {
+    type = "item",
+    name = "ax-matter-solid-fuel",
+    icon = "__ax_matter__/graphics/icons/matter-solid-fuel.png",
+    icon_size = 32,
+    fuel_category = "chemical",
+    fuel_value = "18MJ",
+    fuel_acceleration_multiplier = 1.5,
+    fuel_top_speed_multiplier = 1.15,
+    subgroup = "raw-material",
+    order = "c[solid-fuel]",
+    stack_size = 50
+  },
+  
 -------------------------------
 -- WEAPONRY
 -------------------------------

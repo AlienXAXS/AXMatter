@@ -2,9 +2,9 @@ data:extend({
   {
     type = "technology",
     name = "ax-matter-glowing-fluids",
-    icon = "__ax_matter__/graphics/technology/tech-placeholder.png",
-    icon_size = "64",
-    prerequisites = {"ax-matter-weird-material"},
+    icon = "__ax_matter__/graphics/technology/glowing-fluids.png",
+    icon_size = "128",
+    prerequisites = {"ax-matter-weird-material", "oil-processing"},
     effects =
     {
       {
@@ -18,6 +18,10 @@ data:extend({
 	  {
         type = "unlock-recipe",
         recipe = "ax-cooked-matter-plate"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "matter-solid-fuel"
       }
     },
     unit =
