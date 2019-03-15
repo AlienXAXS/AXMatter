@@ -4,7 +4,7 @@ data:extend({
     name = "ax-matter-weaponry",
     icon = "__ax_matter__/graphics/technology/matter-bullets.png",
     icon_size = "128",
-    prerequisites = {"ax-matter-military-pack"},
+    prerequisites = {"ax-matter-military-science-pack"},
     effects =
     {
       {
