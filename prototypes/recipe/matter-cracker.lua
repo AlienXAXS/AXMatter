@@ -37,7 +37,7 @@ data:extend({
       },
       {
         name = "ax-cracked-matter-9000",
-        probability = 0.80,
+        probability = 0.90,
         amount = 1
       }
     }
