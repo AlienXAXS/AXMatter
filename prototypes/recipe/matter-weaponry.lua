@@ -1,14 +1,9 @@
 data:extend({
   {
-    type = "recipe-category",
-    name = "ax-matter-weaponry"
-  },
-  {
 	type = "recipe",
 	name = "ax-matter-bullets",
 	enabled = false,
 	energy_required = 2,
-	category = "ax-matter-weaponry",
 	ingredients =
 	{
 		{"firearm-magazine", 1},
@@ -22,7 +17,6 @@ data:extend({
 	name = "ax-matter-magazine",
 	enabled = false,
 	energy_required = 5,
-	category = "ax-matter-weaponry",
 	ingredients =
 	{
 		{"ax-matter-bullets", 4},
