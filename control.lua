@@ -93,11 +93,6 @@ function entityDestroyed(event)
 	local entity = event.entity
 	local player = game.players[event.player_index]
 	if ( entity ) then
-		if ( entity.valid ) then
-			game.print("valid")
-		else
-			game.print("not valid")
-		end
 		if entity.valid and entity.name == "ax-matter-ore-converter" then
 			for _,x in pairs(global.axmatter.oreConverters) do
 				if ( x.entity == entity ) then
