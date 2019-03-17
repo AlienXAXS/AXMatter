@@ -1,0 +1,24 @@
+* Change ore into matter infused ore for a better yeild
+-  Stone changes into something else maybe
+-  All ores should be able to change back into their original vanilla ores
+-  Ores become crushed
+-  Crushed coal can become carbon, then into Carbon Fibre
+-  All ores can be enriched, but crushed coal can become carbon before enrichment
+
+* Power generation via Nuclear Reactors (but heat exchangers are actually processing liquid matter)
+- Make matter infused heat exchangers and matter infused steam turbines
+
+* 
+
+
+
+CODE STUFF:
+typeName=game.player.selected.name
+size=50
+y=0
+xy=game.player.selected.position
+for _,x in ipairs(game.player.surface.find_entities_filtered{area={{xy.x-size, xy.y-size},{xy.x+size,xy.y+size}},name=typeName}) do
+	ent=game.player.surface.create_entity{force="neutral", name="coal", position=x.position}
+	ent.amount=x.amount
+	x.destroy()
+end
