@@ -14,7 +14,7 @@
 
 CODE STUFF:
 typeName=game.player.selected.name
-size=50
+size=5
 y=0
 xy=game.player.selected.position
 for _,x in ipairs(game.player.surface.find_entities_filtered{area={{xy.x-size, xy.y-size},{xy.x+size,xy.y+size}},name=typeName}) do

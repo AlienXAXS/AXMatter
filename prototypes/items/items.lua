@@ -11,7 +11,42 @@ data:extend({
     order = "g[matter-ore]",
     stack_size = 50
   },
-  
+  {
+    type = "item",
+    name = "ax-matter-iron-ore",
+    icon = "__ax_matter__/graphics/icons/matter-ores/matter-iron-ore.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "g[matter-ore]",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "ax-matter-copper-ore",
+    icon = "__ax_matter__/graphics/icons/matter-ores/matter-copper-ore.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "g[matter-ore]",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "ax-matter-stone",
+    icon = "__ax_matter__/graphics/icons/matter-ores/matter-stone.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "g[matter-ore]",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "ax-matter-coal",
+    icon = "__ax_matter__/graphics/icons/matter-ores/matter-coal.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "g[matter-ore]",
+    stack_size = 50
+  },
 -------------------------------
 -- FUELS
 -------------------------------
