@@ -195,5 +195,15 @@ data:extend({
 	order = "w[ax-oxygen-collector]",
 	place_result = "ax-matter-lab",
 	stack_size = 20
-  }
+  },
+  {
+	type = "item",
+	name = "ax-matter-ore-converter",
+	icon = "__ax_matter__/graphics/icons/matter-ore-converter.png",
+	icon_size = 32,
+	subgroup = "extraction-machine",
+	order = "w[ax-oxygen-collector]",
+	place_result = "ax-matter-ore-converter",
+	stack_size = 20
+  },
 })

@@ -31,8 +31,7 @@ data:extend({
 	ingredients =
 	{
 		{"ax-cooked-matter-plate",4},
-		{"logistic-science-pack",1},
-		{"ax-matter-science-matter-infused-automation",1}
+		{"logistic-science-pack",1}
 	},
 	result = "ax-matter-science-matter-infused-logistic"
   },

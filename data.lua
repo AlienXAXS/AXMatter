@@ -29,6 +29,7 @@ require("prototypes.entities.matter-infuser")
 require("prototypes.entities.oxygen-collector")
 require("prototypes.entities.matter-cracker")
 require("prototypes.entities.matter-lab")
+require("prototypes.entities.matter-ore-converter")
 
 -- Items
 require("prototypes.items.items")
@@ -43,6 +44,7 @@ require("prototypes.recipe.matter-lab")
 require("prototypes.recipe.matter-plate")
 require("prototypes.recipe.matter-weaponry")
 require("prototypes.recipe.matter-fuel")
+require("prototypes.recipe.matter-ore-conversion")
 
 -- Technology
 require("prototypes.technology.lab-tech")
