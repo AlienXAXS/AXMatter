@@ -5,9 +5,9 @@ local function starts_with(str, start)
 end
 
 local function getItem(name)
-	local items = data.raw["items"]
-	if ( items ) then
-		return items[name]
+	local item = data.raw.item[name]
+	if ( item ) then
+		return item
 	end
 	return nil
 end
@@ -21,7 +21,7 @@ local function generateIcons(NewOreName, Ore)
 		scale=0.75,
 		shift = {2, 2}
 	}
-			
+
 	local retValue =
 	{
 		{
@@ -58,13 +58,23 @@ local function createNewMatterOreItem(NewOreName, Ore)
 end
 
 local function getOrCreateMatterOre(NewOreName, Ore)
-	local existingItem = getItem(NewOreName)
-	if ( existingItem ) then return existingItem end
+
+	local oreName = NewOreName
+	-- Ignore Infinite ore types, just output their normal ore counterparts, if they exist.
+	if ( starts_with(Ore.name,"infinite-") ) then
+		oreName = "ax-matter-" .. Ore.name:sub(10)		--Remove the infinate part
+	end
 	
-	return createNewMatterOreItem(NewOreName, Ore)
+	local existingItem = getItem(oreName)
+	if ( existingItem ) then
+		log("    > Existing item found for " .. NewOreName .. " called " .. existingItem.name .. ".  Shall use that instead")
+		return existingItem
+	end
+	
+	return createNewMatterOreItem(oreName, Ore)
 end
 
-local function createMatterOreEntity(NewOreName, Ore)
+local function createMatterOreEntity(NewOreName, Ore, NewItem)
 	local newOre = util.table.deepcopy(data.raw.resource[Ore.name])
 	
 	newOre.enabled = false
@@ -72,7 +82,8 @@ local function createMatterOreEntity(NewOreName, Ore)
 	newOre.minable.fluid_amount = 50
 	newOre.name = NewOreName
 	newOre.minable.required_fluid = "ax-liquid-matter"
-	newOre.minable.result = NewOreName
+	newOre.minable.result = NewItem.name
+	newOre.minable.results = nil --Clear out multiple results, we dont support these ores (yet i guess)
 	newOre.localised_name = {"",{"entity-name.ax-matter-infused-ore"}, " ", {"entity-name." .. Ore.name}}
 	newOre.icon = nil
 	newOre.icons = generateIcons(NewOreName, Ore)
@@ -91,21 +102,33 @@ local function createMatterOreEntity(NewOreName, Ore)
         flags = {"light"}
       }
     }
-	
+		
 	-- HR Stages
 	if ( Ore.stages.sheet.hr_version ) then
 		newOre.stages_effect.sheet.hr_version =
         {
           filename = "__ax_matter__/graphics/entity/matter-ore/hr-matter-ore-glow.png",
           priority = "extra-high",
-          width = 128,
-          height = 128,
           frame_count = Ore.stages.sheet.hr_version.frame_count,
           variation_count = Ore.stages.sheet.hr_version.variation_count,
           scale = 0.5,
           blend_mode = "additive",
           flags = {"light"}
         }
+		
+		if ( Ore.stages.sheet.hr_version.size ) then 
+			log("   > Ore used 'Size' of " .. Ore.stages.sheet.hr_version.size .. ". Replicating this to new ore stages")
+			newOre.stages_effect.sheet.hr_version.size = Ore.stages.sheet.hr_version.size
+		end
+		if ( Ore.stages.sheet.hr_version.height ) then
+			log("   > Ore used 'width & height' of " .. Ore.stages.sheet.hr_version.width .. "x" .. Ore.stages.sheet.hr_version.height .. ". Replicating this to new ore stages")
+			newOre.stages_effect.sheet.hr_version.height = Ore.stages.sheet.hr_version.height
+			newOre.stages_effect.sheet.hr_version.width = Ore.stages.sheet.hr_version.width
+		end
+		
+		if ( Ore.stages.sheet.hr_version.line_length ) then
+			newOre.stages_effect.sheet.hr_version.line_length = Ore.stages.sheet.hr_version.line_length
+		end
 	end
 	
     newOre.effect_animation_period = 5
@@ -119,10 +142,11 @@ end
 
 local function processOres()
 	local skipOre = false
-	for name,ore in pairs(data.raw["resource"]) do
+	for name,ore in pairs(util.table.deepcopy(data.raw["resource"])) do
 		skipOre = false
 		
-		
+		log("Attempting to infuse Liquid Matter into " .. ore.name .. "!")
+
 		-- Checks if it's a fluid
 		if ( ore.minable.results ) then
 			for _,x in pairs(ore.minable.results) do
@@ -139,22 +163,24 @@ local function processOres()
 		end
 		--end fluid check
 		
+		-- Skip all ores that have multiple results
+		if ( ore.minable.results ) then
+			if ( #ore.minable.results > 1 ) then
+				skipOre = true
+			end
+		end
+				
 		if ( not starts_with(ore.name, "ax") and (not skipOre) ) then -- Do not process our own ores
 			local matterOreName = "ax-matter-" .. ore.name
+			log("  > Creating new ore " .. matterOreName .. "!")
 			local matterOreItem = getOrCreateMatterOre(matterOreName, ore)
-			if ( matterOreItem ) then createMatterOreEntity(matterOreName, ore) end
+			if ( matterOreItem ) then createMatterOreEntity(matterOreName, ore, matterOreItem) end
+		else
+			log("  > Ore is not supported, or is from self")
 		end
+		
+		log("   >  Finished")
 	end
 end
 
 processOres() --Start to dynamically create our Matter Ores
-
--- Fix autoplace crap for matter-ore
---[[
-local peak = {
-	noise_layer = "ax-matter-ore",
-	noise_octaves_difference = -0.85,
-	noise_persistence = 0.4
-}
-table.insert(data.raw.resource["ax-matter-ore"].autoplace.peaks, peak)
-]]
