@@ -19,10 +19,10 @@ data:extend(
 
 -- Ores
 require("prototypes.ores.matter-ore")
-require("prototypes.ores.matter-iron-ore")
-require("prototypes.ores.matter-copper-ore")
-require("prototypes.ores.matter-stone")
-require("prototypes.ores.matter-coal")
+--require("prototypes.ores.matter-iron-ore")
+--require("prototypes.ores.matter-copper-ore")
+--require("prototypes.ores.matter-stone")
+--require("prototypes.ores.matter-coal")
 
 -- Fluids (Some fluid-ores too)
 require("prototypes.fluids.liquid-matter")

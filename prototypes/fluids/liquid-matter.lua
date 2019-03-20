@@ -53,10 +53,10 @@ data:extend(
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
     autoplace = resource_autoplace.resource_autoplace_settings{
       name = "ax-liquid-matter",
-      order = "c", -- Other resources are "b";
-      base_density = 1.2,
+      order = "c",
+      base_density = 5.2,
       base_spots_per_km2 = 1.8,
-      random_probability = 1/52,
+      random_probability = 1/48,
       random_spot_size_minimum = 1,
       random_spot_size_maximum = 1,
       additional_richness = 220000,

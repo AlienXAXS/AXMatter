@@ -51,7 +51,7 @@ end
 
 function OreConverter.script_on_entity_placed(event)
 	local isRobot = (event.robot ~= nil)
-	local entity = event.created_entity
+	local entity = event.created_entity	
 	local player = nil
 	if not isRobot then player = game.players[event.player_index] end
 
@@ -63,7 +63,7 @@ function OreConverter.script_on_entity_placed(event)
 				if not isRobot then
 					player.print("Error: This building must be placed on an ore patch")
 					player.get_main_inventory().insert({name=entity.name, count=1})
-					entity.destroy() -- Destroy it
+					entity.destroy()
 				end
 				return
 			else
