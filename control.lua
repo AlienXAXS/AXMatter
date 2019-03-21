@@ -1,5 +1,5 @@
-require("scripts.util")
-require("scripts.OreConverter")
+require("game_scripts.util")
+require("game_scripts.OreConverter")
 
 -- Init variables
 script.on_init(function()
