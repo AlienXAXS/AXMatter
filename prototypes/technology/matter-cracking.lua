@@ -14,7 +14,11 @@ data:extend({
 	  {
         type = "unlock-recipe",
         recipe = "ax-matter-processing"
-      }
+      },
+	  {
+		type = "unlock-recipe",
+		recipe = "ax-matter-drain-cracked-9001"
+	  }
     },
     unit =
     {

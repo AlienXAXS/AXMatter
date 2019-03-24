@@ -41,5 +41,17 @@ data:extend({
         amount = 1
       }
     }
-  }
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-drain-cracked-9001",
+	enabled = false,
+	energy_required = 20,
+	category = "ax-matter-cracker",
+	ingredients =
+	{
+		{"ax-cracked-matter-9001",1}
+	},
+	result = "ax-cracked-matter-9000"
+  },
 })
