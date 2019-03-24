@@ -13,7 +13,7 @@ data:extend({
     {
       {type="item", name="ax-matter-solid-fuel", amount=1}
     },
-    icon = "__ax_matter__/graphics/icons/matter-solid-fuel-recipe.png",
+    icon = "__aix_matter__/graphics/icons/matter-solid-fuel-recipe.png",
     icon_size = 32,
     subgroup = "fluid-recipes",
     enabled = false,

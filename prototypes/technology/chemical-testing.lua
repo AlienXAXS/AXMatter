@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "ax-matter-chemical-testing",
-    icon = "__ax_matter__/graphics/technology/chemical-testing.png",
+    icon = "__aix_matter__/graphics/technology/chemical-testing.png",
     icon_size = "128",
     prerequisites = {"ax-matter-glowing-fluids", "chemical-science-pack", "oil-processing"},
     effects =

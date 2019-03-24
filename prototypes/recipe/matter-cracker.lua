@@ -24,7 +24,7 @@ data:extend({
     enabled = false,
     category = "ax-matter-cracker",
     ingredients = {{"ax-matter-ore", 2}},
-    icon = "__ax_matter__/graphics/icons/matter-cracker-processing.png",
+    icon = "__aix_matter__/graphics/icons/matter-cracker-processing.png",
     icon_size = 32,
     subgroup = "raw-material",
     order = "k[ax-matter-cracker]", -- k ordering so it shows up after explosives which is j ordering

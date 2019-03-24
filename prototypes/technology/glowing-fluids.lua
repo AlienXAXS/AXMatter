@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "ax-matter-glowing-fluids",
-    icon = "__ax_matter__/graphics/technology/glowing-fluids.png",
+    icon = "__aix_matter__/graphics/technology/glowing-fluids.png",
     icon_size = "128",
     prerequisites = {"ax-matter-weird-material", "oil-processing"},
     effects =

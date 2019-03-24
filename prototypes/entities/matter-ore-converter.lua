@@ -2,7 +2,7 @@ data:extend({
 {
     type = "assembling-machine",
     name = "ax-matter-ore-converter",
-    icon = "__ax_matter__/graphics/icons/matter-ore-converter.png",
+    icon = "__aix_matter__/graphics/icons/matter-ore-converter.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "ax-matter-ore-converter"},
@@ -114,7 +114,7 @@ data:extend({
     },
 	radius_visualisation_picture =
     {
-      filename = "__ax_matter__/graphics/entity/matter-ore-converter/radius-visualization.png",
+      filename = "__aix_matter__/graphics/entity/matter-ore-converter/radius-visualization.png",
       width = 12,
       height = 12,
       priority = "extra-high-no-scale"

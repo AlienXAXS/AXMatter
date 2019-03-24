@@ -7,7 +7,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-ore-conversion",
 	enabled = false,
-	icon = "__ax_matter__/graphics/icons/matter-ore-conversion.png",
+	icon = "__aix_matter__/graphics/icons/matter-ore-conversion.png",
 	icon_size = 32,
 	energy_required = 5,
 	category = "ax-matter-ore-conversion",

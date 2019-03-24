@@ -1,4 +1,4 @@
-local matterOreIcon = "__ax_matter__/graphics/icons/matter-ore.png"
+local matterOreIcon = "__aix_matter__/graphics/icons/matter-ore.png"
 
 local function starts_with(str, start)
    return str:sub(1, #start) == start
@@ -55,7 +55,7 @@ local function GenerateCrushedIcon(fromItem)
 	return
 	{
 		{
-			icon = "__ax_matter__/graphics/icons/32x32_empty.png"
+			icon = "__aix_matter__/graphics/icons/32x32_empty.png"
 		},
 		{
 			icon = icon,
@@ -196,7 +196,7 @@ local function CreateMatterOrePrototype(NewOreName, Ore)
     {
       sheet =
       {
-        filename = "__ax_matter__/graphics/entity/matter-ore/matter-ore-glow.png",
+        filename = "__aix_matter__/graphics/entity/matter-ore/matter-ore-glow.png",
         priority = "extra-high",
         width = 64,
         height = 64,
@@ -211,7 +211,7 @@ local function CreateMatterOrePrototype(NewOreName, Ore)
 	if ( Ore.stages.sheet.hr_version ) then
 		newOre.stages_effect.sheet.hr_version =
         {
-          filename = "__ax_matter__/graphics/entity/matter-ore/hr-matter-ore-glow.png",
+          filename = "__aix_matter__/graphics/entity/matter-ore/hr-matter-ore-glow.png",
           priority = "extra-high",
           frame_count = Ore.stages.sheet.hr_version.frame_count,
           variation_count = Ore.stages.sheet.hr_version.variation_count,

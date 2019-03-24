@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "ax-matter-cracking",
-    icon = "__ax_matter__/graphics/technology/matter-cracking.png",
+    icon = "__aix_matter__/graphics/technology/matter-cracking.png",
     icon_size = "128",
     prerequisites = {"ax-matter-glowing-fluids", "chemical-science-pack", "sulfur-processing", "ax-matter-chemical-testing"},
     effects =

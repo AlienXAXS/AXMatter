@@ -2,7 +2,7 @@ data:extend({
   {
     type = "lab",
     name = "ax-matter-lab",
-    icon = "__ax_matter__/graphics/icons/matter-lab.png",
+    icon = "__aix_matter__/graphics/icons/matter-lab.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "lab"},
@@ -17,7 +17,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab.png",
           width = 98,
           height = 87,
           frame_count = 33,
@@ -26,7 +26,7 @@ data:extend({
           shift = util.by_pixel(0, 1.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab.png",
             width = 194,
             height = 174,
             frame_count = 33,
@@ -37,7 +37,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab-integration.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab-integration.png",
           width = 122,
           height = 81,
           frame_count = 1,
@@ -47,7 +47,7 @@ data:extend({
           shift = util.by_pixel(0, 15.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab-integration.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab-integration.png",
             width = 242,
             height = 162,
             frame_count = 1,
@@ -59,7 +59,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab-shadow.png",
           width = 122,
           height = 68,
           frame_count = 1,
@@ -70,7 +70,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab-shadow.png",
             width = 242,
             height = 136,
             frame_count = 1,
@@ -89,14 +89,14 @@ data:extend({
       layers =
       {
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab.png",
           width = 98,
           height = 87,
           frame_count = 1,
           shift = util.by_pixel(0, 1.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab.png",
             width = 194,
             height = 174,
             frame_count = 1,
@@ -105,14 +105,14 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab-integration.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab-integration.png",
           width = 122,
           height = 81,
           frame_count = 1,
           shift = util.by_pixel(0, 15.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab-integration.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab-integration.png",
             width = 242,
             height = 162,
             frame_count = 1,
@@ -121,7 +121,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-lab/matter-lab-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-lab/matter-lab-shadow.png",
           width = 122,
           height = 68,
           frame_count = 1,
@@ -129,7 +129,7 @@ data:extend({
           draw_as_shadow = true,
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-lab/hr-matter-lab-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-lab/hr-matter-lab-shadow.png",
             width = 242,
             height = 136,
             frame_count = 1,

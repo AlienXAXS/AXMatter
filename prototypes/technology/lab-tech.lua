@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "ax-matter-lab-tech",
-    icon = "__ax_matter__/graphics/technology/matter-lab.png",
+    icon = "__aix_matter__/graphics/technology/matter-lab.png",
     icon_size = "128",
     prerequisites = {"plastics", "steel-processing", "advanced-electronics"},
     effects =

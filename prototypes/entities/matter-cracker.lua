@@ -2,7 +2,7 @@ data:extend({
 {
     type = "assembling-machine",
     name = "ax-matter-cracker",
-    icon = "__ax_matter__/graphics/icons/matter-cracker.png",
+    icon = "__aix_matter__/graphics/icons/matter-cracker.png",
     icon_size = 32,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "ax-matter-cracker"},
@@ -27,7 +27,7 @@ data:extend({
       {
         -- ax-matter-cracker A
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-C.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-C.png",
           priority = "high",
           line_length = 8,
           width = 119,
@@ -36,7 +36,7 @@ data:extend({
           shift = util.by_pixel(-0.5, -26.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C.png",
             priority = "high",
             scale = 0.5,
             line_length = 8,
@@ -47,7 +47,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-C-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-C-shadow.png",
           draw_as_shadow = true,
           priority = "high",
           line_length = 8,
@@ -57,7 +57,7 @@ data:extend({
           shift = util.by_pixel(20, -10),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C-shadow.png",
             draw_as_shadow = true,
             priority = "high",
             scale = 0.5,
@@ -70,7 +70,7 @@ data:extend({
         },
         -- ax-matter-cracker B
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-B.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-B.png",
           priority = "high",
           line_length = 8,
           width = 78,
@@ -79,7 +79,7 @@ data:extend({
           shift = util.by_pixel(23, 6.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B.png",
             priority = "high",
             scale = 0.5,
             line_length = 8,
@@ -90,7 +90,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-B-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-B-shadow.png",
           draw_as_shadow = true,
           priority = "high",
           line_length = 8,
@@ -100,7 +100,7 @@ data:extend({
           shift = util.by_pixel(63, 16),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B-shadow.png",
             draw_as_shadow = true,
             priority = "high",
             scale = 0.5,
@@ -113,7 +113,7 @@ data:extend({
         },
         -- ax-matter-cracker A
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-A.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-A.png",
           priority = "high",
           line_length = 8,
           width = 70,
@@ -122,7 +122,7 @@ data:extend({
           shift = util.by_pixel(-26, 3.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A.png",
             priority = "high",
             scale = 0.5,
             line_length = 8,
@@ -133,7 +133,7 @@ data:extend({
           }
         },
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-A-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-A-shadow.png",
           priority = "high",
           draw_as_shadow = true,
           line_length = 8,
@@ -143,7 +143,7 @@ data:extend({
           shift = util.by_pixel(6, 27),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A-shadow.png",
             priority = "high",
             draw_as_shadow = true,
             scale = 0.5,
@@ -163,7 +163,7 @@ data:extend({
       {
         -- ax-matter-cracker C
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-C-light.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-C-light.png",
           priority = "high",
           blend_mode = "additive", -- ax-matter-cracker
           line_length = 8,
@@ -174,7 +174,7 @@ data:extend({
 
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C-light.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-C-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive", -- ax-matter-cracker
@@ -187,7 +187,7 @@ data:extend({
         },
         -- ax-matter-cracker B
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-B-light.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-B-light.png",
           priority = "high",
           blend_mode = "additive", -- ax-matter-cracker
           line_length = 8,
@@ -197,7 +197,7 @@ data:extend({
           shift = util.by_pixel(16.5, 0.5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B-light.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-B-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive", -- ax-matter-cracker
@@ -210,7 +210,7 @@ data:extend({
         },
         -- ax-matter-cracker A
         {
-          filename = "__ax_matter__/graphics/entity/matter-cracker/matter-cracker-A-light.png",
+          filename = "__aix_matter__/graphics/entity/matter-cracker/matter-cracker-A-light.png",
           priority = "high",
           blend_mode = "additive", -- ax-matter-cracker
           line_length = 8,
@@ -220,7 +220,7 @@ data:extend({
           shift = util.by_pixel(-23.5, -2),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A-light.png",
+            filename = "__aix_matter__/graphics/entity/matter-cracker/hr-matter-cracker-A-light.png",
             priority = "high",
             scale = 0.5,
             blend_mode = "additive", -- ax-matter-cracker

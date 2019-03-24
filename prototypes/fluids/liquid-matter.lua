@@ -8,7 +8,7 @@ data:extend(
     base_color = {r=1, g=1, b=1},
     flow_color = {r=0.2, g=0.25, b=0.80},
     max_temperature = 100,
-    icon = "__ax_matter__/graphics/icons/liquid-matter.png",
+    icon = "__aix_matter__/graphics/icons/liquid-matter.png",
     icon_size = 32,
     order = "a[fluid]-b[liquid-matter]"
   },
@@ -22,7 +22,7 @@ data:extend(
   {
     type = "resource",
     name = "ax-liquid-matter",
-    icon = "__ax_matter__/graphics/icons/liquid-matter.png",
+    icon = "__aix_matter__/graphics/icons/liquid-matter.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
     category = "basic-fluid",
@@ -69,7 +69,7 @@ data:extend(
     {
       sheet =
       {
-        filename = "__ax_matter__/graphics/entity/liquid-matter/liquid-matter.png",
+        filename = "__aix_matter__/graphics/entity/liquid-matter/liquid-matter.png",
         priority = "extra-high",
         width = 75,
         height = 61,

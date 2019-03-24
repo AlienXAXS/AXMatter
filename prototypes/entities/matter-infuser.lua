@@ -2,7 +2,7 @@ data:extend({
 {
     type = "assembling-machine",
     name = "ax-matter-infuser",
-    icon = "__ax_matter__/graphics/icons/matter-infuser.png",
+    icon = "__aix_matter__/graphics/icons/matter-infuser.png",
     icon_size = 32,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "ax-matter-infuser"},
@@ -21,14 +21,14 @@ data:extend({
     animation = make_4way_animation_from_spritesheet({ layers =
     {
       {
-        filename = "__ax_matter__/graphics/entity/matter-infuser/matter-infuser.png",
+        filename = "__aix_matter__/graphics/entity/matter-infuser/matter-infuser.png",
         width = 122,
         height = 134,
         frame_count = 1,
         shift = util.by_pixel(-5, -4.5),
         hr_version =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/hr-matter-infuser.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/hr-matter-infuser.png",
           width = 244,
           height = 268,
           frame_count = 1,
@@ -37,7 +37,7 @@ data:extend({
           }
       },
       {
-        filename = "__ax_matter__/graphics/entity/matter-infuser/matter-infuser-shadow.png",
+        filename = "__aix_matter__/graphics/entity/matter-infuser/matter-infuser-shadow.png",
         width = 175,
         height = 141,
         frame_count = 1,
@@ -45,7 +45,7 @@ data:extend({
         draw_as_shadow = true,
         hr_version =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/hr-matter-infuser-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/hr-matter-infuser-shadow.png",
           width = 350,
           height = 219,
           frame_count = 1,
@@ -65,14 +65,14 @@ data:extend({
         apply_recipe_tint = "primary",
         animation =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/boiling-green-patch.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/boiling-green-patch.png",
           frame_count = 32,
           width = 15,
           height = 10,
           animation_speed = 0.5,
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-infuser/hr-boiling-green-patch.png",
+            filename = "__aix_matter__/graphics/entity/matter-infuser/hr-boiling-green-patch.png",
             frame_count = 32,
             width = 30,
             height = 20,
@@ -90,14 +90,14 @@ data:extend({
         apply_recipe_tint = "secondary",
         animation =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/boiling-green-patch-mask.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/boiling-green-patch-mask.png",
           frame_count = 32,
           width = 15,
           height = 10,
           animation_speed = 0.5,
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-infuser/hr-boiling-green-patch-mask.png",
+            filename = "__aix_matter__/graphics/entity/matter-infuser/hr-boiling-green-patch-mask.png",
             frame_count = 32,
             width = 30,
             height = 20,
@@ -116,14 +116,14 @@ data:extend({
         east_position = {0, 0},
         north_animation =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
           frame_count = 1,
           width = 87,
           height = 60,
           shift = util.by_pixel(0, -5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
+            filename = "__aix_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
             x = 0,
             frame_count = 1,
             width = 174,
@@ -134,7 +134,7 @@ data:extend({
         },
         east_animation =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
           x = 87,
           frame_count = 1,
           width = 87,
@@ -142,7 +142,7 @@ data:extend({
           shift = util.by_pixel(0, -5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
+            filename = "__aix_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
             x = 174,
             frame_count = 1,
             width = 174,
@@ -153,7 +153,7 @@ data:extend({
         },
         south_animation =
         {
-          filename = "__ax_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
+          filename = "__aix_matter__/graphics/entity/matter-infuser/boiling-window-green-patch.png",
           x = 174,
           frame_count = 1,
           width = 87,
@@ -161,7 +161,7 @@ data:extend({
           shift = util.by_pixel(0, -5),
           hr_version =
           {
-            filename = "__ax_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
+            filename = "__aix_matter__/graphics/entity/matter-infuser/hr-boiling-window-green-patch.png",
             x = 348,
             frame_count = 1,
             width = 174,

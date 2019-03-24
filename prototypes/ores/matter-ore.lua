@@ -15,7 +15,7 @@ data:extend({
 {
     type = "resource",
     name = "ax-matter-ore",
-    icon = "__ax_matter__/graphics/icons/matter-ore.png",
+    icon = "__aix_matter__/graphics/icons/matter-ore.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
     order="a-b-e",
@@ -47,7 +47,7 @@ data:extend({
     {
       sheet =
       {
-        filename = "__ax_matter__/graphics/entity/matter-ore/matter-ore.png",
+        filename = "__aix_matter__/graphics/entity/matter-ore/matter-ore.png",
         priority = "extra-high",
         width = 64,
         height = 64,
@@ -55,7 +55,7 @@ data:extend({
         variation_count = 8,
         hr_version =
         {
-          filename = "__ax_matter__/graphics/entity/matter-ore/hr-matter-ore.png",
+          filename = "__aix_matter__/graphics/entity/matter-ore/hr-matter-ore.png",
           priority = "extra-high",
           width = 128,
           height = 128,
@@ -69,7 +69,7 @@ data:extend({
     {
       sheet =
       {
-        filename = "__ax_matter__/graphics/entity/matter-ore/matter-ore-glow.png",
+        filename = "__aix_matter__/graphics/entity/matter-ore/matter-ore-glow.png",
         priority = "extra-high",
         width = 64,
         height = 64,
@@ -79,7 +79,7 @@ data:extend({
         flags = {"light"},
         hr_version =
         {
-          filename = "__ax_matter__/graphics/entity/matter-ore/hr-matter-ore-glow.png",
+          filename = "__aix_matter__/graphics/entity/matter-ore/hr-matter-ore-glow.png",
           priority = "extra-high",
           width = 128,
           height = 128,

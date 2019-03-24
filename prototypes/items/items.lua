@@ -5,7 +5,7 @@ data:extend({
   {
     type = "item",
     name = "ax-matter-ore",
-    icon = "__ax_matter__/graphics/icons/matter-ore.png",
+    icon = "__aix_matter__/graphics/icons/matter-ore.png",
     icon_size = 32,
     subgroup = "raw-resource",
     order = "g[matter-ore]",
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "item",
     name = "ax-matter-solid-fuel",
-    icon = "__ax_matter__/graphics/icons/matter-solid-fuel.png",
+    icon = "__aix_matter__/graphics/icons/matter-solid-fuel.png",
     icon_size = 32,
     fuel_category = "chemical",
     fuel_value = "18MJ",
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "item",
     name = "ax-matter-bullets",
-    icon = "__ax_matter__/graphics/icons/matter-bullets.png",
+    icon = "__aix_matter__/graphics/icons/matter-bullets.png",
     icon_size = 32,
     subgroup = "ammo",
     order = "c[firearm-magazine]",
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "ammo",
     name = "ax-matter-magazine",
-    icon = "__ax_matter__/graphics/icons/matter-magazine.png",
+    icon = "__aix_matter__/graphics/icons/matter-magazine.png",
     icon_size = 32,
     ammo_type =
     {
@@ -90,7 +90,7 @@ data:extend({
   {
     type = "item",
     name = "ax-matter-ore",
-    icon = "__ax_matter__/graphics/icons/matter-ore.png",
+    icon = "__aix_matter__/graphics/icons/matter-ore.png",
     icon_size = 32,
     subgroup = "raw-resource",
     order = "b[ax-matter-ore]",
@@ -99,7 +99,7 @@ data:extend({
   {
     type = "item",
     name = "ax-cracked-matter-9000",
-    icon = "__ax_matter__/graphics/icons/cracked-matter-9000.png",
+    icon = "__aix_matter__/graphics/icons/cracked-matter-9000.png",
     icon_size = 32,
     subgroup = "raw-material",
     order = "b[ax-matter-9000]",
@@ -108,7 +108,7 @@ data:extend({
   {
     type = "item",
     name = "ax-cracked-matter-9001",
-    icon = "__ax_matter__/graphics/icons/cracked-matter-9001.png",
+    icon = "__aix_matter__/graphics/icons/cracked-matter-9001.png",
     icon_size = 32,
     subgroup = "raw-material",
     order = "b[ax-matter-9001]",
@@ -117,7 +117,7 @@ data:extend({
   {
     type = "item",
     name = "ax-uncooked-matter-plate",
-    icon = "__ax_matter__/graphics/icons/uncooked-matter-plate.png",
+    icon = "__aix_matter__/graphics/icons/uncooked-matter-plate.png",
     icon_size = 32,
     subgroup = "raw-material",
     order = "b[ax-matter-9001]",
@@ -126,7 +126,7 @@ data:extend({
   {
     type = "item",
     name = "ax-cooked-matter-plate",
-    icon = "__ax_matter__/graphics/icons/cooked-matter-plate.png",
+    icon = "__aix_matter__/graphics/icons/cooked-matter-plate.png",
     icon_size = 32,
     subgroup = "raw-material",
     order = "b[ax-matter-9001]",
@@ -138,7 +138,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-matter-cracker",
-	icon = "__ax_matter__/graphics/icons/matter-cracker.png",
+	icon = "__aix_matter__/graphics/icons/matter-cracker.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-matter-cracker]",
@@ -148,7 +148,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-matter-infuser",
-	icon = "__ax_matter__/graphics/icons/matter-infuser.png",
+	icon = "__aix_matter__/graphics/icons/matter-infuser.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-matter-infuser]",
@@ -158,7 +158,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-oxygen-collector-mk1",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk1.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk1.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-oxygen-collector]",
@@ -168,7 +168,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-oxygen-collector-mk2",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk2.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk2.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-oxygen-collector]",
@@ -178,7 +178,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-oxygen-collector-mk3",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk3.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk3.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-oxygen-collector]",
@@ -188,7 +188,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-matter-lab",
-	icon = "__ax_matter__/graphics/icons/matter-lab.png",
+	icon = "__aix_matter__/graphics/icons/matter-lab.png",
 	icon_size = 32,
 	subgroup = "production-machine",
 	order = "w[ax-oxygen-collector]",
@@ -198,7 +198,7 @@ data:extend({
   {
 	type = "item",
 	name = "ax-matter-ore-converter",
-	icon = "__ax_matter__/graphics/icons/matter-ore-converter.png",
+	icon = "__aix_matter__/graphics/icons/matter-ore-converter.png",
 	icon_size = 32,
 	subgroup = "extraction-machine",
 	order = "w[ax-oxygen-collector]",

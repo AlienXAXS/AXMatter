@@ -2,7 +2,7 @@ data:extend({
 {
 	type = "assembling-machine",
 	name = "ax-oxygen-collector-mk1",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk1.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk1.png",
 	icon_size = 32,
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "ax-oxygen-collector-mk1"},
@@ -13,7 +13,7 @@ data:extend({
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	animation =
 	{
-	  filename = "__ax_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk1.png",
+	  filename = "__aix_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk1.png",
 	  priority = "high",
 	  width = 99,
 	  height = 102,
@@ -60,7 +60,7 @@ data:extend({
 {
 	type = "assembling-machine",
 	name = "ax-oxygen-collector-mk2",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk2.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk2.png",
 	icon_size = 32,
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "ax-oxygen-collector-mk2"},
@@ -71,7 +71,7 @@ data:extend({
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	animation =
 	{
-	  filename = "__ax_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk2.png",
+	  filename = "__aix_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk2.png",
 	  priority = "high",
 	  width = 99,
 	  height = 102,
@@ -118,7 +118,7 @@ data:extend({
 {
 	type = "assembling-machine",
 	name = "ax-oxygen-collector-mk3",
-	icon = "__ax_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk3.png",
+	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk3.png",
 	icon_size = 32,
 	flags = {"placeable-neutral", "placeable-player", "player-creation"},
 	minable = {hardness = 0.2, mining_time = 0.5, result = "ax-oxygen-collector-mk3"},
@@ -129,7 +129,7 @@ data:extend({
 	selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
 	animation =
 	{
-	  filename = "__ax_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk3.png",
+	  filename = "__aix_matter__/graphics/entity/oxygen-collector/oxygen-collector-mk3.png",
 	  priority = "high",
 	  width = 99,
 	  height = 102,
