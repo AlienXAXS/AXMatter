@@ -1,4 +1,5 @@
 local matterOreIcon = "__aix_matter__/graphics/icons/matter-ore.png"
+local technologyName = "ax-matter-ore-conversion"
 
 local function starts_with(str, start)
    return str:sub(1, #start) == start
@@ -61,6 +62,16 @@ local function GenerateCrushedIcon(fromItem)
 			icon = icon,
 			scale=0.35,
 			shift = {2, 2}
+		},
+		{
+			icon = icon,
+			scale=0.35,
+			shift = {4, 2}
+		},
+		{
+			icon = icon,
+			scale=0.35,
+			shift = {6, 2}
 		}
 	}
 end
@@ -85,13 +96,44 @@ local function GetCorrectOreName(ore)
 	return oreName
 end
 
-local function CreateRecipies(fromItem, ore)
+-- Gets the result for a given ore
+local function GetOreResult(ore)
+	local foundCount = 0
+	local foundResult = nil
+
+	-- No idea if there is a better way of doing this or not, but it's all i've got.
+	for _, x in pairs(data.raw.recipe) do
+		if ( x.category == "smelting" and x.result ~= nil ) then
+			log ( "    > GetOreResult | Recipe category is smelting - checking for ingredients" )
+			if ( x.ingredients ~= nil and #x.ingredients == 1 ) then --If we only have a single ingredient 
+				for _, ingredient in pairs(x.ingredients) do
+					log ( "    > GetOreResult | Recipe ingredient is " .. ingredient[1] .. ", looking for match against " .. ore.name )
+					if ( ingredient[1] == ore.name ) then
+						foundResult = x.result
+						foundCount = foundCount + 1
+					end
+				end
+			end
+		end
+	end
+	
+	log ( "   > GetOreResult | Finished with " .. foundCount .. " found recipies (should be 1)" )
+	
+	if ( foundCount > 1 or foundResult == nil ) then
+		return nil
+	else
+		log ( "   > GetOreResult | Finished with recipe result of " .. ore.name .. " -> " .. foundResult )
+		return foundResult
+	end
+end
+
+local function CreateRecipies(fromItem, ore, oreResult)
 	-- Create the Crushed Recipe and Item
 	local generatedIcon = GenerateCrushedIcon(fromItem)
 	local originalOreName = GetVanillaOreName(ore.name)
 	local newItemName = "crushed-" .. fromItem.name
 	
-	log ( "    > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name )
+	log ( "   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. ( oreResult or ore.minable.result or ore.minable.results[1].name ) )
 	
 	if ( getItem(newItemName) ) then
 		return
@@ -104,7 +146,7 @@ local function CreateRecipies(fromItem, ore)
 		{
 			type = "recipe",
 			name = newItemName,
-			ingredients = {{fromItem.name, 1}},
+			ingredients = {{fromItem.name, 1}, {"ax-cracked-matter-9000",1}},
 			icons = generatedIcon,
 			icon_size = 32,
 			results =
@@ -123,6 +165,7 @@ local function CreateRecipies(fromItem, ore)
 			localised_name = {"",{"item-name.ax-matter-crushed"}, " ", {"item-name." .. originalOreName}},
 			icons = generatedIcon,
 			icon_size = 32,
+			enabled=false,
 			subgroup = "intermediate-product",
 			order = "z[crushed-" .. fromItem.name .. "]",
 			stack_size = 100
@@ -132,18 +175,22 @@ local function CreateRecipies(fromItem, ore)
 			type = "recipe",
 			name = "ax-smelting-" .. newItemName,
 			category = "smelting",
-			enabled = true,
+			enabled = false,
 			energy_required = 2,
 			ingredients =
 			{
 				{newItemName,1}
 			},
-			result = ore.minable.result or ore.minable.results[1].name
+			result = oreResult or ore.minable.result or ore.minable.results[1].name
 		}
 	})
+	
+	-- Unlock our recipies in our tech tree
+	table.insert(data.raw.technology[technologyName].effects, { type = "unlock-recipe", recipe = newItemName })
+	table.insert(data.raw.technology[technologyName].effects, { type = "unlock-recipe", recipe = "ax-smelting-" .. newItemName })
 end
 
-local function CreateNewMatterOreItem(NewOreName, Ore)
+local function CreateNewMatterOreItem(NewOreName, Ore, oreResult)
 	local fixedItemName = GetCorrectOreName(NewOreName)
 	
 	log("   > CreateNewMatterOreItem: " .. NewOreName .. " is now " .. fixedItemName .. ", checking for existing item.")
@@ -169,17 +216,17 @@ local function CreateNewMatterOreItem(NewOreName, Ore)
 	}
 	data:extend({result})
 	
-	log("      > DATA EXTEND: " .. result.name .. " created")
+	log("      > DATA EXTEND ITEM: " .. result.name .. " created")
 	
 	-- Create recipies for this new item
-	CreateRecipies(result, Ore)
+	CreateRecipies(result, Ore, oreResult)
 	
 	return result
 end
 
-local function CreateMatterOrePrototype(NewOreName, Ore)
+local function CreateMatterOrePrototype(NewOreName, Ore, oreResult)
 	local newOre = util.table.deepcopy(data.raw.resource[Ore.name])
-	local newMatterOreItemPrototype = CreateNewMatterOreItem(NewOreName, Ore)
+	local newMatterOreItemPrototype = CreateNewMatterOreItem(NewOreName, Ore, oreResult)
 	
 	newOre.enabled = false
 	newOre.minable.mining_time = (newOre.minable.mining_time/2) --half the mining time
@@ -243,13 +290,14 @@ local function CreateMatterOrePrototype(NewOreName, Ore)
 	
 	data:extend({newOre})
 	
-	log("      > DATA EXTEND: " .. newOre.name .. " created")
+	log("      > DATA EXTEND ENTITY: " .. newOre.name .. " created")
 	
 	return newOre, newMatterOreItemPrototype
 end
 
 local function ProcessOres()
 	local skipOre = false
+	local oreResult = nil
 	for name,ore in pairs(util.table.deepcopy(data.raw["resource"])) do
 		skipOre = false
 		
@@ -277,11 +325,17 @@ local function ProcessOres()
 				skipOre = true
 			end
 		end
-				
-		if ( not starts_with(ore.name, "ax") and (not skipOre) ) then -- Do not process our own ores
-			local matterOreName = ore.name
-			log("  > Creating new ore " .. matterOreName .. "!")
-			local generatedMatterOre, generatedMatterOreItem = CreateMatterOrePrototype(matterOreName, ore)
+		
+		local matterOreName = ore.name
+		log("  > Creating new ore " .. matterOreName .. "!")
+		
+		-- Get the result of this ore from the recipies table.
+		if ( not skipOre ) then
+			oreResult = GetOreResult(ore)
+		end
+
+		if ( not starts_with(ore.name, "ax") and (not skipOre) ) then -- Do not process our own ores, or ores that just wont work
+			local generatedMatterOre, generatedMatterOreItem = CreateMatterOrePrototype(matterOreName, ore, oreResult)
 		else
 			log("  > Ore is not supported, or is from self")
 		end
