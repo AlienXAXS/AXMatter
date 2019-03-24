@@ -49,6 +49,7 @@ require("prototypes.recipe.matter-plate")
 require("prototypes.recipe.matter-weaponry")
 require("prototypes.recipe.matter-fuel")
 require("prototypes.recipe.matter-ore-conversion")
+require("prototypes.recipe.matter-ore-converter")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -58,3 +59,5 @@ require("prototypes.technology.matter-military-science-pack")
 require("prototypes.technology.matter-weaponry")
 require("prototypes.technology.chemical-testing")
 require("prototypes.technology.matter-cracking")
+require("prototypes.technology.matter-infused-production")
+require("prototypes.technology.matter-ore-conversion")

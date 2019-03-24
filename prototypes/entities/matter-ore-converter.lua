@@ -67,7 +67,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
+          filename = "__aix_matter__/graphics/entity/matter-ore-converter/matter-ore-converter.png",
           priority="high",
           width = 108,
           height = 114,
@@ -76,7 +76,7 @@ data:extend({
           shift = util.by_pixel(0, 2),
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1.png",
+            filename = "__aix_matter__/graphics/entity/matter-ore-converter/hr-matter-ore-converter.png",
             priority="high",
             width = 214,
             height = 226,
@@ -87,7 +87,7 @@ data:extend({
           }
         },
         {
-          filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1-shadow.png",
+          filename = "__aix_matter__/graphics/entity/matter-ore-converter/matter-ore-converter-shadow.png",
           priority="high",
           width = 95,
           height = 83,
@@ -98,7 +98,7 @@ data:extend({
           shift = util.by_pixel(8.5, 5.5),
           hr_version =
           {
-            filename = "__base__/graphics/entity/assembling-machine-1/hr-assembling-machine-1-shadow.png",
+            filename = "__aix_matter__/graphics/entity/matter-ore-converter/hr-matter-ore-converter-shadow.png",
             priority="high",
             width = 190,
             height = 165,
@@ -111,13 +111,6 @@ data:extend({
           }
         }
       }
-    },
-	radius_visualisation_picture =
-    {
-      filename = "__aix_matter__/graphics/entity/matter-ore-converter/radius-visualization.png",
-      width = 12,
-      height = 12,
-      priority = "extra-high-no-scale"
     },
     fixed_recipe = "ax-matter-ore-conversion",
 	crafting_categories = {"ax-matter-ore-conversion"},

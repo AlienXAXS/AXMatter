@@ -82,10 +82,9 @@ data:extend({
 	ingredients =
 	{
 		{"production-science-pack",1},
-		{"ax-matter-science-matter-infused-automation",4},
-		{"ax-matter-science-matter-infused-logistic",4},
-		{"ax-matter-science-matter-infused-military",4},
-		{"ax-matter-science-matter-infused-chemical",4}
+		{"ax-cooked-matter-plate",4},
+		{"ax-cracked-matter-9001", 1},
+		{"ax-cracked-matter-9000", 12}
 	},
 	result = "ax-matter-science-matter-infused-production"
   },
