@@ -58,6 +58,16 @@ data:extend({
     place_result = "ax-matter-laser-turret",
     stack_size = 50
   },
+  {
+    type = "item",
+    name = "ax-matter-cable",
+    icon = "__aix_matter__/graphics/icons/matter-cable.png",
+    icon_size = 32,
+    subgroup = "intermediate-product",
+    order = "a[copper-cable]",
+    stack_size = 200,
+    wire_count = 1
+  },
 -------------------------------
 -- WEAPONRY
 -------------------------------
@@ -165,6 +175,16 @@ data:extend({
 -------------------------------
 -- ENTITIES (BUILDINGS ETC)
 -------------------------------
+  {
+    type = "item",
+    name = "ax-matter-beacon",
+    icon = "__aix_matter__/graphics/icons/matter-beacon.png",
+    icon_size = 32,
+    subgroup = "module",
+    order = "a[beacon]",
+    place_result = "ax-matter-beacon",
+    stack_size = 10
+  },
   {
 	type = "item",
 	name = "ax-matter-cracker",

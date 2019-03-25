@@ -54,6 +54,7 @@ require("prototypes.recipe.matter-ore-conversion")
 require("prototypes.recipe.matter-ore-converter")
 require("prototypes.recipe.glass")
 require("prototypes.recipe.matter-beacon")
+require("prototypes.recipe.matter-cable")
 
 -- Technology
 require("prototypes.technology.lab-tech")
