@@ -1,11 +1,11 @@
 {
 "name": "aix_matter",
-"version": "0.0.4",
+"version": "0.0.5",
 "title": "AIX Matter",
 "author": "AlienX",
 "contact": "http://www.agngaming.com/discord",
 "homepage": "http://www.agngaming.com",
 "dependencies": ["base >= 0.17.0"],
-"description": "During your exploration of the planet, you stumble across a new type of fluid.  You find that when you inject this fluid with other materials it becomes empowered.  Ax Metal is the base of this mod, use it to better your base and automation.",
+"description": "During your exploration of the planet, you stumble across a new type of fluid.  You find that when you inject this fluid with other materials it becomes empowered.  AiX Metal is the base of this mod, use it to better your base and automation.",
 "factorio_version": "0.17"
 }

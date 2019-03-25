@@ -1,21 +1,31 @@
 data:extend({
-  {
-    type = "recipe-category",
-    name = "ax-techtree-stage-1"
-  },
   
   ------------------------------
   --  MATTER INFUSED AUTOMATION SCIENCE PACK
   ------------------------------
   {
 	type = "recipe",
-	name = "ax-matter-science-matter-infused-automation",
+	name = "ax-powder-automation",
 	enabled = false,
 	energy_required = 20,
 	ingredients =
 	{
 		{"automation-science-pack",1},
 		{"ax-matter-ore",10}
+	},
+	result = "ax-powder-automation"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-science-matter-infused-automation",
+	enabled = false,
+	energy_required = 20,
+	category="crafting-with-fluid",
+	ingredients =
+	{
+		{"ax-science-flask",1},
+		{"ax-powder-automation",1},
+		{type="fluid", name="water", amount=50}
 	},
 	result = "ax-matter-science-matter-infused-automation"
   },
@@ -25,13 +35,27 @@ data:extend({
   ------------------------------
   {
 	type = "recipe",
-	name = "ax-matter-science-matter-infused-logistic",
+	name = "ax-powder-logistic",
 	enabled = false,
 	energy_required = 20,
 	ingredients =
 	{
 		{"ax-cooked-matter-plate",4},
 		{"logistic-science-pack",1}
+	},
+	result = "ax-powder-logistic"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-science-matter-infused-logistic",
+	enabled = false,
+	energy_required = 20,
+	category="crafting-with-fluid",
+	ingredients =
+	{
+		{"ax-science-flask",1},
+		{"ax-powder-logistic",1},
+		{type="fluid", name="water", amount=50}
 	},
 	result = "ax-matter-science-matter-infused-logistic"
   },
@@ -41,7 +65,7 @@ data:extend({
   ------------------------------
   {
 	type = "recipe",
-	name = "ax-matter-science-matter-infused-military",
+	name = "ax-powder-military",
 	enabled = false,
 	energy_required = 20,
 	ingredients =
@@ -49,6 +73,20 @@ data:extend({
 		{"ax-cooked-matter-plate",4},
 		{"military-science-pack",1},
 		{"firearm-magazine",2}
+	},
+	result = "ax-powder-military"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-science-matter-infused-military",
+	enabled = false,
+	energy_required = 20,
+	category="crafting-with-fluid",
+	ingredients =
+	{
+		{"ax-science-flask",1},
+		{"ax-powder-military",1},
+		{type="fluid", name="water", amount=50}
 	},
 	result = "ax-matter-science-matter-infused-military"
   },
@@ -58,15 +96,28 @@ data:extend({
   ------------------------------
   {
 	type = "recipe",
+	name = "ax-powder-chemical",
+	enabled = false,
+	energy_required = 20,
+	ingredients =
+	{
+		{"chemical-science-pack",1},
+		{"ax-cooked-matter-plate",4},
+		{"ax-matter-solid-fuel",1}
+	},
+	result = "ax-powder-chemical"
+  },
+  {
+	type = "recipe",
 	name = "ax-matter-science-matter-infused-chemical",
 	enabled = false,
 	energy_required = 20,
 	category="crafting-with-fluid",
 	ingredients =
 	{
-		{"chemical-science-pack",1},
-		{"ax-cooked-matter-plate",4},
-		{"ax-matter-solid-fuel",1}
+		{"ax-science-flask",1},
+		{"ax-powder-chemical",1},
+		{type="fluid", name="water", amount=50}
 	},
 	result = "ax-matter-science-matter-infused-chemical"
   },
@@ -76,7 +127,7 @@ data:extend({
   ------------------------------
   {
 	type = "recipe",
-	name = "ax-matter-science-matter-infused-production",
+	name = "ax-powder-production",
 	enabled = false,
 	energy_required = 20,
 	ingredients =
@@ -86,6 +137,20 @@ data:extend({
 		{"ax-cracked-matter-9001", 1},
 		{"ax-cracked-matter-9000", 12}
 	},
+	result = "ax-powder-production"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-science-matter-infused-production",
+	enabled = false,
+	energy_required = 20,
+	category="crafting-with-fluid",
+	ingredients =
+	{
+		{"ax-science-flask",1},
+		{"ax-powder-production",1},
+		{type="fluid", name="water", amount=50}
+	},
 	result = "ax-matter-science-matter-infused-production"
   },
   
@@ -94,7 +159,7 @@ data:extend({
   ------------------------------
   {
 	type = "recipe",
-	name = "ax-matter-science-matter-infused-space",
+	name = "ax-powder-space",
 	enabled = false,
 	energy_required = 20,
 	ingredients =
@@ -105,6 +170,20 @@ data:extend({
 		{"ax-matter-science-matter-infused-military",4},
 		{"ax-matter-science-matter-infused-chemical",4},
 		{"ax-matter-science-matter-infused-production",4}
+	},
+	result = "ax-powder-space"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-science-matter-infused-space",
+	enabled = false,
+	energy_required = 20,
+	category="crafting-with-fluid",
+	ingredients =
+	{
+		{"ax-science-flask",1},
+		{"ax-powder-space",1},
+		{type="fluid", name="water", amount=50}
 	},
 	result = "ax-matter-science-matter-infused-space"
   }

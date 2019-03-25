@@ -23,5 +23,19 @@ data:extend({
 		{"ax-cooked-matter-plate",1}
 	},
 	result = "ax-matter-magazine"
-  }
+  },
+  {
+    type = "recipe",
+    name = "ax-matter-laser-turret",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+	  {"ax-cooked-matter-plate", 20},
+      {"steel-plate", 20},
+      {"electronic-circuit", 20},
+      {"battery", 12}
+    },
+    result = "ax-matter-laser-turret"
+  },
 })

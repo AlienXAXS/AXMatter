@@ -27,7 +27,37 @@ data:extend({
     order = "c[solid-fuel]",
     stack_size = 50
   },
-  
+-------------------------------
+-- STUFF
+-------------------------------
+  {
+    type = "item",
+    name = "ax-science-flask",
+    icon = "__aix_matter__/graphics/icons/science-flask.png",
+    icon_size = 32,
+    subgroup = "intermediate-product",
+    order = "b[ax-matter-ore]",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-sand",
+    icon = "__aix_matter__/graphics/icons/sand.png",
+    icon_size = 32,
+    subgroup = "raw-resource",
+    order = "b[ax-matter-ore]",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-matter-laser-turret",
+    icon = "__aix_matter__/graphics/icons/matter-laser-turret.png",
+    icon_size = 32,
+    subgroup = "defensive-structure",
+    order = "b[turret]-b[laser-turret]",
+    place_result = "ax-matter-laser-turret",
+    stack_size = 50
+  },
 -------------------------------
 -- WEAPONRY
 -------------------------------

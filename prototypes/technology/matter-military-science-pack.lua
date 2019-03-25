@@ -10,6 +10,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ax-matter-science-matter-infused-military"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-powder-military"
       }
     },
     unit =

@@ -13,6 +13,10 @@ data:extend({
       },
 	  {
         type = "unlock-recipe",
+        recipe = "ax-powder-logistic"
+      },
+	  {
+        type = "unlock-recipe",
         recipe = "ax-uncooked-matter-plate"
       },
 	  {
@@ -22,7 +26,11 @@ data:extend({
 	  {
         type = "unlock-recipe",
         recipe = "matter-solid-fuel"
-      }
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-matter-cable"
+      },
     },
     unit =
     {

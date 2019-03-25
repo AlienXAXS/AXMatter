@@ -10,6 +10,18 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ax-matter-science-matter-infused-automation"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-powder-automation"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-sand"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-science-flask"
       }
     },
     unit =

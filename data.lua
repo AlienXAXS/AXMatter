@@ -34,6 +34,8 @@ require("prototypes.entities.oxygen-collector")
 require("prototypes.entities.matter-cracker")
 require("prototypes.entities.matter-lab")
 require("prototypes.entities.matter-ore-converter")
+require("prototypes.entities.matter-laser-turret")
+require("prototypes.entities.matter-beacon")
 
 -- Items
 require("prototypes.items.items")
@@ -50,6 +52,8 @@ require("prototypes.recipe.matter-weaponry")
 require("prototypes.recipe.matter-fuel")
 require("prototypes.recipe.matter-ore-conversion")
 require("prototypes.recipe.matter-ore-converter")
+require("prototypes.recipe.glass")
+require("prototypes.recipe.matter-beacon")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -61,3 +65,4 @@ require("prototypes.technology.chemical-testing")
 require("prototypes.technology.matter-cracking")
 require("prototypes.technology.matter-infused-production")
 require("prototypes.technology.matter-ore-conversion")
+require("prototypes.technology.matter-effect-transmission")
