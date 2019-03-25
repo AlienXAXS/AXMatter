@@ -4,7 +4,7 @@ data:extend({
     name = "ax-matter-lab-tech",
     icon = "__aix_matter__/graphics/technology/matter-lab.png",
     icon_size = "128",
-    prerequisites = {"plastics", "steel-processing", "electronics"},
+    prerequisites = {"steel-processing", "electronics"},
     effects =
     {
       {
