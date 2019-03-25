@@ -1,6 +1,6 @@
 OreConverter = {}					 
-OreConverterProductsNeeded = 4
-BoxSize = 10
+OreConverterProductsNeeded = 100
+BoxSize = 12
 
 local function starts_with(str, start)
    return str:sub(1, #start) == start

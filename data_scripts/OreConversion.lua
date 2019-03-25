@@ -133,7 +133,7 @@ local function CreateRecipies(fromItem, ore, oreResult)
 	local originalOreName = GetVanillaOreName(ore.name)
 	local newItemName = "crushed-" .. fromItem.name
 	
-	log ( "   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. ( oreResult or ore.minable.result or ore.minable.results[1].name ) )
+	log ( "   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. ( oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1] ) )
 	
 	if ( getItem(newItemName) ) then
 		return
@@ -182,7 +182,7 @@ local function CreateRecipies(fromItem, ore, oreResult)
 			{
 				{newItemName,1}
 			},
-			result = oreResult or ore.minable.result or ore.minable.results[1].name
+			result = oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1]
 		}
 	})
 	
