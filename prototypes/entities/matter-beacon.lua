@@ -11,6 +11,8 @@ newBeacon.base_picture.filename = "__aix_matter__/graphics/entity/matter-beacon/
 newBeacon.animation.filename = "__aix_matter__/graphics/entity/matter-beacon/beacon-antenna.png"
 newBeacon.supply_area_distance = 4
 
+newBeacon.minable.result = newBeacon.name
+
 -- Add our new prototypes to the game
 data:extend({
 	newBeacon

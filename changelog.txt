@@ -1,0 +1,49 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2019-03-26
+  Changes:
+    - Added this change log
+  Bugfixes:
+    - Updated the Matter Beacon pickup result so that you get the building back, instead of wrongly receiving the vanilla Beacon.
+    - Updated the Matter Lab pickup result so that you get the building back, instead of wrongly receiving the vanilla Lab.
+    - Updated the Matter Laser Turret pickup result so that you get the building back, instead of wrongly receiving the vanilla Laser Turret.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2019-03-25
+  Changes:
+    - [-] Removed the old Matter Lab graphics
+    - [+] Updated Matter Lab graphics with a better looking variant
+  Features:
+    - [+] Matter Beacon
+    - [+] Matter Laser Turret
+  Bugfixes:
+    - Fixed Dynamic Ore Generation for ore prototypes that were not created with defined Name and Amount values in their Result tree
+    - Fixed matter lab having the wrong technology prerequisites
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2019-03-25
+  Changes:
+    - [+] Matter science packs are now created from Matter Science Powder, with water and a Science Flask
+  Features:
+    - [+] Stone can be crushed into Sand, when smelted Sand will become a Science Flask
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2019-03-24
+  Changes:
+    - [+] Matter Ore can now be set as infinite ore within the startup settings
+  Features:
+    - [+] Most ores (that are supported) are now dynamically generated into their Matter Infused counterparts, these ores give a 3x yield.
+    - [+] Dynamic Ore Generation added for all infused ore
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2019-03-20
+  Features:
+    - [+] Matter Weaponry (new bullets and magazine that deal good damage)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2019-03-15
+  Features:
+    - Initial mod creation, unreleased to the general public
+    - [+] Matter Ore and Liquid Matter
+    - [+] Matter Infused Science Packs
+    - [+] New Research tree based off Matter Science

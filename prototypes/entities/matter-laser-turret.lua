@@ -25,6 +25,9 @@ newLaserTurret.attack_parameters.ammo_type.action.action_delivery.max_length = 2
 newLaserTurret.attack_parameters.range = 30
 newLaserTurret.attack_parameters.energy_consumption = "975kJ"
 
+-- We get ourself back
+newLaserTurret.minable.result = newLaserTurret.name
+
 -- Add our new prototypes to the game
 data:extend({
 	newBeamLaser,

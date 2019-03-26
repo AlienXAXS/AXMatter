@@ -5,7 +5,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-lab.png",
     icon_size = 32,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.2, result = "lab"},
+    minable = {mining_time = 0.2, result = "ax-matter-lab"},
     max_health = 150,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
