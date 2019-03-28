@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2019-03-28
+  Changes:
+    - [+] Added Matter Infused Assembly Machines Tier 2 and 3
+  Bugfixes:
+    - Matter Plate now also needs Copper Plate as well as Iron Plate
+	- Matter Cable is now disabled by default and will no longer show on your crafting menu before researching it
+	- Matter Beacon now has an effective distribution of 75% over the vanilla 50%
+---------------------------------------------------------------------------------------------------
 Version: 0.0.6
 Date: 2019-03-26
   Changes:

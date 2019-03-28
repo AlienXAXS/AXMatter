@@ -12,6 +12,7 @@ data:extend({
 	ingredients =
 	{
 		{"iron-plate", 1},
+		{"copper-plate", 1},
 		{"ax-matter-ore",6},
 		{type="fluid", name="ax-liquid-matter", amount=24}
 	},

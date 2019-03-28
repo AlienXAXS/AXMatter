@@ -10,7 +10,7 @@ newBeacon.energy_usage = "500kW"
 newBeacon.base_picture.filename = "__aix_matter__/graphics/entity/matter-beacon/beacon-base.png"
 newBeacon.animation.filename = "__aix_matter__/graphics/entity/matter-beacon/beacon-antenna.png"
 newBeacon.supply_area_distance = 4
-
+newBeacon.distribution_effectivity = 0.75
 newBeacon.minable.result = newBeacon.name
 
 -- Add our new prototypes to the game

@@ -19,10 +19,6 @@ data:extend(
 
 -- Ores
 require("prototypes.ores.matter-ore")
---require("prototypes.ores.matter-iron-ore")
---require("prototypes.ores.matter-copper-ore")
---require("prototypes.ores.matter-stone")
---require("prototypes.ores.matter-coal")
 
 -- Fluids (Some fluid-ores too)
 require("prototypes.fluids.liquid-matter")
@@ -36,6 +32,7 @@ require("prototypes.entities.matter-lab")
 require("prototypes.entities.matter-ore-converter")
 require("prototypes.entities.matter-laser-turret")
 require("prototypes.entities.matter-beacon")
+require("prototypes.entities.matter-assemblers")
 
 -- Items
 require("prototypes.items.items")
@@ -55,6 +52,7 @@ require("prototypes.recipe.matter-ore-converter")
 require("prototypes.recipe.glass")
 require("prototypes.recipe.matter-beacon")
 require("prototypes.recipe.matter-cable")
+require("prototypes.recipe.matter-assemblers")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -67,3 +65,4 @@ require("prototypes.technology.matter-cracking")
 require("prototypes.technology.matter-infused-production")
 require("prototypes.technology.matter-ore-conversion")
 require("prototypes.technology.matter-effect-transmission")
+require("prototypes.technology.matter-assemblers")

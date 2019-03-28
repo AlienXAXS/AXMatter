@@ -186,6 +186,26 @@ data:extend({
     stack_size = 10
   },
   {
+    type = "item",
+    name = "ax-matter-assembling-machine-2",
+    icon = "__aix_matter__/graphics/icons/matter-assembling-machine-2.png",
+    icon_size = 32,
+    subgroup = "production-machine",
+    order = "b[assembling-machine-2]",
+    place_result = "ax-matter-assembling-machine-2",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "ax-matter-assembling-machine-3",
+    icon = "__aix_matter__/graphics/icons/matter-assembling-machine-3.png",
+    icon_size = 32,
+    subgroup = "production-machine",
+    order = "c[assembling-machine-3]",
+    place_result = "ax-matter-assembling-machine-3",
+    stack_size = 50
+  },
+  {
 	type = "item",
 	name = "ax-matter-cracker",
 	icon = "__aix_matter__/graphics/icons/matter-cracker.png",
