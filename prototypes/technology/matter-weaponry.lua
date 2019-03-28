@@ -14,11 +14,7 @@ data:extend({
 	  {
         type = "unlock-recipe",
         recipe = "ax-matter-magazine"
-      },
-	  {
-		type = "unlock-recipe",
-		recipe = "ax-matter-laser-turret"
-	  }
+      }
     },
     unit =
     {
