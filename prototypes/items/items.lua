@@ -138,6 +138,24 @@ data:extend({
   },
   {
     type = "item",
+    name = "ax-matter-stone-brick",
+    icon = "__aix_matter__/graphics/icons/matter-clay-brick.png",
+    icon_size = 32,
+    subgroup = "aix-matter-weaponry",
+    order = "s-a",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-matter-clay-brick",
+    icon = "__aix_matter__/graphics/icons/matter-stone-brick.png",
+    icon_size = 32,
+    subgroup = "aix-matter-weaponry",
+    order = "s-b",
+    stack_size = 100
+  },
+  {
+    type = "item",
     name = "ax-cracked-matter-9000",
     icon = "__aix_matter__/graphics/icons/cracked-matter-9000.png",
     icon_size = 32,
@@ -184,6 +202,16 @@ data:extend({
     order = "a",
     place_result = "ax-matter-beacon",
     stack_size = 10
+  },
+  {
+    type = "item",
+    name = "ax-matter-wall",
+    icon = "__aix_matter__/graphics/icons/matter-wall.png",
+    icon_size = 32,
+    subgroup = "aix-matter-weaponry",
+    order = "s-z",
+    place_result = "ax-matter-wall",
+    stack_size = 100
   },
   {
     type = "item",

@@ -38,4 +38,40 @@ data:extend({
     },
     result = "ax-matter-laser-turret"
   },
+  {
+	type = "recipe",
+	name = "ax-matter-clay-brick",
+    category = "crafting-with-fluid",
+	enabled = false,
+	energy_required = 5,
+	ingredients =
+	{
+		{"stone", 10},
+        {type="fluid", name="ax-liquid-matter", amount=150}
+	},
+	result = "ax-matter-clay-brick"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-stone-brick",
+	enabled = false,
+	energy_required = 5,
+    category = "smelting",
+	ingredients =
+	{
+		{"ax-matter-clay-brick", 1},
+	},
+	result = "ax-matter-stone-brick"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-wall",
+	enabled = false,
+	energy_required = 5,
+	ingredients =
+	{
+		{"ax-matter-stone-brick", 20},
+	},
+	result = "ax-matter-wall"
+  },
 })

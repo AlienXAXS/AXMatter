@@ -87,6 +87,7 @@ require("prototypes.entities.matter-ore-converter")
 require("prototypes.entities.matter-laser-turret")
 require("prototypes.entities.matter-beacon")
 require("prototypes.entities.matter-assemblers")
+require("prototypes.entities.matter-stone-wall")
 
 -- Items
 require("prototypes.items.items")

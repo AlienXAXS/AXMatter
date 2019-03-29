@@ -9,6 +9,9 @@ Date: 2019-03-28
     - [+] Matter Science pack graphics changed to make them look different from vanilla
     - [+] AiX Matter now has it's own Items Group
     - [+] All AiX Matter items/buildings/ores are now sorted correctly in the Items Screen
+    - [+] Added Unfired & Fired Matter Stone Bricks
+    - [+] Added Matter Infused Walls
+    - [+] Added technology tree for Matter Stone Walls
   Bugfixes:
     - Matter Cable is now disabled by default and will no longer show on your crafting menu before researching it
     - Matter Beacon now has an effective distribution of 75% over the vanilla 50%
