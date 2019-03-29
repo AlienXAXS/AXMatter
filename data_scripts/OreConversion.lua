@@ -167,7 +167,7 @@ local function CreateRecipies(fromItem, ore, oreResult)
 			icons = generatedIcon,
 			icon_size = 32,
 			enabled=false,
-			subgroup = "intermediate-product",
+			subgroup = "aix-matter-crushed-ores",
 			order = "z[crushed-" .. fromItem.name .. "]",
 			stack_size = 100
 		},
@@ -211,7 +211,7 @@ local function CreateNewMatterOreItem(NewOreName, Ore, oreResult)
 		localised_name = {"",{"item-name.ax-matter-infused-ore"}, " ", {"entity-name." .. Ore.name}},
 		icons = generateIcons(NewOreName, Ore),
 		icon_size = 32,
-		subgroup = "raw-resource",
+		subgroup = "aix-matter-ores",
 		order = "z[" .. Ore.name .. "]",
 		stack_size = 50
 	}

@@ -2,8 +2,63 @@
 if not axmatter then axmatter = {} end
 if not axmatter.func then axmatter.func = {} end
 
-data:extend(
-{
+data:extend({
+  {
+    type = "item-group",
+    name = "aix-matter-group",
+    order = "ge",
+    inventory_order = "ge",
+    icon = "__aix_matter__/graphics/icons/aixmatter.png",
+    icon_size = 64,
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-science-powder",
+    group = "aix-matter-group",
+    order = "a"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-science",
+    group = "aix-matter-group",
+    order = "b"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-products",
+    group = "aix-matter-group",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-production-machines",
+    group = "aix-matter-group",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-buildings",
+    group = "aix-matter-group",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-weaponry",
+    group = "aix-matter-group",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-ores",
+    group = "aix-matter-group",
+    order = "d"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-crushed-ores",
+    group = "aix-matter-group",
+    order = "d"
+  },
   {
     type = "item-subgroup",
     name = "ax-ores",
@@ -14,8 +69,7 @@ data:extend(
     type = "resource-category",
     name = "ax-liquid"
   }
-}
-)
+})
 
 -- Ores
 require("prototypes.ores.matter-ore")

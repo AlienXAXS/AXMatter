@@ -7,7 +7,7 @@ data:extend({
     name = "ax-matter-ore",
     icon = "__aix_matter__/graphics/icons/matter-ore.png",
     icon_size = 32,
-    subgroup = "raw-resource",
+    subgroup = "aix-matter-ores",
     order = "g[matter-ore]",
     stack_size = 50
   },
@@ -23,8 +23,8 @@ data:extend({
     fuel_value = "18MJ",
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.15,
-    subgroup = "raw-material",
-    order = "c[solid-fuel]",
+    subgroup = "aix-matter-products",
+    order = "a",
     stack_size = 50
   },
 -------------------------------
@@ -35,8 +35,8 @@ data:extend({
     name = "ax-science-flask",
     icon = "__aix_matter__/graphics/icons/science-flask.png",
     icon_size = 32,
-    subgroup = "intermediate-product",
-    order = "b[ax-matter-ore]",
+    subgroup = "aix-matter-products",
+    order = "b",
     stack_size = 100
   },
   {
@@ -44,8 +44,8 @@ data:extend({
     name = "ax-sand",
     icon = "__aix_matter__/graphics/icons/sand.png",
     icon_size = 32,
-    subgroup = "raw-resource",
-    order = "b[ax-matter-ore]",
+    subgroup = "aix-matter-products",
+    order = "c",
     stack_size = 100
   },
   {
@@ -53,8 +53,8 @@ data:extend({
     name = "ax-matter-laser-turret",
     icon = "__aix_matter__/graphics/icons/matter-laser-turret.png",
     icon_size = 32,
-    subgroup = "defensive-structure",
-    order = "b[turret]-b[laser-turret]",
+    subgroup = "aix-matter-weaponry",
+    order = "c",
     place_result = "ax-matter-laser-turret",
     stack_size = 50
   },
@@ -63,8 +63,8 @@ data:extend({
     name = "ax-matter-cable",
     icon = "__aix_matter__/graphics/icons/matter-cable.png",
     icon_size = 32,
-    subgroup = "intermediate-product",
-    order = "a[copper-cable]",
+    subgroup = "aix-matter-products",
+    order = "a",
     stack_size = 200,
     wire_count = 1
   },
@@ -76,8 +76,8 @@ data:extend({
     name = "ax-matter-bullets",
     icon = "__aix_matter__/graphics/icons/matter-bullets.png",
     icon_size = 32,
-    subgroup = "ammo",
-    order = "c[firearm-magazine]",
+    subgroup = "aix-matter-weaponry",
+    order = "a",
     stack_size = 100
   },
   {
@@ -120,8 +120,8 @@ data:extend({
       }
     },
     magazine_size = 24,
-    subgroup = "ammo",
-    order = "a[piercing-rounds-magazine]-b[uranium-rounds-magazine]",
+    subgroup = "aix-matter-weaponry",
+    order = "b",
     stack_size = 200
   },
 -------------------------------
@@ -132,7 +132,7 @@ data:extend({
     name = "ax-matter-ore",
     icon = "__aix_matter__/graphics/icons/matter-ore.png",
     icon_size = 32,
-    subgroup = "raw-resource",
+    subgroup = "aix-matter-ores",
     order = "b[ax-matter-ore]",
     stack_size = 100
   },
@@ -141,8 +141,8 @@ data:extend({
     name = "ax-cracked-matter-9000",
     icon = "__aix_matter__/graphics/icons/cracked-matter-9000.png",
     icon_size = 32,
-    subgroup = "raw-material",
-    order = "b[ax-matter-9000]",
+    subgroup = "aix-matter-products",
+    order = "y",
     stack_size = 100
   },
   {
@@ -150,8 +150,8 @@ data:extend({
     name = "ax-cracked-matter-9001",
     icon = "__aix_matter__/graphics/icons/cracked-matter-9001.png",
     icon_size = 32,
-    subgroup = "raw-material",
-    order = "b[ax-matter-9001]",
+    subgroup = "aix-matter-products",
+    order = "z",
     stack_size = 100
   },
   {
@@ -159,8 +159,8 @@ data:extend({
     name = "ax-uncooked-matter-plate",
     icon = "__aix_matter__/graphics/icons/uncooked-matter-plate.png",
     icon_size = 32,
-    subgroup = "raw-material",
-    order = "b[ax-matter-9001]",
+    subgroup = "aix-matter-products",
+    order = "e",
     stack_size = 100
   },
   {
@@ -168,8 +168,8 @@ data:extend({
     name = "ax-cooked-matter-plate",
     icon = "__aix_matter__/graphics/icons/cooked-matter-plate.png",
     icon_size = 32,
-    subgroup = "raw-material",
-    order = "b[ax-matter-9001]",
+    subgroup = "aix-matter-products",
+    order = "f",
     stack_size = 100
   },
 -------------------------------
@@ -180,8 +180,8 @@ data:extend({
     name = "ax-matter-beacon",
     icon = "__aix_matter__/graphics/icons/matter-beacon.png",
     icon_size = 32,
-    subgroup = "module",
-    order = "a[beacon]",
+    subgroup = "aix-matter-buildings",
+    order = "a",
     place_result = "ax-matter-beacon",
     stack_size = 10
   },
@@ -190,8 +190,8 @@ data:extend({
     name = "ax-matter-assembling-machine-2",
     icon = "__aix_matter__/graphics/icons/matter-assembling-machine-2.png",
     icon_size = 32,
-    subgroup = "production-machine",
-    order = "b[assembling-machine-2]",
+    subgroup = "aix-matter-production-machines",
+    order = "a",
     place_result = "ax-matter-assembling-machine-2",
     stack_size = 50
   },
@@ -200,8 +200,8 @@ data:extend({
     name = "ax-matter-assembling-machine-3",
     icon = "__aix_matter__/graphics/icons/matter-assembling-machine-3.png",
     icon_size = 32,
-    subgroup = "production-machine",
-    order = "c[assembling-machine-3]",
+    subgroup = "aix-matter-production-machines",
+    order = "b",
     place_result = "ax-matter-assembling-machine-3",
     stack_size = 50
   },
@@ -210,8 +210,8 @@ data:extend({
 	name = "ax-matter-cracker",
 	icon = "__aix_matter__/graphics/icons/matter-cracker.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-matter-cracker]",
+	subgroup = "aix-matter-production-machines",
+	order = "c",
 	place_result = "ax-matter-cracker",
 	stack_size = 20
   },
@@ -220,8 +220,8 @@ data:extend({
 	name = "ax-matter-infuser",
 	icon = "__aix_matter__/graphics/icons/matter-infuser.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-matter-infuser]",
+	subgroup = "aix-matter-production-machines",
+	order = "d",
 	place_result = "ax-matter-infuser",
 	stack_size = 20
   },
@@ -230,8 +230,8 @@ data:extend({
 	name = "ax-oxygen-collector-mk1",
 	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk1.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-oxygen-collector]",
+	subgroup = "aix-matter-production-machines",
+	order = "e",
 	place_result = "ax-oxygen-collector-mk1",
 	stack_size = 20
   },
@@ -240,8 +240,8 @@ data:extend({
 	name = "ax-oxygen-collector-mk2",
 	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk2.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-oxygen-collector]",
+	subgroup = "aix-matter-production-machines",
+	order = "e",
 	place_result = "ax-oxygen-collector-mk2",
 	stack_size = 20
   },
@@ -250,8 +250,8 @@ data:extend({
 	name = "ax-oxygen-collector-mk3",
 	icon = "__aix_matter__/graphics/icons/oxygen-collector/oxygen-collector-mk3.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-oxygen-collector]",
+	subgroup = "aix-matter-production-machines",
+	order = "e",
 	place_result = "ax-oxygen-collector-mk3",
 	stack_size = 20
   },
@@ -260,8 +260,8 @@ data:extend({
 	name = "ax-matter-lab",
 	icon = "__aix_matter__/graphics/icons/matter-lab.png",
 	icon_size = 32,
-	subgroup = "production-machine",
-	order = "w[ax-oxygen-collector]",
+	subgroup = "aix-matter-buildings",
+	order = "a",
 	place_result = "ax-matter-lab",
 	stack_size = 20
   },
@@ -270,8 +270,8 @@ data:extend({
 	name = "ax-matter-ore-converter",
 	icon = "__aix_matter__/graphics/icons/matter-ore-converter.png",
 	icon_size = 32,
-	subgroup = "extraction-machine",
-	order = "w[ax-oxygen-collector]",
+	subgroup = "aix-matter-production-machines",
+	order = "z",
 	place_result = "ax-matter-ore-converter",
 	stack_size = 20
   },
