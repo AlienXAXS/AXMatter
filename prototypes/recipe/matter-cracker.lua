@@ -11,7 +11,7 @@ data:extend({
 	ingredients =
 	{
 		{"centrifuge", 1},
-		{"ax-cooked-matter-plate", 50},
+		{"ax-matter-iron-plate", 50},
 		{"electronic-circuit", 20},
 		{"advanced-circuit", 20}
 	},

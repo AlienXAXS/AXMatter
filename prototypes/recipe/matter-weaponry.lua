@@ -7,7 +7,7 @@ data:extend({
 	ingredients =
 	{
 		{"firearm-magazine", 1},
-		{"ax-cooked-matter-plate",4},
+		{"ax-matter-iron-plate",4},
 		{"copper-plate",4}
 	},
 	result = "ax-matter-bullets"
@@ -20,7 +20,7 @@ data:extend({
 	ingredients =
 	{
 		{"ax-matter-bullets", 4},
-		{"ax-cooked-matter-plate",1}
+		{"ax-matter-iron-plate",1}
 	},
 	result = "ax-matter-magazine"
   },
@@ -31,7 +31,7 @@ data:extend({
     energy_required = 20,
     ingredients =
     {
-	  {"ax-cooked-matter-plate", 20},
+	  {"ax-matter-iron-plate", 20},
       {"steel-plate", 20},
       {"electronic-circuit", 20},
       {"battery", 12}

@@ -12,7 +12,7 @@ data:extend(
 			ingredients =
 			{
 				{"steel-plate", 16},
-				{"ax-cooked-matter-plate", 12},
+				{"ax-matter-iron-plate", 12},
 				{"electronic-circuit", 8},
 				{"pipe", 12},
 			},
@@ -26,7 +26,7 @@ data:extend(
 			ingredients =
 			{
 				{"steel-plate", 16},
-				{"ax-cooked-matter-plate", 12},
+				{"ax-matter-iron-plate", 12},
 				{"electronic-circuit", 8},
 				{"pipe", 12},
 			},
@@ -40,7 +40,7 @@ data:extend(
 			ingredients =
 			{
 				{"steel-plate", 16},
-				{"ax-cooked-matter-plate", 12},
+				{"ax-matter-iron-plate", 12},
 				{"electronic-circuit", 8},
 				{"pipe", 12},
 			},

@@ -8,7 +8,7 @@ data:extend({
 	{
 		{"assembling-machine-2", 1},
 		{"ax-cracked-matter-9001", 10},
-		{"ax-cooked-matter-plate", 24},
+		{"ax-matter-iron-plate", 24},
 		{"pipe", 4},
 	},
 	result = "ax-matter-ore-converter"

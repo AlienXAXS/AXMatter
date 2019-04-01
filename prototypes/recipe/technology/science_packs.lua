@@ -7,7 +7,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-automation",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
 		{"automation-science-pack",1},
@@ -19,7 +19,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-automation",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{
@@ -37,10 +37,10 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-logistic",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
-		{"ax-cooked-matter-plate",4},
+		{"ax-matter-iron-plate",4},
 		{"logistic-science-pack",1}
 	},
 	result = "ax-powder-logistic"
@@ -49,7 +49,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-logistic",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{
@@ -67,10 +67,10 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-military",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
-		{"ax-cooked-matter-plate",4},
+		{"ax-matter-iron-plate",4},
 		{"military-science-pack",1},
 		{"firearm-magazine",2}
 	},
@@ -80,7 +80,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-military",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{
@@ -98,11 +98,11 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-chemical",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
 		{"chemical-science-pack",1},
-		{"ax-cooked-matter-plate",4},
+		{"ax-matter-iron-plate",4},
 		{"ax-matter-solid-fuel",1}
 	},
 	result = "ax-powder-chemical"
@@ -111,7 +111,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-chemical",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{
@@ -129,11 +129,11 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-production",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
 		{"production-science-pack",1},
-		{"ax-cooked-matter-plate",4},
+		{"ax-matter-iron-plate",4},
 		{"ax-cracked-matter-9001", 1},
 		{"ax-cracked-matter-9000", 12}
 	},
@@ -143,7 +143,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-production",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{
@@ -161,7 +161,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-powder-space",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 10,
 	ingredients =
 	{
 		{"space-science-pack",1},
@@ -177,7 +177,7 @@ data:extend({
 	type = "recipe",
 	name = "ax-matter-science-matter-infused-space",
 	enabled = false,
-	energy_required = 20,
+	energy_required = 2,
 	category="crafting-with-fluid",
 	ingredients =
 	{

@@ -13,6 +13,32 @@ data:extend(
     order = "a[fluid]-b[liquid-matter]"
   },
   {
+    type = "fluid",
+    name = "ax-liquid-matter-steam",
+    default_temperature = 15,
+    max_temperature = 1000,
+    heat_capacity = "0.2KJ",
+    icon = "__aix_matter__/graphics/icons/liquid-matter-steam.png",
+    icon_size = 32,
+    base_color = {r=0.5, g=0.5, b=0.5},
+    flow_color = {r=1.0, g=1.0, b=1.0},
+    order = "a[fluid]-b[steam]",
+    gas_temperature = 15,
+    auto_barrel = false
+  },
+  {
+    type = "fluid",
+    name = "ax-liquid-matter-mixed-water",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r=1, g=1, b=1},
+    flow_color = {r=0.2, g=0.25, b=0.80},
+    max_temperature = 100,
+    icon = "__aix_matter__/graphics/icons/liquid-matter-mixed-water.png",
+    icon_size = 32,
+    order = "a[fluid]-b[liquid-matter]"
+  },
+  {
     type = "autoplace-control",
     name = "ax-liquid-matter",
     richness = true,
@@ -54,15 +80,16 @@ data:extend(
     autoplace = resource_autoplace.resource_autoplace_settings{
       name = "ax-liquid-matter",
       order = "c",
-      base_density = 5.2,
+      base_density = 8.2,
       base_spots_per_km2 = 1.8,
       random_probability = 1/48,
       random_spot_size_minimum = 1,
       random_spot_size_maximum = 1,
-      additional_richness = 220000,
-      has_starting_area_placement = false,
-      resource_index = resource_autoplace.get_next_resource_index(),
+      additional_richness = 320000,
+      has_starting_area_placement = true,
+      resource_index = resource_autoplace.get_next_resource_index()+35,
       regular_rq_factor_multiplier = 1
+      starting_rq_factor_multiplier = 1.5
     },
     stage_counts = {0},
     stages =

@@ -5,7 +5,7 @@ data:extend({
 	enabled = false,
 	ingredients =
 	{
-		{"ax-cooked-matter-plate", 12},
+		{"ax-matter-iron-plate", 12},
 		{"assembling-machine-2", 1}
 	},
 	result = "ax-matter-assembling-machine-2"
@@ -16,7 +16,7 @@ data:extend({
     enabled = false,
     ingredients =
     {
-      {"ax-cooked-matter-plate", 12},
+      {"ax-matter-iron-plate", 12},
       {"assembling-machine-3", 2}
     },
     result = "ax-matter-assembling-machine-3"

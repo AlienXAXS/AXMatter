@@ -7,7 +7,7 @@ data:extend({
     ingredients =
     {
       {type="fluid", name="ax-liquid-matter", amount=10},
-	  {"ax-cooked-matter-plate",2}
+	  {"ax-matter-iron-plate",2}
     },
     results=
     {

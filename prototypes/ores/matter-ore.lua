@@ -34,13 +34,14 @@ data:extend({
     autoplace = resource_autoplace.resource_autoplace_settings{
       name = "ax-matter-ore",
       order = "c",
-      base_density = 0.9,
+      base_density = 1.6,
       base_spots_per_km2 = 1.25,
-      has_starting_area_placement = false,
+      has_starting_area_placement = true,
       random_spot_size_minimum = 2,
       random_spot_size_maximum = 4,
       resource_index = resource_autoplace.get_next_resource_index()+30,
-      regular_rq_factor_multiplier = 1
+      regular_rq_factor_multiplier = 1,
+      starting_rq_factor_multiplier = 1.5
     },
     stage_counts = {10000, 6330, 3670, 1930, 870, 270, 100, 50},
     stages =

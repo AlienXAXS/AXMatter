@@ -49,7 +49,19 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "aix-matter-power",
+    group = "aix-matter-group",
+    order = "c"
+  },
+  {
+    type = "item-subgroup",
     name = "aix-matter-ores",
+    group = "aix-matter-group",
+    order = "d"
+  },
+  {
+    type = "item-subgroup",
+    name = "aix-matter-fluids",
     group = "aix-matter-group",
     order = "d"
   },
@@ -80,6 +92,7 @@ require("prototypes.fluids.oxygen")
 
 -- Entities
 require("prototypes.entities.matter-infuser")
+require("prototypes.entities.matter-combiner")
 require("prototypes.entities.oxygen-collector")
 require("prototypes.entities.matter-cracker")
 require("prototypes.entities.matter-lab")
@@ -88,6 +101,7 @@ require("prototypes.entities.matter-laser-turret")
 require("prototypes.entities.matter-beacon")
 require("prototypes.entities.matter-assemblers")
 require("prototypes.entities.matter-stone-wall")
+require("prototypes.entities.matter-power")
 
 -- Items
 require("prototypes.items.items")
@@ -95,7 +109,7 @@ require("prototypes.items.science")
 
 -- Recipies
 require("prototypes.recipe.oxygen-collector")
-require("prototypes.recipe.matter-infuser")
+require("prototypes.recipe.matter-infuser-combiner")
 require("prototypes.recipe.matter-cracker")
 require("prototypes.recipe.technology.science_packs")
 require("prototypes.recipe.matter-lab")
@@ -108,6 +122,8 @@ require("prototypes.recipe.glass")
 require("prototypes.recipe.matter-beacon")
 require("prototypes.recipe.matter-cable")
 require("prototypes.recipe.matter-assemblers")
+require("prototypes.recipe.matter-fluids")
+require("prototypes.recipe.matter-power")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -122,3 +138,4 @@ require("prototypes.technology.matter-ore-conversion")
 require("prototypes.technology.matter-effect-transmission")
 require("prototypes.technology.matter-assemblers")
 require("prototypes.technology.matter-laser-turrets")
+require("prototypes.technology.matter-power-generation")

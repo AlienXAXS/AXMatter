@@ -9,7 +9,7 @@ data:extend({
       {"electronic-circuit", 20},
       {"advanced-circuit", 20},
       {"steel-plate", 10},
-	  {"ax-cooked-matter-plate", 24},
+	  {"ax-matter-iron-plate", 24},
       {"ax-matter-cable", 10}
     },
     result = "ax-matter-beacon"

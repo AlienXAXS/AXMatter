@@ -1,33 +1,57 @@
 data:extend({
   {
-    type = "recipe-category",
-    name = "ax-matter-plate"
-  },
-  {
 	type = "recipe",
-	name = "ax-uncooked-matter-plate",
+	name = "ax-matter-covered-iron-plate",
 	enabled = false,
 	energy_required = 2.5,
 	category = "crafting-with-fluid",
 	ingredients =
 	{
 		{"iron-plate", 1},
-		{"copper-plate", 1},
 		{"ax-matter-ore",6},
 		{type="fluid", name="ax-liquid-matter", amount=24}
 	},
-	result = "ax-uncooked-matter-plate"
+	result = "ax-matter-covered-iron-plate"
   },
   {
 	type = "recipe",
-	name = "ax-cooked-matter-plate",
+	name = "ax-matter-iron-plate",
 	category = "smelting",
 	enabled = false,
 	energy_required = 7,
 	ingredients =
 	{
-		{"ax-uncooked-matter-plate",1}
+		{"ax-matter-covered-iron-plate",1}
 	},
-	result = "ax-cooked-matter-plate"
+	result = "ax-matter-iron-plate"
+  },
+  
+  
+  
+  {
+	type = "recipe",
+	name = "ax-matter-covered-copper-plate",
+	enabled = false,
+	energy_required = 2.5,
+	category = "crafting-with-fluid",
+	ingredients =
+	{
+		{"copper-plate", 1},
+		{"ax-matter-ore",6},
+		{type="fluid", name="ax-liquid-matter", amount=24}
+	},
+	result = "ax-matter-covered-copper-plate"
+  },
+  {
+	type = "recipe",
+	name = "ax-matter-copper-plate",
+	category = "smelting",
+	enabled = false,
+	energy_required = 7,
+	ingredients =
+	{
+		{"ax-matter-covered-copper-plate",1}
+	},
+	result = "ax-matter-copper-plate"
   }
 })

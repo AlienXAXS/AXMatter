@@ -17,11 +17,19 @@ data:extend({
       },
 	  {
         type = "unlock-recipe",
-        recipe = "ax-uncooked-matter-plate"
+        recipe = "ax-matter-covered-iron-plate"
       },
 	  {
         type = "unlock-recipe",
-        recipe = "ax-cooked-matter-plate"
+        recipe = "ax-matter-iron-plate"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-covered-copper-plate"
+      },
+	  {
+        type = "unlock-recipe",
+        recipe = "ax-matter-copper-plate"
       },
 	  {
         type = "unlock-recipe",
@@ -30,6 +38,10 @@ data:extend({
 	  {
         type = "unlock-recipe",
         recipe = "ax-matter-cable"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-combiner"
       },
     },
     unit =

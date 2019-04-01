@@ -20,7 +20,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-solid-fuel.png",
     icon_size = 32,
     fuel_category = "chemical",
-    fuel_value = "18MJ",
+    fuel_value = "50MJ",
     fuel_acceleration_multiplier = 1.5,
     fuel_top_speed_multiplier = 1.15,
     subgroup = "aix-matter-products",
@@ -174,8 +174,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "ax-uncooked-matter-plate",
-    icon = "__aix_matter__/graphics/icons/uncooked-matter-plate.png",
+    name = "ax-matter-covered-iron-plate",
+    icon = "__aix_matter__/graphics/icons/matter-covered-iron-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
     order = "e",
@@ -183,8 +183,26 @@ data:extend({
   },
   {
     type = "item",
-    name = "ax-cooked-matter-plate",
-    icon = "__aix_matter__/graphics/icons/cooked-matter-plate.png",
+    name = "ax-matter-iron-plate",
+    icon = "__aix_matter__/graphics/icons/matter-iron-plate.png",
+    icon_size = 32,
+    subgroup = "aix-matter-products",
+    order = "f",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-matter-covered-copper-plate",
+    icon = "__aix_matter__/graphics/icons/matter-covered-copper-plate.png",
+    icon_size = 32,
+    subgroup = "aix-matter-products",
+    order = "e",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-matter-copper-plate",
+    icon = "__aix_matter__/graphics/icons/matter-copper-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
     order = "f",
@@ -193,6 +211,26 @@ data:extend({
 -------------------------------
 -- ENTITIES (BUILDINGS ETC)
 -------------------------------
+  {
+    type = "item",
+    name = "ax-matter-boiler-mk1",
+    icon = "__aix_matter__/graphics/icons/matter-boiler-mk1.png",
+    icon_size = 32,
+    subgroup = "aix-matter-power",
+    order = "a",
+    place_result = "ax-matter-boiler-mk1",
+    stack_size = 10
+  },
+  {
+    type = "item",
+    name = "ax-matter-power-generator-mk1",
+    icon = "__aix_matter__/graphics/icons/matter-power-generator-mk1.png",
+    icon_size = 32,
+    subgroup = "aix-matter-power",
+    order = "a",
+    place_result = "ax-matter-power-generator-mk1",
+    stack_size = 10
+  },
   {
     type = "item",
     name = "ax-matter-beacon",
@@ -251,6 +289,16 @@ data:extend({
 	subgroup = "aix-matter-production-machines",
 	order = "d",
 	place_result = "ax-matter-infuser",
+	stack_size = 20
+  },
+  {
+	type = "item",
+	name = "ax-matter-combiner",
+	icon = "__aix_matter__/graphics/icons/matter-combiner.png",
+	icon_size = 32,
+	subgroup = "aix-matter-production-machines",
+	order = "d",
+	place_result = "ax-matter-combiner",
 	stack_size = 20
   },
   {
