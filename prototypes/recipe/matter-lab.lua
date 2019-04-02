@@ -1,9 +1,5 @@
 data:extend({
   {
-    type = "recipe-category",
-    name = "ax-matter-lab"
-  },
-  {
 	type = "recipe",
 	name = "ax-matter-lab",
 	enabled = false,

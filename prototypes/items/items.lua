@@ -1,3 +1,5 @@
+require("power")
+
 data:extend({
 ------------------------------
 -- ORES
@@ -45,7 +47,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/sand.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "c",
+    order = "a",
     stack_size = 100
   },
   {
@@ -154,6 +156,7 @@ data:extend({
     order = "s-b",
     stack_size = 100
   },
+  -- CRACKING
   {
     type = "item",
     name = "ax-cracked-matter-9000",
@@ -172,6 +175,7 @@ data:extend({
     order = "z",
     stack_size = 100
   },
+  -- IRON
   {
     type = "item",
     name = "ax-matter-covered-iron-plate",
@@ -192,6 +196,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "ax-matter-stick",
+    icon = "__aix_matter__/graphics/icons/matter-stick.png",
+    icon_size = 32,
+    subgroup = "aix-matter-products",
+    order = "f",
+    stack_size = 100
+  },
+  -- COPPER
+  {
+    type = "item",
     name = "ax-matter-covered-copper-plate",
     icon = "__aix_matter__/graphics/icons/matter-covered-copper-plate.png",
     icon_size = 32,
@@ -208,29 +222,28 @@ data:extend({
     order = "f",
     stack_size = 100
   },
+  -- STEEL
+  {
+    type = "item",
+    name = "ax-matter-covered-steel-plate",
+    icon = "__aix_matter__/graphics/icons/matter-covered-steel-plate.png",
+    icon_size = 32,
+    subgroup = "aix-matter-products",
+    order = "e",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "ax-matter-steel-plate",
+    icon = "__aix_matter__/graphics/icons/matter-steel-plate.png",
+    icon_size = 32,
+    subgroup = "aix-matter-products",
+    order = "f",
+    stack_size = 100
+  },
 -------------------------------
 -- ENTITIES (BUILDINGS ETC)
 -------------------------------
-  {
-    type = "item",
-    name = "ax-matter-boiler-mk1",
-    icon = "__aix_matter__/graphics/icons/matter-boiler-mk1.png",
-    icon_size = 32,
-    subgroup = "aix-matter-power",
-    order = "a",
-    place_result = "ax-matter-boiler-mk1",
-    stack_size = 10
-  },
-  {
-    type = "item",
-    name = "ax-matter-power-generator-mk1",
-    icon = "__aix_matter__/graphics/icons/matter-power-generator-mk1.png",
-    icon_size = 32,
-    subgroup = "aix-matter-power",
-    order = "a",
-    place_result = "ax-matter-power-generator-mk1",
-    stack_size = 10
-  },
   {
     type = "item",
     name = "ax-matter-beacon",

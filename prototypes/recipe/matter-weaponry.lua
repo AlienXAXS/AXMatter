@@ -32,9 +32,23 @@ data:extend({
     ingredients =
     {
 	  {"ax-matter-iron-plate", 20},
-      {"steel-plate", 20},
+      {"ax-matter-steel-plate", 20},
       {"electronic-circuit", 20},
       {"battery", 12}
+    },
+    result = "ax-matter-laser-turret"
+  },
+  {
+    type = "recipe",
+    name = "ax-matter-laser-turret-from-turret",
+    enabled = false,
+    energy_required = 20,
+    ingredients =
+    {
+	  {"laser-turret", 1},
+      {"ax-matter-steel-plate", 5},
+      {"electronic-circuit", 5},
+      {"battery", 2}
     },
     result = "ax-matter-laser-turret"
   },

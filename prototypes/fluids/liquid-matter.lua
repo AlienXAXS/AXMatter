@@ -88,7 +88,7 @@ data:extend(
       additional_richness = 320000,
       has_starting_area_placement = true,
       resource_index = resource_autoplace.get_next_resource_index()+35,
-      regular_rq_factor_multiplier = 1
+      regular_rq_factor_multiplier = 1,
       starting_rq_factor_multiplier = 1.5
     },
     stage_counts = {0},

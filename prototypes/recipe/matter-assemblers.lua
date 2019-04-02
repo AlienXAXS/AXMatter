@@ -17,7 +17,7 @@ data:extend({
     ingredients =
     {
       {"ax-matter-iron-plate", 12},
-      {"assembling-machine-3", 2}
+      {"assembling-machine-3", 1}
     },
     result = "ax-matter-assembling-machine-3"
   },

@@ -10,6 +10,10 @@ data:extend({
 	  {
 		type = "unlock-recipe",
 		recipe = "ax-matter-laser-turret"
+	  },
+      {
+		type = "unlock-recipe",
+		recipe = "ax-matter-laser-turret-from-turret"
 	  }
     },
     unit =

@@ -31,6 +31,14 @@ data:extend({
         type = "unlock-recipe",
         recipe = "ax-matter-copper-plate"
       },
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-covered-steel-plate"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-steel-plate"
+      },
 	  {
         type = "unlock-recipe",
         recipe = "matter-solid-fuel"
@@ -42,6 +50,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "ax-matter-combiner"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-stick"
       },
     },
     unit =
