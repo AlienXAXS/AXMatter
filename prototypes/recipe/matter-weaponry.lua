@@ -46,9 +46,8 @@ data:extend({
     ingredients =
     {
 	  {"laser-turret", 1},
-      {"ax-matter-steel-plate", 5},
-      {"electronic-circuit", 5},
-      {"battery", 2}
+      {"ax-matter-steel-plate", 12},
+      {"ax-matter-iron-plate", 12},
     },
     result = "ax-matter-laser-turret"
   },

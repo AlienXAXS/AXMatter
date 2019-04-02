@@ -68,4 +68,16 @@ data:extend({
     },
     result = "ax-matter-beacon"
   },
+  {
+    type = "recipe",
+    name = "ax-cracked-matter-9000-to-mixed-liquid",
+    enabled = false,
+    category = "crafting-with-fluid",
+    energy_required = 15,
+    ingredients =
+    {
+      {"ax-cracked-matter-9000", 20},
+    },
+    results = {{type="fluid", name="ax-liquid-matter-mixed-water", amount=400}}
+  },
 })

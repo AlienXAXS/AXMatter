@@ -38,7 +38,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/science-flask.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "b",
+    order = "a-b",
     stack_size = 100
   },
   {
@@ -182,7 +182,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-covered-iron-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "e",
+    order = "e-a",
     stack_size = 100
   },
   {
@@ -191,7 +191,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-iron-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "f",
+    order = "e-a-a",
     stack_size = 100
   },
   {
@@ -210,7 +210,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-covered-copper-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "e",
+    order = "e-b",
     stack_size = 100
   },
   {
@@ -219,7 +219,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-copper-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "f",
+    order = "e-b-a",
     stack_size = 100
   },
   -- STEEL
@@ -229,7 +229,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-covered-steel-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "e",
+    order = "e-c",
     stack_size = 100
   },
   {
@@ -238,7 +238,7 @@ data:extend({
     icon = "__aix_matter__/graphics/icons/matter-steel-plate.png",
     icon_size = 32,
     subgroup = "aix-matter-products",
-    order = "f",
+    order = "e-c-a",
     stack_size = 100
   },
 -------------------------------

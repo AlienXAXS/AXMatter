@@ -6,15 +6,19 @@ Date: 2019-04-02
     - [+] Added Mixed Liquid Matter (from water and liquid matter) to be used with Power Generation
     - [+] Added Matter Copper Plates
     - [+] Added Matter Steel Plates
+    - [+] Added Matter Sticks
     - [+] Added Matter Power Supply and Matter Advanced Power Supply
     - [+] Added Matter Medium & Big Power Poles, plus extended-reach variants
     - [+] Added Matter Substation
+    - [+] Added locale for new entities/items/etc
+    - [+] Added recipe for Matter Laser Turrets so you can build them from Vanilla Turrets
+    - [+] Added recipie to convert Cracked Matter 9000 to Mixed Liquid Matter to be used in power generation (as a recylcing attempt)
     - [~] Changed Matter Plates to be Matter Iron Plates
     - [~] Changed all AiX Matter Ores to be in the startup area
     - [~] Changed Science packs now take 2 seconds to bottle, instead of the incorrect 20
-    - [+] Added locale for new entities/items/etc
   Bugfixes:
     - Fixed some invalid Ore generation values, you should see Matter Ore and Liquid Matter patches more often now on new maps and in new chunks
+    - Fixed sorting order for Matter Plate variants
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2019-03-28

@@ -49,10 +49,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "ax-matter-combiner"
-      },
-      {
-        type = "unlock-recipe",
         recipe = "ax-matter-stick"
       },
     },

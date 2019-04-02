@@ -18,6 +18,10 @@ data:extend({
 	  {
 		type = "unlock-recipe",
 		recipe = "ax-matter-drain-cracked-9001"
+	  },
+      {
+		type = "unlock-recipe",
+		recipe = "ax-cracked-matter-9000-to-mixed-liquid"
 	  }
     },
     unit =
