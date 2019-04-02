@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 2019-04-02
+  Changes:
+    - [+] Added Matter Power Generation
+    - [+] Added Mixed Liquid Matter (from water and liquid matter) to be used with Power Generation
+    - [+] Added Matter Copper Plates
+    - [+] Added Matter Steel Plates
+    - [+] Added Matter Power Supply and Matter Advanced Power Supply
+    - [+] Added Matter Medium & Big Power Poles, plus extended-reach variants
+    - [+] Added Matter Substation
+    - [~] Changed Matter Plates to be Matter Iron Plates
+    - [~] Changed all AiX Matter Ores to be in the startup area
+    - [~] Changed Science packs now take 2 seconds to bottle, instead of the incorrect 20
+    - [+] Added locale for new entities/items/etc
+  Bugfixes:
+    - Fixed some invalid Ore generation values, you should see Matter Ore and Liquid Matter patches more often now on new maps and in new chunks
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2019-03-28
   Changes:
