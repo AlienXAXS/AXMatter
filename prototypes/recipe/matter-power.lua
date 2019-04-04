@@ -7,8 +7,8 @@ data:extend({
     ingredients =
     {
       {"boiler", 1},
-	  {"ax-matter-iron-plate", 24},
-      {"ax-matter-copper-plate", 24},
+	    {"ax-matter-iron-plate", 12},
+      {"ax-matter-copper-plate", 12},
     },
     result = "ax-matter-boiler-mk1"
   },
@@ -20,8 +20,8 @@ data:extend({
     ingredients =
     {
       {"steam-engine", 1},
-	  {"ax-matter-iron-plate", 50},
-      {"ax-matter-copper-plate", 42},
+	    {"ax-matter-iron-plate", 12},
+      {"ax-matter-copper-plate", 12},
     },
     result = "ax-matter-power-generator-mk1"
   },

@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 2019-04-04
+  Changes:
+    - [+] Added support for RSO (RSO needs to be updated though)
+    - [+] Greatly increased the yield of Mixed Liquid Matter with Water
+    - [+] Matter Power Boiler and Generator now needs much less materials to be built
+  Bugfixes:
+    - Fixed that power-supply and adv-power-supply technologies didnt have a locale definition
+    - Matter Cracking now correctly needs Matter Infused Production science packs to research
+    - Matter Walls can now be researched with Dectorio installed
+---------------------------------------------------------------------------------------------------
 Version: 0.0.8
 Date: 2019-04-02
   Changes:

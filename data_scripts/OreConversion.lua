@@ -239,7 +239,7 @@ local function CreateMatterOrePrototype(NewOreName, Ore, oreResult)
 	newOre.localised_name = {"",{"entity-name.ax-matter-infused-ore"}, " ", {"entity-name." .. Ore.name}}
 	newOre.icon = nil
 	newOre.icons = generateIcons(NewOreName, Ore)
-	newOre.autoplace = {} --do not autoplace this new ore
+	newOre.autoplace = nil --do not autoplace this new ore
 	newOre.stages_effect =
     {
       sheet =

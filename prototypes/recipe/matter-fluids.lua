@@ -3,15 +3,15 @@ data:extend({
         type = "recipe",
         name = "ax-liquid-matter-mixed-water",
         category = "ax-matter-combiner",
-        energy_required = 1,
+        energy_required = 2.5,
         ingredients =
         {
-            {type="fluid", name="water", amount=50},
-            {type="fluid", name="ax-liquid-matter", amount=15}
+            {type="fluid", name="water", amount=270},
+            {type="fluid", name="ax-liquid-matter", amount=30}
         },
         results=
         {
-            {type="fluid", name="ax-liquid-matter-mixed-water", amount=65}
+            {type="fluid", name="ax-liquid-matter-mixed-water", amount=300}
         },
         icon = "__aix_matter__/graphics/icons/recipe-liquid-matter-mixed-water.png",
         icon_size = 32,
