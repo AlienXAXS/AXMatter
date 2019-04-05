@@ -6,7 +6,8 @@ require("game_scripts.SelfHealingWalls")
 script.on_init(function()
 	if not global.axmatter then global.axmatter = {} end
 	if not global.axmatter.oreConverters then global.axmatter.oreConverters = {} end
-	if not global.axmatter.selfHealingWalls then global.axmatter.selfHealingWalls = {} end
+	if not global.axmatter.selfHealingWalls.walls then global.axmatter.selfHealingWalls.walls = {} end
+	if not global.axmatter.selfHealingWalls.renderSources then global.axmatter.selfHealingWalls.renderSources = {} end
 end)
 
 -- Called when a player or bot puts an entity in the world
@@ -19,19 +20,24 @@ script.on_event({defines.events.on_entity_died, defines.events.on_player_mined_e
 	entityDestroyed(event)
 end)
 
+script.on_event(defines.events.on_entity_damaged, function(event)
+	SelfHealingWalls.on_entity_damaged()
+end)
+
 -- Config changed
 script.on_configuration_changed(function(event)
 	if not global.axmatter then global.axmatter = {} end
 	if not global.axmatter.oreConverters then global.axmatter.oreConverters = {} end
-	if not global.axmatter.selfHealingWalls then global.axmatter.selfHealingWalls = {} end
+	if not global.axmatter.selfHealingWalls.walls then global.axmatter.selfHealingWalls.walls = {} end
+	if not global.axmatter.selfHealingWalls.renderSources then global.axmatter.selfHealingWalls.renderSources = {} end
 end)
 
 script.on_nth_tick(60, function()
 	OreConverter.script_on_nth_tick()
+	SelfHealingWalls.on_nth_tick()
 end)
 
 script.on_event(defines.events.on_tick, function()
-	SelfHealingWalls.on_tick()
 end)
 
 function entityPlacedHandler(event)
