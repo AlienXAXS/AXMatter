@@ -9,8 +9,8 @@ local settings = {
 }
 
 function SelfHealingWalls.on_nth_tick()
-    for k=#global.axmatter.selfHealingWalls.wall, 1, -1 do
-        local entity = global.axmatter.selfHealingWalls.wall[k]
+    local invalidList = {}
+    for id, entity in pairs(global.axmatter.selfHealingWalls.walls) do
         if ( entity and entity.valid ) then
             if ( entity.health < settings.MaxHealth ) then
                 local newHealth = entity.health + settings.HealthToRegenPerCycle
@@ -20,12 +20,16 @@ function SelfHealingWalls.on_nth_tick()
 
                 -- Remove the wall from the table, as it's fully healed.
                 if ( newHealth == settings.MaxHealth ) then
-                    global.axmatter.selfHealingWalls.walls[k] = nil
+                    table.insert(invalidList, id)
                 end
             end
         else
-            global.axmatter.selfHealingWalls.walls[k] = nil
+            table.insert(invalidList, id)
         end
+    end
+
+    for _, id in pairs(invalidList) do
+        global.axmatter.selfHealingWalls.walls[id] = nil
     end
 end
 
@@ -36,7 +40,7 @@ end
 function SetupWall(entity)
     -- Add the wall to the global table    
     local renderSources = {}
-    table.insert(renderSources, renderer.draw_light{sprite="__core__/graphics/empty.png", color = {r=1,g=0,b=0}, surface=entity.surface, target=entity})
+    table.insert(renderSources, rendering.draw_light{sprite="entity/small-lamp", color = {r=1,g=0,b=0}, surface=entity.surface, target=entity})
 
     global.axmatter.selfHealingWalls.renderSources[entity.unit_number] = renderSources
 end
@@ -66,8 +70,8 @@ function SelfHealingWalls.on_entity_destroyed(event)
 end
 
 function SelfHealingWalls.Cleanup(entity)
-    if ( global.axmatter.selfHealingWalls.wall[entity.unit_number] ) then
-        global.axmatter.selfHealingWalls[entity.unit_number] = nil
+    if ( global.axmatter.selfHealingWalls.walls[entity.unit_number] ) then
+        global.axmatter.selfHealingWalls.walls[entity.unit_number] = nil
     end
 
     if ( global.axmatter.selfHealingWalls.renderSources[entity.unit_number] ) then

@@ -6,6 +6,7 @@ require("game_scripts.SelfHealingWalls")
 script.on_init(function()
 	if not global.axmatter then global.axmatter = {} end
 	if not global.axmatter.oreConverters then global.axmatter.oreConverters = {} end
+	if not global.axmatter.selfHealingWalls then global.axmatter.selfHealingWalls = {} end
 	if not global.axmatter.selfHealingWalls.walls then global.axmatter.selfHealingWalls.walls = {} end
 	if not global.axmatter.selfHealingWalls.renderSources then global.axmatter.selfHealingWalls.renderSources = {} end
 end)
@@ -21,13 +22,14 @@ script.on_event({defines.events.on_entity_died, defines.events.on_player_mined_e
 end)
 
 script.on_event(defines.events.on_entity_damaged, function(event)
-	SelfHealingWalls.on_entity_damaged()
+	SelfHealingWalls.on_entity_damaged(event)
 end)
 
 -- Config changed
 script.on_configuration_changed(function(event)
 	if not global.axmatter then global.axmatter = {} end
 	if not global.axmatter.oreConverters then global.axmatter.oreConverters = {} end
+	if not global.axmatter.selfHealingWalls then global.axmatter.selfHealingWalls = {} end
 	if not global.axmatter.selfHealingWalls.walls then global.axmatter.selfHealingWalls.walls = {} end
 	if not global.axmatter.selfHealingWalls.renderSources then global.axmatter.selfHealingWalls.renderSources = {} end
 end)
