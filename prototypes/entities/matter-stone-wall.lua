@@ -70,4 +70,8 @@ matterWall.pictures.gate_connection_patch.sheets[1].filename = gfxPath .. "/wall
 matterWall.pictures.gate_connection_patch.sheets[1].hr_version.filename = gfxPath .. "/hr-wall-gate.png"
 
 
-data:extend({matterWall})
+-- Self healing walls
+local selfHealingWall = util.table.deepcopy(matterWall)
+selfHealingWall.name = "ax-matter-self-healing-wall"
+
+data:extend({matterWall, selfHealingWall})

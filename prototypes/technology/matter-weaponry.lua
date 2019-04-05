@@ -58,4 +58,28 @@ data:extend({
     },
     order = "d-a-a"
   },
+  {
+    type = "technology",
+    name = "ax-matter-self-healing-walls",
+    icon = "__aix_matter__/graphics/technology/matter-self-healing-walls.png",
+    icon_size = "128",
+    prerequisites = {"ax-matter-walls"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "ax-matter-self-healing-wall"
+      },
+    },
+    unit =
+    {
+      count = 50,
+      ingredients = {
+        {"ax-matter-science-matter-infused-automation", 1},
+        {"ax-matter-science-matter-infused-military", 1},
+      },
+      time = 30
+    },
+    order = "d-a-a"
+  },
 })

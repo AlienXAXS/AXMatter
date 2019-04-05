@@ -86,5 +86,18 @@ data:extend({
 		{"ax-matter-stone-brick", 20},
 	},
 	result = "ax-matter-wall"
-  },
+	},
+	{
+		type = "recipe",
+		name = "ax-matter-self-healing-wall",
+		enabled = false,
+		category="crafting-with-fluid",
+		energy_required = 5,
+		ingredients =
+		{
+			{"ax-matter-stone-brick", 20},
+			{type="fluid", name="ax-liquid-matter", amount=50}
+		},
+		result = "ax-matter-self-healing-wall"
+		},
 })

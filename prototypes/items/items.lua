@@ -266,6 +266,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "ax-matter-self-healing-wall",
+    icon = "__aix_matter__/graphics/icons/matter-wall.png",
+    icon_size = 32,
+    subgroup = "aix-matter-weaponry",
+    order = "s-z",
+    place_result = "ax-matter-self-healing-wall",
+    stack_size = 100
+  },
+  {
+    type = "item",
     name = "ax-matter-assembling-machine-2",
     icon = "__aix_matter__/graphics/icons/matter-assembling-machine-2.png",
     icon_size = 32,

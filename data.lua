@@ -80,7 +80,14 @@ data:extend({
   {
     type = "resource-category",
     name = "ax-liquid"
-  }
+  },
+  {
+    type = "flying-text",
+    name = "ax-flying-text",
+    flags = {"not-on-map", "placeable-off-grid"},
+    time_to_live = 30,
+    speed = 0
+  },
 })
 
 -- Ores
