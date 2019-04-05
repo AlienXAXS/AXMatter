@@ -6,7 +6,7 @@ newBeamLaser.name = "ax-laser-beam"
 newBeamLaser.head.filename = "__aix_matter__/graphics/entity/matter-laser-turret/hr-laser-body.png"
 newBeamLaser.tail.filename = "__aix_matter__/graphics/entity/matter-laser-turret/hr-laser-end.png"
 newBeamLaser.body[1].filename = "__aix_matter__/graphics/entity/matter-laser-turret/hr-laser-body.png"
---newBeamLaser.action.action_delivery["target-effects"][1].damage.amount = 20
+-- newBeamLaser.action.action_delivery["target-effects"][1].damage.amount = 20
 newBeamLaser.damage_interval = 13.5
 
 -- Set new stuff for our new turret
@@ -29,7 +29,4 @@ newLaserTurret.attack_parameters.energy_consumption = "975kJ"
 newLaserTurret.minable.result = newLaserTurret.name
 
 -- Add our new prototypes to the game
-data:extend({
-	newBeamLaser,
-	newLaserTurret
-})
+data:extend({newBeamLaser, newLaserTurret})
