@@ -57,7 +57,7 @@ function SelfHealingWalls.on_entity_placed(event)
     local entity = event.created_entity
 
     if ( entity and entity.valid and entity.name == "ax-matter-self-healing-wall") then
-        table.insert(global.axmatter.selfHealingWalls, {entity = entity, renderSources = {}, lastTick = game.tick})
+        global.axmatter.selfHealingWalls[entity.unit_number] = {entity = entity, renderSources = {}, lastTick = game.tick})
     end
 end
 
@@ -69,13 +69,11 @@ function SelfHealingWalls.on_entity_destroyed(event)
 end
 
 function SelfHealingWalls.Cleanup(entity)
-    for k=#global.axmatter.selfHealingWalls, 1, -1 do
-        local wall = global.axmatter.selfHealingWalls[k]
-        if ( wall.entity and wall.entity.valid and wall.entity == entity ) then
-            for _,renderSource in pairs(wall.renderSources) do
-                rendering.destroy(renderSource)
-            end
-            table.remove(global.axmatter.selfHealingWalls, k)
+    if ( global.axmatter.selfHealingWalls[entity.unit_number] ) then
+        local wall = global.axmatter.selfHealingWalls[entity.unit_number]
+        for _,renderSource in pairs(wall.renderSources) do
+            rendering.destroy(renderSource)
         end
+        global.axmatter.selfHealingWalls[entity.unit_number] = nil
     end
 end
