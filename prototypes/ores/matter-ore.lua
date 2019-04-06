@@ -20,9 +20,9 @@ data:extend({
         tree_removal_max_distance = 32 * 32,
         minable = {
             mining_particle = "stone-particle",
-            mining_time = 2.75,
+            mining_time = 1.75,
             result = "ax-matter-ore",
-            fluid_amount = 55,
+            fluid_amount = 20,
             required_fluid = "ax-liquid-matter"
         },
         collision_box = {{-0.1, -0.1}, {0.1, 0.1}},

@@ -83,7 +83,7 @@ data:extend({
         category = "crafting-with-fluid",
         energy_required = 5,
         ingredients = {
-            {"ax-matter-stone-brick", 20},
+            {"ax-matter-wall", 1},
             {type = "fluid", name = "ax-liquid-matter", amount = 50}
         },
         result = "ax-matter-self-healing-wall"

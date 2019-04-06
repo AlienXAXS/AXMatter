@@ -15,7 +15,7 @@ function SelfHealingWalls.on_nth_tick()
                 entity.health = newHealth
                 entity.surface.create_entity{
                     name = "ax-flying-text",
-                    position = entity.position,
+                    position = {x = entity.position.x-0.10, y=entity.position.y-0.25},
                     text = "+",
                     color = {r = 1, g = 0, b = 0}
                 }

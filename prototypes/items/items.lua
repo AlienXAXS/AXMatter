@@ -136,7 +136,7 @@ data:extend({
     {
         type = "item",
         name = "ax-matter-stone-brick",
-        icon = "__aix_matter__/graphics/icons/matter-clay-brick.png",
+        icon = "__aix_matter__/graphics/icons/matter-stone-brick.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
         order = "s-a",
@@ -145,7 +145,7 @@ data:extend({
     {
         type = "item",
         name = "ax-matter-clay-brick",
-        icon = "__aix_matter__/graphics/icons/matter-stone-brick.png",
+        icon = "__aix_matter__/graphics/icons/matter-clay-brick.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
         order = "s-b",
@@ -239,6 +239,16 @@ data:extend({
     -------------------------------
     -- ENTITIES (BUILDINGS ETC)
     -------------------------------
+    {
+        type = "item",
+        name = "ax-matter-drill-mk1",
+        icon = "__aix_matter__/graphics/icons/matter-beacon.png",
+        icon_size = 32,
+        subgroup = "aix-matter-buildings",
+        order = "a",
+        place_result = "ax-matter-drill-mk1",
+        stack_size = 10
+    },
     {
         type = "item",
         name = "ax-matter-beacon",

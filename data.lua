@@ -106,6 +106,7 @@ require("prototypes.entities.matter-beacon")
 require("prototypes.entities.matter-assemblers")
 require("prototypes.entities.matter-stone-wall")
 require("prototypes.entities.matter-power")
+require("prototypes.entities.matter-drill")
 
 -- Items
 require("prototypes.items.items")
