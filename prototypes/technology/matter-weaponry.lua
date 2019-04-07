@@ -80,7 +80,7 @@ data:extend({
         name = "ax-matter-laser-rifles",
         icon = "__aix_matter__/graphics/technology/laser-rifle.png",
         icon_size = "256",
-        prerequisites = {"ax-matter-weaponry", "advanced-electronics"},
+        prerequisites = {"ax-matter-military-science-pack", "advanced-electronics"},
         effects = {
             {
                 type = "unlock-recipe",
