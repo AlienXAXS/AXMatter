@@ -242,11 +242,31 @@ data:extend({
     {
         type = "item",
         name = "ax-matter-drill-mk1",
-        icon = "__aix_matter__/graphics/icons/matter-beacon.png",
+        icon = "__aix_matter__/graphics/icons/matter-drill-mk1.png",
         icon_size = 32,
         subgroup = "aix-matter-buildings",
-        order = "a",
+        order = "x-a",
         place_result = "ax-matter-drill-mk1",
+        stack_size = 10
+    },
+    {
+        type = "item",
+        name = "ax-matter-drill-mk2",
+        icon = "__aix_matter__/graphics/icons/matter-drill-mk2.png",
+        icon_size = 32,
+        subgroup = "aix-matter-buildings",
+        order = "x-b",
+        place_result = "ax-matter-drill-mk2",
+        stack_size = 10
+    },
+    {
+        type = "item",
+        name = "ax-matter-drill-mk3",
+        icon = "__aix_matter__/graphics/icons/matter-drill-mk3.png",
+        icon_size = 32,
+        subgroup = "aix-matter-buildings",
+        order = "x-c",
+        place_result = "ax-matter-drill-mk3",
         stack_size = 10
     },
     {
@@ -265,7 +285,7 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-wall.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
-        order = "s-z",
+        order = "s-a",
         place_result = "ax-matter-wall",
         stack_size = 100
     },
@@ -275,7 +295,7 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-wall.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
-        order = "s-z",
+        order = "s-b",
         place_result = "ax-matter-self-healing-wall",
         stack_size = 100
     },

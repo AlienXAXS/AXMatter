@@ -85,6 +85,10 @@ data:extend({
         time_to_live = 30,
         speed = 0
     },
+    {
+        type = "ammo-category",
+        name = "laser-rifle"
+    },
 })
 
 -- Ores
@@ -111,6 +115,7 @@ require("prototypes.entities.matter-drill")
 -- Items
 require("prototypes.items.items")
 require("prototypes.items.science")
+require("prototypes.items.weapons")
 
 -- Recipies
 require("prototypes.recipe.oxygen-collector")
@@ -129,6 +134,7 @@ require("prototypes.recipe.matter-cable")
 require("prototypes.recipe.matter-assemblers")
 require("prototypes.recipe.matter-fluids")
 require("prototypes.recipe.matter-power")
+require("prototypes.recipe.matter-drills")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -146,3 +152,4 @@ require("prototypes.technology.matter-laser-turrets")
 require("prototypes.technology.matter-power-generation")
 require("prototypes.technology.matter-power-supply")
 require("prototypes.technology.matter-adv-power-supply")
+require("prototypes.technology.matter-drilling")
