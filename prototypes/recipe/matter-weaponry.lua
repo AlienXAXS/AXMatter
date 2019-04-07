@@ -95,7 +95,7 @@ data:extend({
         category = "crafting",
         energy_required = 5,
         ingredients = {
-            {"ax-matter-steel-plate", 2},
+            {"ax-matter-steel-plate", 10},
             {"battery", 4},
             {"advanced-circuit", 20},
             {"ax-matter-cable", 1}
