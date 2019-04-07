@@ -9,3 +9,7 @@ if (mods["Dectorio"] ~= nil and data.raw.technology["dect-advanced-walls"] ~= ni
         "dect-advanced-walls"
     }
 end
+
+if (data.raw.technology["stone-walls"] ~= nil) then
+    data.raw.technology["ax-matter-walls"].prerequisites = {"ax-matter-military-science-pack", "stone-walls"}
+end
