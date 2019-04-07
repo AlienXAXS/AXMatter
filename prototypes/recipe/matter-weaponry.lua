@@ -88,4 +88,18 @@ data:extend({
         },
         result = "ax-matter-self-healing-wall"
     },
+    {
+        type = "recipe",
+        name = "ax-matter-laser-rifle",
+        enabled = false,
+        category = "crafting",
+        energy_required = 5,
+        ingredients = {
+            {"ax-matter-steel-plate", 2},
+            {"battery", 4},
+            {"advanced-circuit", 20},
+            {"ax-matter-cable", 1}
+        },
+        result = "ax-matter-laser-rifle"
+    },
 })
