@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2019-04-08
+  Changes:
+    - [+] Added a Matter Laser Rifle and Cartridge. It shoots a beam of concentrated matter that damages anything along its path
+    - [+] Added Self Healing Walls
+    - [+] Added Matter Mining Drills (Mk1, Mk2 and Mk3 variants) - Thanks to Deadlock for the graphics
+    - [~] Matter Cable is now made from Matter Copper Plate
+    - [~] Renamed Matter Weaponry to Matter Bullets and Magazines as it's less confusing
+  Bugfixes:
+    - Fixed a bug with dynamic ore generation when the recipe ingredients table does not have named values
+    - Matter Infused Walls reasearch should now work with more mods (such as Bobs / Angels)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2019-04-04
   Changes:
