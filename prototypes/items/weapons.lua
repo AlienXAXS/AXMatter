@@ -22,7 +22,7 @@ data:extend({
     {
         type = "ammo",
         name = "ax-matter-laser-rifle-cartridge",
-        icon = "__base__/graphics/icons/railgun-ammo.png",
+        icon = "__aix_matter__/graphics/icons/laser-rifle-cartridge.png",
         icon_size = 32,
         flags = {"hidden"},
         ammo_type = {
@@ -40,13 +40,13 @@ data:extend({
                     type = "instant",
                     target_effects = {
                         type = "damage",
-                        damage = {amount = 25, type = "physical"}
+                        damage = {amount = 26, type = "physical"}
                     }
                 }
             }
         },
-        magazine_size = 4,
-        subgroup = "ammo",
+        magazine_size = 20,
+        subgroup = "aix-matter-weaponry",
         order = "c[railgun]",
         stack_size = 200
     },
@@ -60,8 +60,8 @@ data:extend({
         attack_parameters = {
             type = "projectile",
             ammo_category = "laser-rifle",
-            cooldown = 12,
-            movement_slow_down_factor = 0.4,
+            cooldown = 10,
+            movement_slow_down_factor = 0.7,
             projectile_creation_distance = 0.6,
             range = 25,
             sound = {

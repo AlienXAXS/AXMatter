@@ -102,4 +102,16 @@ data:extend({
         },
         result = "ax-matter-laser-rifle"
     },
+    {
+        type = "recipe",
+        name = "ax-matter-laser-rifle-cartridge",
+        enabled = false,
+        category = "crafting-with-fluid",
+        energy_required = 30,
+        ingredients = {
+            {"ax-matter-steel-plate", 4},
+            {type="fluid", name="ax-liquid-matter", amount=100}
+        },
+        results = {{type="item", name="ax-matter-laser-rifle-cartridge", amount=12}}
+    },
 })

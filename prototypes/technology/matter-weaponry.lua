@@ -75,4 +75,31 @@ data:extend({
         },
         order = "d-a-a"
     },
+    {
+        type = "technology",
+        name = "ax-matter-laser-rifles",
+        icon = "__aix_matter__/graphics/technology/laser-rifle.png",
+        icon_size = "256",
+        prerequisites = {"ax-matter-weaponry", "advanced-electronics"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "ax-matter-laser-rifle-cartridge"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "ax-matter-laser-rifle"
+            },
+        },
+        unit = {
+            count = 50,
+            ingredients = {
+                {"ax-matter-science-matter-infused-automation", 1},
+                {"ax-matter-science-matter-infused-logistic", 1},
+                {"ax-matter-science-matter-infused-military", 1},
+            },
+            time = 30
+        },
+        order = "d-a-a"
+    },
 })

@@ -139,7 +139,7 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-stone-brick.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
-        order = "s-a",
+        order = "r-b",
         stack_size = 100
     },
     {
@@ -148,7 +148,7 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-clay-brick.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
-        order = "s-b",
+        order = "r-a",
         stack_size = 100
     },
     -- CRACKING
@@ -292,7 +292,7 @@ data:extend({
     {
         type = "item",
         name = "ax-matter-self-healing-wall",
-        icon = "__aix_matter__/graphics/icons/matter-wall.png",
+        icon = "__aix_matter__/graphics/icons/matter-wall-self-healing.png",
         icon_size = 32,
         subgroup = "aix-matter-weaponry",
         order = "s-b",
