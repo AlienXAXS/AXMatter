@@ -1,8 +1,8 @@
 -- Sets the mining speed of a drill based off Factorio's vanilla Electric-Mining-Drill
 local drillSpeedMultipliers = {
-    mk1 = 1.5,
-    mk2 = 2.0,
-    mk3 = 2.5
+    mk1 = 2.5,
+    mk2 = 3.0,
+    mk3 = 3.75
 }
 
 data:extend({

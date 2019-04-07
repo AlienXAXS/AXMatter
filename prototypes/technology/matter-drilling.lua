@@ -26,7 +26,7 @@ data:extend({
         name = "ax-matter-drilling-mk2",
         icon = "__aix_matter__/graphics/technology/matter-drilling-mk2.png",
         icon_size = "64",
-        prerequisites = {"ax-matter-drilling-mk1", "speed-module-2"},
+        prerequisites = {"ax-matter-drilling-mk1", "speed-module-2", "ax-matter-chemical-testing"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -49,7 +49,7 @@ data:extend({
         name = "ax-matter-drilling-mk3",
         icon = "__aix_matter__/graphics/technology/matter-drilling-mk3.png",
         icon_size = "64",
-        prerequisites = {"ax-matter-drilling-mk2", "speed-module-3"},
+        prerequisites = {"ax-matter-drilling-mk2", "speed-module-3", "ax-matter-infused-production"},
         effects = {
             {
                 type = "unlock-recipe",
