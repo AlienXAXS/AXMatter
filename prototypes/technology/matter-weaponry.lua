@@ -56,7 +56,7 @@ data:extend({
         name = "ax-matter-self-healing-walls",
         icon = "__aix_matter__/graphics/technology/matter-self-healing-walls.png",
         icon_size = "128",
-        prerequisites = {"ax-matter-walls"},
+        prerequisites = {"ax-matter-walls", "ax-matter-infused-production"},
         effects = {
             {
                 type = "unlock-recipe",

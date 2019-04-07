@@ -5,7 +5,6 @@ data:extend({
         icon = "__aix_matter__/graphics/technology/matter-infused-production.png",
         icon_size = "128",
         prerequisites = {
-            "ax-matter-cracking",
             "ax-matter-chemical-testing",
             "production-science-pack"
         },

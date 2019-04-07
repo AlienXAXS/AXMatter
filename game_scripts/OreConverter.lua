@@ -163,12 +163,6 @@ function OreConverter.Cleanup(entity)
     for k = #global.axmatter.oreConverters, 1, -1 do
         local x = global.axmatter.oreConverters[k]
         if (x.entity == entity) then
-            x.entity.surface.create_entity{
-                name = "flying-text",
-                position = x.entity.position,
-                text = "Ore Converted",
-                color = {r = 0.5, g = 1, b = 1}
-            }
             for _, renderData in pairs(x.renderdata) do
                 rendering.destroy(renderData)
                 table.remove(global.axmatter.oreConverters, k)

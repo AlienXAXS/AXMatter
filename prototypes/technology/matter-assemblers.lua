@@ -28,7 +28,6 @@ data:extend({
         icon_size = "128",
         prerequisites = {
             "automation-3",
-            "ax-matter-glowing-fluids",
             "ax-matter-infused-production"
         },
         effects = {
