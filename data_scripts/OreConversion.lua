@@ -122,7 +122,7 @@ local function CreateRecipies(fromItem, ore, oreResult)
         {
             type = "recipe",
             name = newItemName,
-            ingredients = {{fromItem.name, 1}, {"ax-cracked-matter-9000", 1}},
+            ingredients = {{fromItem.name, 1}},
             icons = generatedIcon,
             enabled = false,
             icon_size = 32,
