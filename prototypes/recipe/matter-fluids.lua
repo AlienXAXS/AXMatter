@@ -5,8 +5,8 @@ data:extend({
         category = "ax-matter-combiner",
         energy_required = 2.5,
         ingredients = {
-            {type = "fluid", name = "water", amount = 270},
-            {type = "fluid", name = "ax-liquid-matter", amount = 30}
+            {type = "fluid", name = "water", amount = 290},
+            {type = "fluid", name = "ax-liquid-matter", amount = 10}
         },
         results = {
             {
