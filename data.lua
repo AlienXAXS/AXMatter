@@ -25,6 +25,12 @@ data:extend({
     },
     {
         type = "item-subgroup",
+        name = "aix-matter-logistic",
+        group = "aix-matter-group",
+        order = "b-c"
+    },
+    {
+        type = "item-subgroup",
         name = "aix-matter-products",
         group = "aix-matter-group",
         order = "c"
@@ -85,10 +91,7 @@ data:extend({
         time_to_live = 30,
         speed = 0
     },
-    {
-        type = "ammo-category",
-        name = "laser-rifle"
-    },
+    {type = "ammo-category", name = "laser-rifle"},
 })
 
 -- Ores
@@ -111,6 +114,7 @@ require("prototypes.entities.matter-assemblers")
 require("prototypes.entities.matter-stone-wall")
 require("prototypes.entities.matter-power")
 require("prototypes.entities.matter-drill")
+require("prototypes.entities.matter-logistics")
 
 -- Items
 require("prototypes.items.items")

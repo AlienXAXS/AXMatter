@@ -241,6 +241,36 @@ data:extend({
     -------------------------------
     {
         type = "item",
+        name = "ax-matter-transport-belt",
+        icon = "__aix_matter__/graphics/icons/matter-transport-belt.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-a",
+        place_result = "ax-matter-transport-belt",
+        stack_size = 10
+    },
+    {
+        type = "item",
+        name = "ax-matter-underground-belt",
+        icon = "__aix_matter__/graphics/icons/matter-underground-belt.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-b",
+        place_result = "ax-matter-underground-belt",
+        stack_size = 10
+    },
+    {
+        type = "item",
+        name = "ax-matter-splitter",
+        icon = "__aix_matter__/graphics/icons/matter-splitter.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-c",
+        place_result = "ax-matter-splitter",
+        stack_size = 10
+    },
+    {
+        type = "item",
         name = "ax-matter-drill-mk1",
         icon = "__aix_matter__/graphics/icons/matter-drill-mk1.png",
         icon_size = 32,
