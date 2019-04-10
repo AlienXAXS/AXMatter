@@ -55,7 +55,7 @@ data:extend({
         energy_required = 5,
         ingredients = {
             {"stone", 10},
-            {type = "fluid", name = "ax-liquid-matter", amount = 150}
+            {type = "fluid", name = "ax-liquid-matter", amount = 25}
         },
         result = "ax-matter-clay-brick"
     },
