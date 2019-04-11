@@ -51,6 +51,7 @@ matterWall.pictures.gate_connection_patch.sheets[1].hr_version.filename = gfxPat
 -- Self healing walls
 local selfHealingWall = util.table.deepcopy(matterWall)
 selfHealingWall.name = "ax-matter-self-healing-wall"
+selfHealingWall.minable.result = selfHealingWall.name
 selfHealingWall.icon = "__aix_matter__/graphics/icons/matter-wall-self-healing.png"
 
 selfHealingWall.pictures.single.layers[1].filename = gfxPath .. "/self-repair/wall-single.png"
