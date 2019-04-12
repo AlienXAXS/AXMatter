@@ -13,6 +13,18 @@ data:extend({
     },
     {
         type = "fluid",
+        name = "ax-pure-liquid-matter",
+        default_temperature = 25,
+        heat_capacity = "0.1KJ",
+        base_color = {r = 1, g = 1, b = 1},
+        flow_color = {r = 0.45, g = 0, b = 1},
+        max_temperature = 100,
+        icon = "__aix_matter__/graphics/icons/pure-liquid-matter.png",
+        icon_size = 32,
+        order = "a[fluid]-b[liquid-matter]"
+    },
+    {
+        type = "fluid",
         name = "ax-liquid-matter-steam",
         default_temperature = 15,
         max_temperature = 1000,

@@ -145,6 +145,36 @@ data:extend({
     },
 
     ------------------------------
+    --  MATTER INFUSED UTILITY SCIENCE PACK
+    ------------------------------
+    {
+        type = "recipe",
+        name = "ax-powder-utility",
+        enabled = false,
+        energy_required = 10,
+        category="crafting-with-fluid",
+        ingredients = {
+            {"utility-science-pack", 1},
+            {"ax-matter-magazine", 1},
+            {type="fluid", name="ax-pure-liquid-matter", amount=35}
+        },
+        result = "ax-powder-utility"
+    },
+    {
+        type = "recipe",
+        name = "ax-matter-science-matter-infused-utility",
+        enabled = false,
+        energy_required = 2,
+        category = "crafting-with-fluid",
+        ingredients = {
+            {"ax-science-flask", 1},
+            {"ax-powder-utility", 1},
+            {type = "fluid", name = "water", amount = 50}
+        },
+        result = "ax-matter-science-matter-infused-utility"
+    },
+
+    ------------------------------
     --  MATTER INFUSED SPACE SCIENCE PACK
     ------------------------------
     {
@@ -152,13 +182,10 @@ data:extend({
         name = "ax-powder-space",
         enabled = false,
         energy_required = 10,
+        category="crafting-with-fluid",
         ingredients = {
             {"space-science-pack", 1},
-            {"ax-matter-science-matter-infused-automation", 4},
-            {"ax-matter-science-matter-infused-logistic", 4},
-            {"ax-matter-science-matter-infused-military", 4},
-            {"ax-matter-science-matter-infused-chemical", 4},
-            {"ax-matter-science-matter-infused-production", 4}
+            {type="fluid", name="ax-pure-liquid-matter", amount=25}
         },
         result = "ax-powder-space"
     },

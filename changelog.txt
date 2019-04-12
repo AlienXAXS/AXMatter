@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2019-04-11
+  Changes:
+    - [+] Added Matter Belts, Splitters and Undergrounds
+    - [+] Added Pure Liquid Matter, which is created with Oxygen Collectors and Air Filters
+    - [+] Added Utility and Space Matter Science Packs
+    - [+] Added Infinite Inserter Capacity Bonus Research
+    - [+] Added Infinite Stack Inserter Capacity Bonus Research
+    - [+] Added Infinite Breaking Force Research
+    - [+] Added Infinite Science Lab Speed Research
+    - [+] Added Infinite Worker Robot Cargo Size Research
+    - [~] Renamed Liquid Matter Mixed With Water to Diliuted Liquid Matter
+    - [~] Diluted Liquid Matter needs less Liquid Matter now to produce (was 30, now 10)
+    - [~] Clay Bricks no longer need 150 Liquid Matter to make (now 25)
+    - [~] Ore Crushing no longer needs Cracked Matter 9000, but does need Water
+    - [~] Matter Drills Mk1, Mk2 and Mk3 are now 3x, 4x and 5x faster than Factorio's Vanilla drill
+  Bugfixes:
+    - Picking up Self healing Walls will now give you back a Self Healing Wall
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 2019-04-08
   Bugfixes:
@@ -16,7 +35,7 @@ Date: 2019-04-07
   Bugfixes:
     - Fixed a bug with dynamic ore generation when the recipe ingredients table does not have named values
     - Matter Infused Walls reasearch should now work with more mods (such as Bobs / Angels)
-    - Liquid Matter deposists now gain a large boost when Infiniate ores are turned on in Mod Settings
+    - Liquid Matter deposists now gain a large boost when Infinite ores are turned on in Mod Settings
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
 Date: 2019-04-04

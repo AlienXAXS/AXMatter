@@ -13,7 +13,7 @@ data:extend({
     },
     {
         type = "fluid",
-        name = "ax-pure-oxygen",
+        name = "ax-oxygen",
         default_temperature = 25,
         heat_capacity = "0.1KJ",
         base_color = {r = 0.5, g = 0.5, b = 0.5},

@@ -70,6 +70,16 @@ data:extend({
         stack_size = 200,
         wire_count = 1
     },
+    {
+        type = "item",
+        name = "ax-air-filter",
+        icon = "__aix_matter__/graphics/icons/air-filter.png",
+        icon_size = 32,
+        subgroup = "aix-matter-products",
+        order = "b",
+        stack_size = 200,
+        wire_count = 1
+    },
     -------------------------------
     -- WEAPONRY
     -------------------------------
@@ -196,6 +206,15 @@ data:extend({
         icon_size = 32,
         subgroup = "aix-matter-products",
         order = "f",
+        stack_size = 100
+    },
+    {
+        type = "item",
+        name = "ax-matter-gear-wheel",
+        icon = "__aix_matter__/graphics/icons/matter-gear-wheel.png",
+        icon_size = 32,
+        subgroup = "aix-matter-products",
+        order = "f-b",
         stack_size = 100
     },
     -- COPPER

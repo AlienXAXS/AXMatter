@@ -41,6 +41,7 @@ data:extend({
             {type = "unlock-recipe", recipe = "matter-solid-fuel"},
             {type = "unlock-recipe", recipe = "ax-matter-cable"},
             {type = "unlock-recipe", recipe = "ax-matter-stick"},
+            {type = "unlock-recipe", recipe = "ax-matter-gear-wheel"},
         },
         unit = {
             count = 100,

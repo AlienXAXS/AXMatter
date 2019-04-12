@@ -23,7 +23,6 @@ data:extend({
         ingredients = {{"ax-matter-covered-iron-plate", 1}},
         result = "ax-matter-iron-plate"
     },
-
     {
         type = "recipe",
         name = "ax-matter-stick",
@@ -31,6 +30,22 @@ data:extend({
         energy_required = 2.5,
         ingredients = {{"ax-matter-iron-plate", 1},},
         results = {{"ax-matter-stick", 2}}
+    },
+    {
+        type = "recipe",
+        name = "ax-matter-gear-wheel",
+        enabled = false,
+        energy_required = 2.5,
+        ingredients = {{"ax-matter-iron-plate", 1},},
+        results = {{"ax-matter-gear-wheel", 2}}
+    },
+    {
+        type = "recipe",
+        name = "ax-air-filter",
+        enabled = false,
+        energy_required = 2.5,
+        ingredients = {{"ax-matter-iron-plate", 1},{"coal", 4}},
+        results = {{"ax-air-filter", 1}}
     },
 
     -- COPPER

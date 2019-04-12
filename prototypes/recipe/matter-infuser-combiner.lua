@@ -10,9 +10,9 @@ data:extend({
         enabled = false,
         energy_required = 20,
         ingredients = {
-            {"steel-plate", 16},
-            {"iron-gear-wheel", 12},
-            {"electronic-circuit", 8},
+            {"ax-matter-iron-plate", 16},
+            {"steel-plate", 12},
+            {"advanced-circuit", 8},
             {"pipe", 12},
         },
         result = "ax-matter-infuser"

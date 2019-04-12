@@ -16,7 +16,8 @@ data:extend({
             ingredients = {
                 {"ax-matter-science-matter-infused-automation", 2},
                 {"ax-matter-science-matter-infused-logistic", 2},
-                {"ax-matter-science-matter-infused-chemical", 2}
+                {"ax-matter-science-matter-infused-chemical", 2},
+                {"ax-matter-science-matter-infused-production", 1},
             },
             time = 30
         },
