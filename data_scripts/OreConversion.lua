@@ -122,7 +122,8 @@ local function CreateRecipies(fromItem, ore, oreResult)
         {
             type = "recipe",
             name = newItemName,
-            ingredients = {{fromItem.name, 1}},
+            category="crafting-with-fluid",
+            ingredients = {{fromItem.name, 1},{type="fluid", name="water", amount=20}},
             icons = generatedIcon,
             enabled = false,
             icon_size = 32,
