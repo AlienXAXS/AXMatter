@@ -7,7 +7,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "a",
         place_result = "ax-matter-boiler-mk1",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -17,7 +17,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "a",
         place_result = "ax-matter-power-generator-mk1",
-        stack_size = 10
+        stack_size = 50
     },
 
     --------------------------------
@@ -31,7 +31,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "b",
         place_result = "ax-matter-medium-electric-pole",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -48,7 +48,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "b-a",
         place_result = "ax-matter-medium-extended-electric-pole",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -58,7 +58,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "c",
         place_result = "ax-matter-big-electric-pole",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -75,7 +75,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "c-a",
         place_result = "ax-matter-big-extended-electric-pole",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -85,7 +85,7 @@ data:extend({
         subgroup = "aix-matter-power",
         order = "d",
         place_result = "ax-matter-substation",
-        stack_size = 10
+        stack_size = 50
     },
 })
 

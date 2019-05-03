@@ -266,7 +266,7 @@ data:extend({
         subgroup = "aix-matter-logistic",
         order = "a-a",
         place_result = "ax-matter-transport-belt",
-        stack_size = 10
+        stack_size = 100
     },
     {
         type = "item",
@@ -276,7 +276,7 @@ data:extend({
         subgroup = "aix-matter-logistic",
         order = "a-b",
         place_result = "ax-matter-underground-belt",
-        stack_size = 10
+        stack_size = 100
     },
     {
         type = "item",
@@ -286,7 +286,7 @@ data:extend({
         subgroup = "aix-matter-logistic",
         order = "a-c",
         place_result = "ax-matter-splitter",
-        stack_size = 10
+        stack_size = 100
     },
     {
         type = "item",
@@ -296,7 +296,7 @@ data:extend({
         subgroup = "aix-matter-buildings",
         order = "x-a",
         place_result = "ax-matter-drill-mk1",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -306,7 +306,7 @@ data:extend({
         subgroup = "aix-matter-buildings",
         order = "x-b",
         place_result = "ax-matter-drill-mk2",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
@@ -316,7 +316,7 @@ data:extend({
         subgroup = "aix-matter-buildings",
         order = "x-c",
         place_result = "ax-matter-drill-mk3",
-        stack_size = 10
+        stack_size = 50
     },
     {
         type = "item",
