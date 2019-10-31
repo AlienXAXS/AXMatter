@@ -1,9 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2019-10-31
+  Bugfixes:
+    - [~] Fixed that you were unable to complete the research tree (Thanks IlK7)
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2019-08-30
   Bugfixes:
     - [~] Fixed AiX Matter not loading due to an animation set error in the latest factorio build
-	- [~] Fixed AiX Matter not loading with custom style sheets that did not have ores with 8 frames (Krastorio tested)
+    - [~] Fixed AiX Matter not loading with custom style sheets that did not have ores with 8 frames (Krastorio tested)
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 2019-07-05
