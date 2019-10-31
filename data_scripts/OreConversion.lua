@@ -304,6 +304,11 @@ local function ProcessOres()
         -- Skip all ores that have multiple results
         if (ore.minable.results) then if (#ore.minable.results > 1) then skipOre = true end end
 
+		-- skip all ores that do not have 8 frames, as our stages_effects wont apply correctly
+		if (ore.stages.sheet.frame_count) then
+			if ( ore.stages.sheet.frame_count ~= 8 ) then skipOre = true end
+		end
+
         local matterOreName = ore.name
         log("  > Creating new ore " .. matterOreName .. "!")
 

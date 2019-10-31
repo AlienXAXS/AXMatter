@@ -3,8 +3,35 @@ local transportBelt = util.table.deepcopy(data.raw["transport-belt"]["express-tr
 transportBelt.name = "ax-matter-transport-belt"
 transportBelt.minable.result = transportBelt.name
 transportBelt.icon = "__aix_matter__/graphics/icons/matter-transport-belt.png"
-transportBelt.animations.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png"
-transportBelt.animations.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png"
+
+--[[
+transportBelt.belt_animation_set = {
+	animation_set =
+	{
+		filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png",
+		priority = "extra-high",
+		width = 64,
+		height = 64,
+		frame_count = 16,
+		direction_count = 20,
+		hr_version =
+		{
+			filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png",
+			priority = "extra-high",
+			width = 128,
+			height = 128,
+			scale = 0.5,
+			frame_count = 16,
+			direction_count = 20
+		}
+	},
+}
+]]--
+
+--transportBelt.animations.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png"
+--transportBelt.animations.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png"
+
+
 transportBelt.belt_animation_set.animation_set.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png"
 transportBelt.belt_animation_set.animation_set.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png"
 transportBelt.speed = singleItemSpeed * 4

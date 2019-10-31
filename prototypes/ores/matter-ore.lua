@@ -1,5 +1,3 @@
-local oIndex = resource_autoplace.get_next_resource_index()
-
 data:extend({
     {
         type = "autoplace-control",
@@ -35,7 +33,6 @@ data:extend({
             has_starting_area_placement = true,
             random_spot_size_minimum = 2,
             random_spot_size_maximum = 4,
-            resource_index = resource_autoplace.get_next_resource_index() + 30,
             regular_rq_factor_multiplier = 1,
             starting_rq_factor_multiplier = 1.5
         },
