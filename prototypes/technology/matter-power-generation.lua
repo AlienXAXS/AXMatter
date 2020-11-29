@@ -22,6 +22,7 @@ data:extend({
                 type = "unlock-recipe",
                 recipe = "ax-matter-power-generator-mk1"
             },
+			{type = "unlock-recipe", recipe = "matter-infused-coal"},
         },
         unit = {
             count = 100,

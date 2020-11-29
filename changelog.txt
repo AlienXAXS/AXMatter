@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2020-11-28
+  Bugfixes:
+    - [~] Finally fixed that Matter Power Plants do not actually give more power than normal steam engines
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2020-11-25
+  Features:
+  - Now supported on v1.0
+  - [+] Added limited support for Space Exploration by Earendel
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2020-01-25
+  Features:
+  - Now supported on 0.18
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2019-10-31
   Bugfixes:

@@ -13,6 +13,7 @@ local function generateIcons(NewOreName, Ore)
 
     local oreIcon = {
         icon = matterOreIcon,
+		icon_size = 32,
         tint = {r = 0.5, g = 0.5, b = 0.5, a = 0.5},
         scale = 0.75,
         shift = {2, 2}
@@ -43,7 +44,8 @@ local function GenerateCrushedIcon(fromItem)
 
     return {
         {
-            icon = "__aix_matter__/graphics/icons/32x32_empty.png"
+            icon = "__aix_matter__/graphics/icons/32x32_empty.png",
+			icon_size = 32
         },
         {icon = icon, scale = 0.35, shift = {2, 2}},
         {icon = icon, scale = 0.35, shift = {4, 2}},

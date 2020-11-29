@@ -41,7 +41,8 @@ data:extend({
                 icon = "__aix_matter__/graphics/icons/matter-medium-electric-pole.png"
             },
             {
-                icon = "__aix_matter__/graphics/icons/corner_plus.png"
+                icon = "__aix_matter__/graphics/icons/corner_plus.png",
+		icon_size = 32
             },
         },
         icon_size = 32,
@@ -68,7 +69,8 @@ data:extend({
                 icon = "__aix_matter__/graphics/icons/matter-big-electric-pole.png"
             },
             {
-                icon = "__aix_matter__/graphics/icons/corner_plus.png"
+                icon = "__aix_matter__/graphics/icons/corner_plus.png",
+		icon_size = 32
             },
         },
         icon_size = 32,

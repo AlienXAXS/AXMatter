@@ -7,7 +7,8 @@ data:extend({
         prerequisites = {
             "ax-matter-glowing-fluids",
             "chemical-science-pack",
-            "oil-processing"
+            "oil-processing",
+			"ax-matter-power-generation"
         },
         effects = {
             {

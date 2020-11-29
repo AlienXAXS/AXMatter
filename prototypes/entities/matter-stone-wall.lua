@@ -3,6 +3,7 @@ local matterWall = util.table.deepcopy(data.raw.wall["stone-wall"])
 
 matterWall.name = "ax-matter-wall"
 matterWall.icon = "__aix_matter__/graphics/icons/matter-wall.png"
+matterWall.icon_size = 32
 matterWall.max_health = 500
 matterWall.minable.result = matterWall.name
 
@@ -53,6 +54,7 @@ local selfHealingWall = util.table.deepcopy(matterWall)
 selfHealingWall.name = "ax-matter-self-healing-wall"
 selfHealingWall.minable.result = selfHealingWall.name
 selfHealingWall.icon = "__aix_matter__/graphics/icons/matter-wall-self-healing.png"
+selfHealingWall.icon_size = 32
 
 selfHealingWall.pictures.single.layers[1].filename = gfxPath .. "/self-repair/wall-single.png"
 selfHealingWall.pictures.single.layers[1].hr_version.filename = gfxPath .. "/self-repair/hr-wall-single.png"

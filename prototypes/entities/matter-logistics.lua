@@ -3,6 +3,7 @@ local transportBelt = util.table.deepcopy(data.raw["transport-belt"]["express-tr
 transportBelt.name = "ax-matter-transport-belt"
 transportBelt.minable.result = transportBelt.name
 transportBelt.icon = "__aix_matter__/graphics/icons/matter-transport-belt.png"
+transportBelt.icon_size = 32
 
 --[[
 transportBelt.belt_animation_set = {
@@ -40,6 +41,7 @@ local undergroundBelt = util.table.deepcopy(data.raw["underground-belt"]["expres
 undergroundBelt.name = "ax-matter-underground-belt"
 undergroundBelt.minable.result = undergroundBelt.name
 undergroundBelt.icon = "__aix_matter__/graphics/icons/matter-underground-belt.png"
+undergroundBelt.icon_size = 32
 undergroundBelt.structure.direction_in.sheet.filename = "__aix_matter__/graphics/entity/matter-belt/underground-belt/underground-belt-structure.png"
 undergroundBelt.structure.direction_in.sheet.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/underground-belt/hr-underground-belt-structure.png"
 undergroundBelt.structure.direction_out.sheet.filename = "__aix_matter__/graphics/entity/matter-belt/underground-belt/underground-belt-structure.png"
@@ -56,6 +58,7 @@ local splitter = util.table.deepcopy(data.raw["splitter"]["express-splitter"])
 splitter.name = "ax-matter-splitter"
 splitter.minable.result = splitter.name
 splitter.icon = "__aix_matter__/graphics/icons/matter-splitter.png"
+splitter.icon_size = 32
 splitter.speed = singleItemSpeed * 4
 splitter.structure.north.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/splitter-north.png"
 splitter.structure.north.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/hr-splitter-north.png"

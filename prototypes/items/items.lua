@@ -1,4 +1,5 @@
 require("power")
+require("fuel")
 
 data:extend({
     ------------------------------
@@ -322,7 +323,7 @@ data:extend({
         type = "item",
         name = "ax-matter-beacon",
         icon = "__aix_matter__/graphics/icons/matter-beacon.png",
-        icon_size = 32,
+		icon_size = 64, icon_mipmaps = 4,
         subgroup = "aix-matter-buildings",
         order = "a",
         place_result = "ax-matter-beacon",

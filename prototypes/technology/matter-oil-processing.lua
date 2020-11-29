@@ -17,7 +17,8 @@ data:extend({
             {
                 type = "unlock-recipe",
                 recipe = "ax-matter-light-oil-cracking"
-            }
+            },
+			{type = "unlock-recipe", recipe = "matter-solid-fuel"},
         },
         unit = {
             count = 100,

@@ -161,7 +161,11 @@ require("prototypes.technology.matter-adv-power-supply")
 require("prototypes.technology.matter-drilling")
 require("prototypes.technology.matter-oil-processing")
 require("prototypes.technology.pure-liquid-matter")
-require("prototypes.technology.matter-inf-research")
+
+if (mods["space-exploration"] == nil ) then
+	require("prototypes.technology.matter-inf-research")
+end
+
 require("prototypes.technology.matter-infused-utility")
 require("prototypes.technology.matter-logistics")
 require("prototypes.technology.matter-infused-space")

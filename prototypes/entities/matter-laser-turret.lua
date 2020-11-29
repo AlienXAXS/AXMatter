@@ -12,6 +12,7 @@ newBeamLaser.damage_interval = 13.5
 -- Set new stuff for our new turret
 newLaserTurret.name = "ax-matter-laser-turret"
 newLaserTurret.icon = "__aix_matter__/graphics/icons/matter-laser-turret.png"
+newLaserTurret.icon_size = 32
 newLaserTurret.max_health = 1250
 newLaserTurret.energy_source.drain = "28kW"
 

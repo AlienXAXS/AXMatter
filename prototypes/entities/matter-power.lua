@@ -4,10 +4,13 @@
 local boilerMk1 = util.table.deepcopy(data.raw.boiler["boiler"])
 boilerMk1.name = "ax-matter-boiler-mk1"
 boilerMk1.icon = "__aix_matter__/graphics/icons/matter-boiler-mk1.png"
+boilerMk1.icon_size = 32
 boilerMk1.max_health = 300
+boilerMk1.target_temperature = 220
 boilerMk1.fluid_box.filter = "ax-liquid-matter-mixed-water"
 boilerMk1.output_fluid_box.filter = "ax-liquid-matter-steam"
 boilerMk1.minable.result = boilerMk1.name
+boilerMk1.energy_consumption = "2.6MW"
 
 boilerMk1.energy_source.effectivity = 1
 boilerMk1.energy_source.smoke[1].name = "ax-power-smoke"
@@ -43,10 +46,12 @@ boilerMk1.fire.west.hr_version.filename = "__aix_matter__/graphics/entity/matter
 local matterPowerGeneratorMk1 = util.table.deepcopy(data.raw.generator["steam-engine"])
 matterPowerGeneratorMk1.name = "ax-matter-power-generator-mk1"
 matterPowerGeneratorMk1.icon = "__aix_matter__/graphics/icons/matter-power-generator-mk1.png"
+matterPowerGeneratorMk1.icon_size = 32
 matterPowerGeneratorMk1.max_health = 500
+matterPowerGeneratorMk1.maximum_temperature = 220
 matterPowerGeneratorMk1.minable.result = matterPowerGeneratorMk1.name
 matterPowerGeneratorMk1.fluid_box.filter = "ax-liquid-matter-steam"
-matterPowerGeneratorMk1.effectivity = 2.5
+matterPowerGeneratorMk1.effectivity = 1
 matterPowerGeneratorMk1.horizontal_animation.layers[1].filename = "__aix_matter__/graphics/entity/matter-power-generator-mk1/steam-engine-H.png"
 matterPowerGeneratorMk1.horizontal_animation.layers[1].hr_version.filename = "__aix_matter__/graphics/entity/matter-power-generator-mk1/hr-steam-engine-H.png"
 matterPowerGeneratorMk1.vertical_animation.layers[1].filename = "__aix_matter__/graphics/entity/matter-power-generator-mk1/steam-engine-V.png"
@@ -60,6 +65,7 @@ local matterMedElecPole = util.table.deepcopy(data.raw["electric-pole"]["medium-
 matterMedElecPole.name = "ax-matter-medium-electric-pole"
 matterMedElecPole.fast_replaceable_group = "electric-pole"
 matterMedElecPole.icon = "__aix_matter__/graphics/icons/matter-medium-electric-pole.png"
+matterMedElecPole.icon_size = 32
 matterMedElecPole.minable.result = matterMedElecPole.name
 matterMedElecPole.max_health = 300
 matterMedElecPole.supply_area_distance = 5
@@ -76,10 +82,12 @@ matterMedExtElecPole.minable.result = matterMedExtElecPole.name
 matterMedExtElecPole.icon = nil
 matterMedExtElecPole.icons = {
     {
-        icon = "__aix_matter__/graphics/icons/matter-medium-electric-pole.png"
+        icon = "__aix_matter__/graphics/icons/matter-medium-electric-pole.png",
+		icon_size = 32
     },
     {
-        icon = "__aix_matter__/graphics/icons/corner_plus.png"
+        icon = "__aix_matter__/graphics/icons/corner_plus.png",
+		icon_size = 32
     },
 }
 matterMedExtElecPole.max_health = 300
@@ -95,6 +103,7 @@ matterBigElecPole.name = "ax-matter-big-electric-pole"
 matterBigElecPole.fast_replaceable_group = "electric-pole"
 matterBigElecPole.minable.result = matterBigElecPole.name
 matterBigElecPole.icon = "__aix_matter__/graphics/icons/matter-big-electric-pole.png"
+matterBigElecPole.icon_size = 32
 matterBigElecPole.max_health = 250
 matterBigElecPole.supply_area_distance = 2.5
 matterBigElecPole.pictures.layers[1].filename = "__aix_matter__/graphics/entity/matter-big-electric-pole/big-electric-pole.png"
@@ -109,10 +118,12 @@ matterBigExtElecPole.minable.result = matterBigExtElecPole.name
 matterBigExtElecPole.icon = nil
 matterBigExtElecPole.icons = {
     {
-        icon = "__aix_matter__/graphics/icons/matter-big-electric-pole.png"
+        icon = "__aix_matter__/graphics/icons/matter-big-electric-pole.png",
+		icon_size = 32
     },
     {
-        icon = "__aix_matter__/graphics/icons/corner_plus.png"
+        icon = "__aix_matter__/graphics/icons/corner_plus.png",
+		icon_size = 32
     },
 }
 matterBigExtElecPole.max_health = 250
@@ -129,6 +140,7 @@ matterSubstation.name = "ax-matter-substation"
 matterSubstation.fast_replaceable_group = "electric-pole"
 matterSubstation.minable.result = matterSubstation.name
 matterSubstation.icon = "__aix_matter__/graphics/icons/matter-substation.png"
+matterSubstation.icon_size = 32
 matterSubstation.max_health = 300
 matterSubstation.supply_area_distance = 12
 matterSubstation.maximum_wire_distance = matterSubstation.supply_area_distance * 2
@@ -184,3 +196,21 @@ data.raw["electric-pole"]["big-electric-pole"].next_upgrade = matterBigElecPole.
 data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "electric-pole"
 data.raw["electric-pole"]["substation"].next_upgrade = matterSubstation.name
 data.raw["electric-pole"]["substation"].fast_replaceable_group = "electric-pole"
+
+local medPoleGroupName = data.raw["electric-pole"]["medium-electric-pole"].fast_replaceable_group or "electric-pole"
+local bigPoleGroupName = data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group or "big-electric-pole"
+local substationGroupName = data.raw["electric-pole"]["substation"].fast_replaceable_group or "substation"
+
+-- support for changing pole upgrade group names
+data.raw["electric-pole"]["ax-matter-medium-electric-pole"].fast_replaceable_group = medPoleGroupName
+data.raw["electric-pole"]["ax-matter-medium-extended-electric-pole"].fast_replaceable_group = medPoleGroupName
+data.raw["electric-pole"]["medium-electric-pole"].next_upgrade = "ax-matter-medium-electric-pole"
+
+data.raw["electric-pole"]["ax-matter-big-electric-pole"].fast_replaceable_group = bigPoleGroupName
+data.raw["electric-pole"]["ax-matter-big-extended-electric-pole"].fast_replaceable_group = bigPoleGroupName
+data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = bigPoleGroupName
+data.raw["electric-pole"]["big-electric-pole"].next_upgrade = "ax-matter-big-electric-pole"
+
+data.raw["electric-pole"]["ax-matter-substation"].fast_replaceable_group = substationGroupName
+data.raw["electric-pole"]["substation"].fast_replaceable_group = substationGroupName
+data.raw["electric-pole"]["substation"].next_upgrade = "ax-matter-substation"
