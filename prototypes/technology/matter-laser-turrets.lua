@@ -6,7 +6,7 @@ data:extend({
         icon_size = "128",
         prerequisites = {
             "ax-matter-military-science-pack",
-            "laser-turrets"
+            "laser-turret"
         },
         effects = {
             {

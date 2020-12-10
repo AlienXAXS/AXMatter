@@ -1,19 +1,43 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2020-12-10
+  Features:
+    - [+] Added Matter Underground belts of the following reach lengths: 12, 16, 20 tiles respectively
+    - [+] Added two new Logistical Matter Belts and Splitters with item speeds 75 and 90 items per second respectively
+    - [+] Added Matter Iron, Copper and Steel plate research before you can unlock Matter Logistic Research
+    - [+] Added AlienX's Enrichment Process (Much like Kovarex's Enrichment Process, just for Cracked Matter)
+  Changes:
+    - [~] Reduced the time it takes to smelt Matter Iron/Copper Plate from 7 seconds to 3 seconds
+    - [~] Reduced the time it takes to create Matter Covered Iron/Copper Plate from 2.5 to 2 seconds
+    - [~] Reduced the amount of Matter Ore required to create Matter Covered Iron/Copper/Steel Plate, but increased the amount of Liquid Matter needed in each
+    - [~] Reduced the time it takes to produce Matter Iron Sticks and Matter Gear Wheels from 2.5 to 1.5
+    - [~] Reduced the time it takes to smelt Matter Steel Plate from 7 seconds to 4 seconds
+    - [~] Moved some research tiers around to make room for the new Iron, Copper and Steel plate research mentioned above
+    - [~] Matter Transport belts no longer require Pure Liquid Matter, instead they require just Liquid Matter.  However the next tiers of belt require Pure Liquid Matter
+    - [~] Updated some technology icons to better reflect Factorio v1.1
+  Bugfixes:
+    - [+] Replaced Matter Solid Fuel with Matter Steel Plate in the Chemical Science Pack so Chemical Testing Technology can now be researched
+    - [+] Fixed up some of the icons so they work with Factorios icon mipmaps
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
 Date: 2020-11-28
-  Bugfixes:
+  Features:
+    - [+] Added Matter Coated Coal for better use with the modified Matter Boilers
+  Changes:
+    - [~] Changed some of the technology tree to better refelect the changes in Matter Power Generation
     - [~] Finally fixed that Matter Power Plants do not actually give more power than normal steam engines
+    - [~] Updated icon sizes and sprites for some entities such as the Matter Beacon
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.8
 Date: 2020-11-25
   Features:
-  - Now supported on v1.0
-  - [+] Added limited support for Space Exploration by Earendel
+    - Now supported on v1.0
+    - [+] Added limited support for Space Exploration by Earendel
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 2020-01-25
   Features:
-  - Now supported on 0.18
+    - Now supported on 0.18
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2019-10-31

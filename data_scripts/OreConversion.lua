@@ -1,4 +1,5 @@
 local matterOreIcon = "__aix_matter__/graphics/icons/matter-ore.png"
+local matterOreMipmapIcon = "__aix_matter__/graphics/icons/matter-ore-mipmaps.png"
 local technologyName = "ax-matter-ore-conversion"
 
 local function starts_with(str, start) return str:sub(1, #start) == start end
@@ -12,12 +13,18 @@ end
 local function generateIcons(NewOreName, Ore)
 
     local oreIcon = {
-        icon = matterOreIcon,
+        icon = "__aix_matter__/graphics/icons/liquid-matter.png",
 		icon_size = 32,
-        tint = {r = 0.5, g = 0.5, b = 0.5, a = 0.5},
+        tint = {r = 0.5, g = 0.5, b = 0.5, a = 1},
         scale = 0.75,
-        shift = {2, 2}
+        shift = {0, 0}
     }
+	
+	--if ( Ore.icon_mipmaps ~= nil ) then
+	--	oreIcon.icon = matterOreMipmapIcon
+	--	oreIcon.icon_mipmaps = Ore.icon_mipmaps
+	--	oreIcon.icon_size = Ore.icon_size
+	--end
 
     local retValue = {{icon = Ore.icon}}
 
@@ -42,15 +49,21 @@ local function GenerateCrushedIcon(fromItem)
         return nil
     end
 
-    return {
+    local result = {
         {
             icon = "__aix_matter__/graphics/icons/32x32_empty.png",
-			icon_size = 32
+			icon_size = icon.size
         },
-        {icon = icon, scale = 0.35, shift = {2, 2}},
-        {icon = icon, scale = 0.35, shift = {4, 2}},
-        {icon = icon, scale = 0.35, shift = {6, 2}}
+        {icon = icon, scale = 0.25, shift = {-5, 0}},
+		{icon = icon, scale = 0.25, shift = {0, 0}},
+		{icon = icon, scale = 0.25, shift = {5, 0}},
     }
+	
+	if ( fromItem.icon_mipmaps ~= nil ) then
+		result[1].icon = "__aix_matter__/graphics/icons/4-mipmap-empty.png"
+	end
+	
+	return result
 end
 
 local function GetVanillaOreName(ore)
@@ -115,12 +128,16 @@ local function CreateRecipies(fromItem, ore, oreResult)
 
     log("   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. (oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1]))
 
+	log("   > Generated Icon Output:")
+	log(serpent.block(generatedIcon))
+
     if (getItem(newItemName)) then return end
 
     log("   > Creating Crushed Item From " .. fromItem.name .. " using ore " .. originalOreName)
 
-    data:extend({
-        -- Recipe to craft item below from ore
+	
+
+    local resultRecipe = 
         {
             type = "recipe",
             name = newItemName,
@@ -128,11 +145,13 @@ local function CreateRecipies(fromItem, ore, oreResult)
             ingredients = {{fromItem.name, 1},{type="fluid", name="water", amount=20}},
             icons = generatedIcon,
             enabled = false,
-            icon_size = 32,
+			icon_mipmaps = 4,
+            icon_size = fromItem.icon_size,
             results = {{name = newItemName, probability = 1, amount = 3}}
-        },
+        }
+		
         -- Item itself
-        {
+    local resultItem = {
             type = "item",
             name = newItemName,
             localised_name = {
@@ -142,14 +161,14 @@ local function CreateRecipies(fromItem, ore, oreResult)
                 {"item-name." .. originalOreName}
             },
             icons = generatedIcon,
-            icon_size = 32,
+            icon_size = fromItem.icon_size,
             enabled = false,
             subgroup = "aix-matter-crushed-ores",
             order = "z[crushed-" .. fromItem.name .. "]",
             stack_size = 100
-        },
+        }
         -- Smelting
-        {
+    local resultSmelting = {
             type = "recipe",
             name = "ax-smelting-" .. newItemName,
             category = "smelting",
@@ -158,7 +177,17 @@ local function CreateRecipies(fromItem, ore, oreResult)
             ingredients = {{newItemName, 1}},
             result = oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1]
         }
-    })
+	
+	-- Update the icon size and mipmaps if it has any
+	if ( fromItem.icon_mipmaps ~= nil ) then
+		resultRecipe.icon_mipmaps = fromItem.icon_mipmaps
+		resultRecipe.icon_size = fromItem.icon_size
+		
+		resultItem.icon_mipmaps = fromItem.icon_mipmaps
+		resultItem.icon_size = fromItem.icon_size
+	end
+	
+	data:extend({resultRecipe, resultItem, resultSmelting})
 
     -- Unlock our recipies in our tech tree
     table.insert(
@@ -202,6 +231,13 @@ local function CreateNewMatterOreItem(NewOreName, Ore, oreResult)
         order = "z[" .. Ore.name .. "]",
         stack_size = 50
     }
+	
+	-- Update the icon size and mipmaps if it has any
+	if ( Ore.icon_mipmaps ~= nil ) then
+		result.icon_mipmaps = Ore.icon_mipmaps
+		result.icon_size = Ore.icon_size
+	end
+	
     data:extend({result})
 
     log("      > DATA EXTEND ITEM: " .. result.name .. " created")

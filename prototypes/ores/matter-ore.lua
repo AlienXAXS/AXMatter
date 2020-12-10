@@ -1,3 +1,5 @@
+local resource_autoplace = require("resource-autoplace")
+resource_autoplace.initialize_patch_set("ax-matter-ore", true)
 data:extend({
     {
         type = "autoplace-control",

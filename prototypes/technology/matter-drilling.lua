@@ -4,7 +4,7 @@ data:extend({
         name = "ax-matter-drilling-mk1",
         icon = "__aix_matter__/graphics/technology/matter-drilling-mk1.png",
         icon_size = "64",
-        prerequisites = {"ax-matter-glowing-fluids", "speed-module"},
+        prerequisites = {"ax-matter-logistic-science-pack", "speed-module"},
         effects = {
             {
                 type = "unlock-recipe",

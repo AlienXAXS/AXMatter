@@ -2,8 +2,8 @@ data:extend({
     {
         type = "technology",
         name = "ax-inserter-capacity-bonus",
+		icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/inserter-capacity.png",
-        icon_size = 128,
         prerequisites = {
             "inserter-capacity-bonus-7",
             "ax-matter-infused-space"
@@ -30,10 +30,10 @@ data:extend({
     {
         type = "technology",
         name = "ax-stack-inserter-capacity-bonus",
+		icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/inserter-capacity.png",
-        icon_size = 128,
         prerequisites = {
-            "inserter-capacity-bonus-7",
+            --"inserter-capacity-bonus-7",
             "ax-matter-infused-space"
         },
         effects = {
@@ -58,8 +58,8 @@ data:extend({
     {
         type = "technology",
         name = "worker-robots-storage-4",
+		icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/worker-robots-storage.png",
-        icon_size = 128,
         prerequisites = {
             "worker-robots-storage-3",
             "ax-matter-infused-space"
@@ -84,8 +84,8 @@ data:extend({
     {
         type = "technology",
         name = "braking-force-8",
+		icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/braking-force.png",
-        icon_size = 128,
         effects = {
             {type = "train-braking-force-bonus", modifier = 0.08}
         },
@@ -109,8 +109,8 @@ data:extend({
     {
         type = "technology",
         name = "research-speed-7",
+		icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/research-speed.png",
-        icon_size = 128,
         effects = {{type = "laboratory-speed", modifier = 0.1}},
         prerequisites = {"research-speed-6", "ax-matter-infused-space"},
         unit = {

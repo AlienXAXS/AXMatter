@@ -21,7 +21,7 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-infused-coal.png",
 		icon_size = 64, icon_mipmaps = 4,
         fuel_category = "chemical",
-        fuel_value = "9.825MJ",
+        fuel_value = "6.5MJ",
         fuel_acceleration_multiplier = 0.25,
         fuel_top_speed_multiplier = 0.15,
         subgroup = "aix-matter-products",

@@ -5,7 +5,6 @@ data:extend({
         icon = "__aix_matter__/graphics/technology/chemical-testing.png",
         icon_size = "128",
         prerequisites = {
-            "ax-matter-glowing-fluids",
             "chemical-science-pack",
             "oil-processing",
 			"ax-matter-power-generation"

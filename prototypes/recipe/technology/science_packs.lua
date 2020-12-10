@@ -96,7 +96,7 @@ data:extend({
         ingredients = {
             {"chemical-science-pack", 1},
             {"ax-matter-iron-plate", 4},
-            {"ax-matter-solid-fuel", 1}
+            {"ax-matter-steel-plate", 1}
         },
         result = "ax-powder-chemical"
     },

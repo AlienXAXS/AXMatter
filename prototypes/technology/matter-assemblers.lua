@@ -4,7 +4,7 @@ data:extend({
         name = "ax-matter-automation-2",
         icon = "__aix_matter__/graphics/technology/automation-2.png",
         icon_size = "128",
-        prerequisites = {"automation-2", "ax-matter-glowing-fluids"},
+        prerequisites = {"automation-2", "ax-matter-logistic-science-pack"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -27,7 +27,7 @@ data:extend({
         icon = "__aix_matter__/graphics/technology/automation-3.png",
         icon_size = "128",
         prerequisites = {
-            "automation-3",
+            "ax-matter-automation-2",
             "ax-matter-infused-production"
         },
         effects = {

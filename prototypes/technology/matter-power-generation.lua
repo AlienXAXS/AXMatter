@@ -4,7 +4,7 @@ data:extend({
         name = "ax-matter-power-generation",
         icon = "__aix_matter__/graphics/technology/matter-power-generation.png",
         icon_size = "128",
-        prerequisites = {"ax-matter-glowing-fluids"},
+        prerequisites = {"ax-matter-logistic-science-pack"},
         effects = {
             {
                 type = "unlock-recipe",

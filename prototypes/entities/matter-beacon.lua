@@ -3,7 +3,7 @@ local newBeacon = util.table.deepcopy(data.raw.beacon["beacon"])
 -- Set new stuff for our new turret
 newBeacon.name = "ax-matter-beacon"
 newBeacon.icon = "__aix_matter__/graphics/icons/matter-beacon.png"
-newBeacon.icon_size = 32
+--newBeacon.icon_size = 32
 newBeacon.max_health = 450
 newBeacon.energy_usage = "500kW"
 

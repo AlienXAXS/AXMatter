@@ -5,12 +5,12 @@ data:extend({
         type = "recipe",
         name = "ax-matter-covered-iron-plate",
         enabled = false,
-        energy_required = 2.5,
+        energy_required = 2,
         category = "crafting-with-fluid",
         ingredients = {
             {"iron-plate", 1},
-            {"ax-matter-ore", 6},
-            {type = "fluid", name = "ax-liquid-matter", amount = 24}
+            {"ax-matter-ore", 2},
+            {type = "fluid", name = "ax-liquid-matter", amount = 28}
         },
         result = "ax-matter-covered-iron-plate"
     },
@@ -19,7 +19,7 @@ data:extend({
         name = "ax-matter-iron-plate",
         category = "smelting",
         enabled = false,
-        energy_required = 7,
+        energy_required = 3,
         ingredients = {{"ax-matter-covered-iron-plate", 1}},
         result = "ax-matter-iron-plate"
     },
@@ -27,7 +27,7 @@ data:extend({
         type = "recipe",
         name = "ax-matter-stick",
         enabled = false,
-        energy_required = 2.5,
+        energy_required = 1.5,
         ingredients = {{"ax-matter-iron-plate", 1},},
         results = {{"ax-matter-stick", 2}}
     },
@@ -35,7 +35,7 @@ data:extend({
         type = "recipe",
         name = "ax-matter-gear-wheel",
         enabled = false,
-        energy_required = 2.5,
+        energy_required = 1.5,
         ingredients = {{"ax-matter-iron-plate", 1},},
         results = {{"ax-matter-gear-wheel", 2}}
     },
@@ -54,12 +54,12 @@ data:extend({
         type = "recipe",
         name = "ax-matter-covered-copper-plate",
         enabled = false,
-        energy_required = 2.5,
+        energy_required = 2,
         category = "crafting-with-fluid",
         ingredients = {
             {"copper-plate", 1},
-            {"ax-matter-ore", 6},
-            {type = "fluid", name = "ax-liquid-matter", amount = 24}
+            {"ax-matter-ore", 2},
+            {type = "fluid", name = "ax-liquid-matter", amount = 28}
         },
         result = "ax-matter-covered-copper-plate"
     },
@@ -68,7 +68,7 @@ data:extend({
         name = "ax-matter-copper-plate",
         category = "smelting",
         enabled = false,
-        energy_required = 7,
+        energy_required = 3,
         ingredients = {{"ax-matter-covered-copper-plate", 1}},
         result = "ax-matter-copper-plate"
     },
@@ -82,8 +82,8 @@ data:extend({
         category = "crafting-with-fluid",
         ingredients = {
             {"steel-plate", 1},
-            {"ax-matter-ore", 6},
-            {type = "fluid", name = "ax-liquid-matter", amount = 24}
+            {"ax-matter-ore", 2},
+            {type = "fluid", name = "ax-liquid-matter", amount = 28}
         },
         result = "ax-matter-covered-steel-plate"
     },
@@ -92,7 +92,7 @@ data:extend({
         name = "ax-matter-steel-plate",
         category = "smelting",
         enabled = false,
-        energy_required = 7,
+        energy_required = 4,
         ingredients = {{"ax-matter-covered-steel-plate", 1}},
         result = "ax-matter-steel-plate"
     }

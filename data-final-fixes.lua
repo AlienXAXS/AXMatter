@@ -55,5 +55,5 @@ if (mods["space-exploration"] ~= nil ) then
             }
 	
 	-- Removes space science as it's no longer required
-	data.raw.technology["ax-matter-infused-space"] = nil
+	--data.raw.technology["ax-matter-infused-space"] = nil
 end

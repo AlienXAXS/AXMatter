@@ -6,41 +6,6 @@ data:extend({
         icon_size = "128",
         prerequisites = {"ax-matter-weird-material", "oil-processing"},
         effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-science-matter-infused-logistic"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-powder-logistic"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-covered-iron-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-iron-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-covered-copper-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-copper-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-covered-steel-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "ax-matter-steel-plate"
-            },
-            {type = "unlock-recipe", recipe = "ax-matter-cable"},
-            {type = "unlock-recipe", recipe = "ax-matter-stick"},
-            {type = "unlock-recipe", recipe = "ax-matter-gear-wheel"},
         },
         unit = {
             count = 100,

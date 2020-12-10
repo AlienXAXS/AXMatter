@@ -28,7 +28,7 @@ data:extend({
         icon_size = "128",
         prerequisites = {
             "ax-matter-military-science-pack",
-            "passive-defense"
+            "stone-wall"
         },
         effects = {
             {

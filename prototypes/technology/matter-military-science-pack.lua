@@ -5,8 +5,7 @@ data:extend({
         icon = "__aix_matter__/graphics/technology/matter-weaponry.png",
         icon_size = "128",
         prerequisites = {
-            "ax-matter-weird-material",
-            "ax-matter-glowing-fluids",
+            "ax-matter-logistic-science-pack",
             "military-science-pack",
             "military",
             "military-2"

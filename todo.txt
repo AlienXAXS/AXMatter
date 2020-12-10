@@ -1,0 +1,11 @@
+* Pull down the amount of time it takes to smelt a matter iron plate.
+* * Check all smelting times for the above
+
+* Reduce the amount of matter ore requried from 6 -> 2 to make the matter plate
+
+* Slightly increase the amount of oil products you get from liquid matter oil processing.
+
+* Add more stuff to the Yellow Technology
+* * Needs ideas though, perhaps look at existing yellow technologies and create something better.
+* * * Perhaps some sort of Duplication Matter Fluid that when injected into certain mats like Green Circuits etc it will duplicate the result.
+* * * The result should inherit the products difficuilty though, for example Reds should be more complex perhaps in terms of requirements than Greens.

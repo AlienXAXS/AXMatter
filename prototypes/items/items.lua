@@ -265,18 +265,58 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-transport-belt.png",
         icon_size = 32,
         subgroup = "aix-matter-logistic",
-        order = "a-a",
+        order = "a-a-a",
         place_result = "ax-matter-transport-belt",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-transport-belt-2",
+        icon = "__aix_matter__/graphics/icons/matter-transport-belt-2.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-a-b",
+        place_result = "ax-matter-transport-belt-2",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-transport-belt-3",
+        icon = "__aix_matter__/graphics/icons/matter-transport-belt-3.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-a-c",
+        place_result = "ax-matter-transport-belt-3",
         stack_size = 100
     },
     {
         type = "item",
-        name = "ax-matter-underground-belt",
-        icon = "__aix_matter__/graphics/icons/matter-underground-belt.png",
+        name = "ax-matter-underground-belt-l12",
+        icon = "__aix_matter__/graphics/icons/matter-underground-belt-l12.png",
         icon_size = 32,
         subgroup = "aix-matter-logistic",
-        order = "a-b",
-        place_result = "ax-matter-underground-belt",
+        order = "a-b-a",
+        place_result = "ax-matter-underground-belt-l12",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-underground-belt-l16",
+        icon = "__aix_matter__/graphics/icons/matter-underground-belt-l16.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-b-b",
+        place_result = "ax-matter-underground-belt-l16",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-underground-belt-l20",
+        icon = "__aix_matter__/graphics/icons/matter-underground-belt-l20.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-b-c",
+        place_result = "ax-matter-underground-belt-l20",
         stack_size = 100
     },
     {
@@ -285,8 +325,28 @@ data:extend({
         icon = "__aix_matter__/graphics/icons/matter-splitter.png",
         icon_size = 32,
         subgroup = "aix-matter-logistic",
-        order = "a-c",
+        order = "a-c-a",
         place_result = "ax-matter-splitter",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-splitter-2",
+        icon = "__aix_matter__/graphics/icons/matter-splitter-2.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-c-b",
+        place_result = "ax-matter-splitter-2",
+        stack_size = 100
+    },
+	{
+        type = "item",
+        name = "ax-matter-splitter-3",
+        icon = "__aix_matter__/graphics/icons/matter-splitter-3.png",
+        icon_size = 32,
+        subgroup = "aix-matter-logistic",
+        order = "a-c-c",
+        place_result = "ax-matter-splitter-3",
         stack_size = 100
     },
     {
