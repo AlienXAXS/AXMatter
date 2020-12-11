@@ -2,6 +2,8 @@
 if not axmatter then axmatter = {} end
 if not axmatter.func then axmatter.func = {} end
 
+require("__LSlib__/LSlib")
+
 data:extend({
     {
         type = "item-group",
@@ -142,6 +144,7 @@ require("prototypes.recipe.matter-power")
 require("prototypes.recipe.matter-drills")
 require("prototypes.recipe.matter-oil-processing")
 require("prototypes.recipe.matter-logistics")
+require("prototypes.recipe.iridium-coin")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -163,6 +166,7 @@ require("prototypes.technology.matter-drilling")
 require("prototypes.technology.matter-oil-processing")
 require("prototypes.technology.pure-liquid-matter")
 require("prototypes.technology.matter-materials")
+require("prototypes.technology.matter-duplication")
 
 if (mods["space-exploration"] == nil ) then
 	require("prototypes.technology.matter-inf-research")

@@ -14,6 +14,19 @@ data:extend({
         order = "g[matter-ore]",
         stack_size = 50
     },
+    ------------------------------
+    -- NUCLEAR REACTOR WASTE MANAGEMENT (used-up-uranium-fuel-cell)
+    ------------------------------
+	{
+        type = "item",
+        name = "ax-iridium-coin",
+        icon = "__aix_matter__/graphics/icons/iridium-coin.png",
+        icon_size = 32,
+        subgroup = "aix-matter-products",
+        order = "a-b-c",
+        stack_size = 50
+    },
+	
     -------------------------------
     -- FUELS
     -------------------------------

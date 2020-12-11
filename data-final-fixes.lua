@@ -1,5 +1,8 @@
 require("data_scripts.OreConversion")
 
+-- Setup Matter Duplication
+require("data_scripts.MatterDuplication")
+
 -- If we have dectorio, change our walls to be a pre-req of that instead
 if (mods["Dectorio"] ~= nil and data.raw.technology["dect-advanced-walls"] ~= nil) then
     log("AIX Matter: Found Dectorio, changing ax-matter-walls")
@@ -20,6 +23,10 @@ if (mods["space-exploration"] ~= nil ) then
 	data.raw.recipe["ax-powder-space"].ingredients = {{replacementSciencePackName, 1},{type="fluid", name="ax-pure-liquid-matter", amount=25}}
 	data.raw.technology["ax-matter-infused-space"].prerequisites = {"ax-matter-infused-utility",replacementSciencePackName}
 	
+	-- Remove the pesky changes SpaceEx does to our tech requirements
+	LSlib.technology.removeIngredient("ax-matter-logistics-1", "chemical-science-pack")
+	LSlib.technology.removeIngredient("ax-matter-logistics-2", "chemical-science-pack")
+	LSlib.technology.removeIngredient("ax-matter-logistics-3", "chemical-science-pack")
 	
 	-- Fixes Space Ex messing with some research tiers	
 	-- Fix assemblers

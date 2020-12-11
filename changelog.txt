@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2020-12-11
+  Features:
+    - [+] Added Matter Duplication Technology - You can now duplicate most items that will accept Productivity Modules from their raw materials, however it is extremely expensive.
+    - [+] Added Iridium-192 which is a byproduct of the reaction within a Nuclear Reactor, this is used to create the Duplication Liquid
+  Changes:
+    - [~] Removed a load of log lines, your hard drive can thank me later.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 2020-12-10
   Features:

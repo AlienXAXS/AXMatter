@@ -23,7 +23,19 @@ data:extend({
         max_temperature = 100,
         icon = "__aix_matter__/graphics/icons/pure-liquid-matter.png",
         icon_size = 32,
-        order = "a[fluid]-b[liquid-matter]"
+        order = "a[fluid]-b[liquid-matter]-b"
+    },
+	{
+        type = "fluid",
+        name = "ax-duplication-liquid",
+        default_temperature = 25,
+        heat_capacity = "0.1KJ",
+        base_color = {r = 1, g = 1, b = 1},
+        flow_color = {r = 0.6, g = 0.5, b = 1},
+        max_temperature = 100,
+        icon = "__aix_matter__/graphics/icons/duplication-liquid.png",
+        icon_size = 32,
+        order = "a[fluid]-b[liquid-matter]-c"
     },
     {
         type = "fluid",

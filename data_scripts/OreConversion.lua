@@ -72,7 +72,7 @@ local function GetVanillaOreName(ore)
     if (starts_with(ore, "infinite-")) then
         oreName = ore:sub(10) -- Remove the infinate part
     end
-    log("    > GetVanillaOreName Generated ore name: " .. oreName)
+    --log("    > GetVanillaOreName Generated ore name: " .. oreName)
     return oreName
 end
 
@@ -82,7 +82,7 @@ local function GetCorrectOreName(ore)
     if (starts_with(ore, "infinite-")) then
         oreName = "ax-matter-" .. ore:sub(10) -- Remove the infinate part
     end
-    log("    > GetCorrectOreName Generated ore name: " .. oreName)
+    --log("    > GetCorrectOreName Generated ore name: " .. oreName)
     return oreName
 end
 
@@ -94,12 +94,12 @@ local function GetOreResult(ore)
     -- No idea if there is a better way of doing this or not, but it's all i've got.
     for _, x in pairs(data.raw.recipe) do
         if (x.category == "smelting" and x.result ~= nil) then
-            log("    > GetOreResult | Recipe category is smelting - checking for ingredients")
+            --log("    > GetOreResult | Recipe category is smelting - checking for ingredients")
             if (x.ingredients ~= nil and #x.ingredients == 1) then -- If we only have a single ingredient 
                 if (x.ingredients[1] ~= nil) then
                     for _, ingredient in pairs(x.ingredients) do
                         local ingName = ingredient.name or ingredient[1].name or ingredient[1]
-                        log("    > GetOreResult | Recipe ingredient is " .. ingName .. ", looking for match against " .. ore.name)
+                        --log("    > GetOreResult | Recipe ingredient is " .. ingName .. ", looking for match against " .. ore.name)
                         if (ingName == ore.name) then
                             foundResult = x.result
                             foundCount = foundCount + 1
@@ -110,12 +110,12 @@ local function GetOreResult(ore)
         end
     end
 
-    log("   > GetOreResult | Finished with " .. foundCount .. " found recipies (should be 1)")
+    --log("   > GetOreResult | Finished with " .. foundCount .. " found recipies (should be 1)")
 
     if (foundCount > 1 or foundResult == nil) then
         return nil
     else
-        log("   > GetOreResult | Finished with recipe result of " .. ore.name .. " -> " .. foundResult)
+        --log("   > GetOreResult | Finished with recipe result of " .. ore.name .. " -> " .. foundResult)
         return foundResult
     end
 end
@@ -126,14 +126,14 @@ local function CreateRecipies(fromItem, ore, oreResult)
     local originalOreName = GetVanillaOreName(ore.name)
     local newItemName = "crushed-" .. fromItem.name
 
-    log("   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. (oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1]))
+    --log("   > CreateRecipies: newItemName=" .. newItemName .. " using ore " .. ore.name .. " result is " .. (oreResult or ore.minable.result or ore.minable.results[1].name or ore.minable.results[1][1]))
 
-	log("   > Generated Icon Output:")
-	log(serpent.block(generatedIcon))
+	--log("   > Generated Icon Output:")
+	--log(serpent.block(generatedIcon))
 
     if (getItem(newItemName)) then return end
 
-    log("   > Creating Crushed Item From " .. fromItem.name .. " using ore " .. originalOreName)
+    --log("   > Creating Crushed Item From " .. fromItem.name .. " using ore " .. originalOreName)
 
 	
 
@@ -206,16 +206,16 @@ end
 local function CreateNewMatterOreItem(NewOreName, Ore, oreResult)
     local fixedItemName = GetCorrectOreName(NewOreName)
 
-    log("   > CreateNewMatterOreItem: " .. NewOreName .. " is now " .. fixedItemName .. ", checking for existing item.")
+    --log("   > CreateNewMatterOreItem: " .. NewOreName .. " is now " .. fixedItemName .. ", checking for existing item.")
 
     -- If the item already exists, use that
     local existingItem = getItem(fixedItemName)
     if (existingItem) then
-        log("   > Existing item found, will use that now (usually means infinite ore was detected)")
+        --log("   > Existing item found, will use that now (usually means infinite ore was detected)")
         return existingItem
     end
 
-    log("   > Existing item not found, generating it now based off name " .. fixedItemName)
+    --log("   > Existing item not found, generating it now based off name " .. fixedItemName)
     local result = {
         type = "item",
         name = fixedItemName,
@@ -240,7 +240,7 @@ local function CreateNewMatterOreItem(NewOreName, Ore, oreResult)
 	
     data:extend({result})
 
-    log("      > DATA EXTEND ITEM: " .. result.name .. " created")
+    --log("      > DATA EXTEND ITEM: " .. result.name .. " created")
 
     -- Create recipies for this new item
     CreateRecipies(result, Ore, oreResult)
@@ -294,11 +294,11 @@ local function CreateMatterOrePrototype(NewOreName, Ore, oreResult)
         }
 
         if (Ore.stages.sheet.hr_version.size) then
-            log("   > Ore used 'Size' of " .. Ore.stages.sheet.hr_version.size .. ". Replicating this to new ore stages")
+            --log("   > Ore used 'Size' of " .. Ore.stages.sheet.hr_version.size .. ". Replicating this to new ore stages")
             newOre.stages_effect.sheet.hr_version.size = Ore.stages.sheet.hr_version.size
         end
         if (Ore.stages.sheet.hr_version.height) then
-            log("   > Ore used 'width & height' of " .. Ore.stages.sheet.hr_version.width .. "x" .. Ore.stages.sheet.hr_version.height .. ". Replicating this to new ore stages")
+            --log("   > Ore used 'width & height' of " .. Ore.stages.sheet.hr_version.width .. "x" .. Ore.stages.sheet.hr_version.height .. ". Replicating this to new ore stages")
             newOre.stages_effect.sheet.hr_version.height = Ore.stages.sheet.hr_version.height
             newOre.stages_effect.sheet.hr_version.width = Ore.stages.sheet.hr_version.width
         end
@@ -316,7 +316,7 @@ local function CreateMatterOrePrototype(NewOreName, Ore, oreResult)
 
     data:extend({newOre})
 
-    log("      > DATA EXTEND ENTITY: " .. newOre.name .. " created")
+    --log("      > DATA EXTEND ENTITY: " .. newOre.name .. " created")
 
     return newOre, newMatterOreItemPrototype
 end
@@ -327,7 +327,7 @@ local function ProcessOres()
     for name, ore in pairs(util.table.deepcopy(data.raw["resource"])) do
         skipOre = false
 
-        log("Attempting to infuse Liquid Matter into " .. ore.name .. "!")
+        --log("Attempting to infuse Liquid Matter into " .. ore.name .. "!")
 
         -- Checks if it's a fluid
         if (ore.minable.results) then
@@ -348,7 +348,7 @@ local function ProcessOres()
 		end
 
         local matterOreName = ore.name
-        log("  > Creating new ore " .. matterOreName .. "!")
+        --log("  > Creating new ore " .. matterOreName .. "!")
 
         -- Get the result of this ore from the recipies table.
         if (not skipOre) then oreResult = GetOreResult(ore) end
@@ -356,10 +356,10 @@ local function ProcessOres()
         if (not starts_with(ore.name, "ax") and (not skipOre)) then -- Do not process our own ores, or ores that just wont work
             local generatedMatterOre, generatedMatterOreItem = CreateMatterOrePrototype(matterOreName, ore, oreResult)
         else
-            log("  > Ore is not supported, or is from self")
+            --log("  > Ore is not supported, or is from self")
         end
 
-        log("   >  Finished")
+        --log("   >  Finished")
     end
 end
 
