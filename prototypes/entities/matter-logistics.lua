@@ -1,3 +1,6 @@
+local hit_effects = require ("__base__.prototypes.entity.hit-effects")
+local sounds = require("__base__.prototypes.entity.sounds")
+
 local singleItemSpeed = data.raw["transport-belt"]["transport-belt"].speed -- 0.0020833
 local transportBelt = util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"])
 transportBelt.name = "ax-matter-transport-belt"
@@ -13,8 +16,8 @@ transportBelt2.name = "ax-matter-transport-belt-2"
 transportBelt2.minable.result = transportBelt2.name
 transportBelt2.icon = "__aix_matter__/graphics/icons/matter-transport-belt-2.png"
 transportBelt2.icon_size = 32
-transportBelt2.belt_animation_set.animation_set.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png"
-transportBelt2.belt_animation_set.animation_set.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png"
+transportBelt2.belt_animation_set.animation_set.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt-2.png"
+transportBelt2.belt_animation_set.animation_set.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt-2.png"
 transportBelt2.speed = singleItemSpeed * 5
 
 local transportBelt3 = util.table.deepcopy(data.raw["transport-belt"]["express-transport-belt"])
@@ -22,8 +25,8 @@ transportBelt3.name = "ax-matter-transport-belt-3"
 transportBelt3.minable.result = transportBelt3.name
 transportBelt3.icon = "__aix_matter__/graphics/icons/matter-transport-belt-3.png"
 transportBelt3.icon_size = 32
-transportBelt3.belt_animation_set.animation_set.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png"
-transportBelt3.belt_animation_set.animation_set.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png"
+transportBelt3.belt_animation_set.animation_set.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt-3.png"
+transportBelt3.belt_animation_set.animation_set.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt-3.png"
 transportBelt3.speed = singleItemSpeed * 6
 
 local undergroundBeltL12 = util.table.deepcopy(data.raw["underground-belt"]["express-underground-belt"])
@@ -77,53 +80,709 @@ undergroundBeltL20.speed = singleItemSpeed * 6
 undergroundBeltL20.belt_animation_set = transportBelt.belt_animation_set
 undergroundBeltL20.max_distance = 20
 
-local splitter = util.table.deepcopy(data.raw["splitter"]["express-splitter"])
-splitter.name = "ax-matter-splitter"
-splitter.minable.result = splitter.name
-splitter.icon = "__aix_matter__/graphics/icons/matter-splitter.png"
-splitter.icon_size = 32
-splitter.speed = singleItemSpeed * 4
-splitter.structure.north.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/splitter-north.png"
-splitter.structure.north.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-splitter-north.png"
-splitter.structure.east.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/splitter-east.png"
-splitter.structure.east.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-splitter-east.png"
-splitter.structure.south.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/splitter-south.png"
-splitter.structure.south.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-splitter-south.png"
-splitter.structure.west.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/splitter-west.png"
-splitter.structure.west.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-splitter-west.png"
-splitter.belt_animation_set = transportBelt.belt_animation_set
 
-local splitter2 = util.table.deepcopy(data.raw["splitter"]["express-splitter"])
-splitter2.name = "ax-matter-splitter-2"
-splitter2.minable.result = splitter2.name
-splitter2.icon = "__aix_matter__/graphics/icons/matter-splitter-2.png"
-splitter2.icon_size = 32
-splitter2.speed = singleItemSpeed * 5
-splitter2.structure.north.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/splitter-north.png"
-splitter2.structure.north.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-splitter-north.png"
-splitter2.structure.east.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/splitter-east.png"
-splitter2.structure.east.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-splitter-east.png"
-splitter2.structure.south.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/splitter-south.png"
-splitter2.structure.south.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-splitter-south.png"
-splitter2.structure.west.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/splitter-west.png"
-splitter2.structure.west.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-splitter-west.png"
-splitter2.belt_animation_set = transportBelt.belt_animation_set
+-- Corpses
+data:extend({
+  {
+    type = "corpse",
+    name = "ax-matter-splitter-corpse",
+    icon = "__aix_matter__/graphics/icons/matter-splitter.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "not-on-map"},
+    subgroup = "belt-remnants",
+    order = "a-i-a",
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    tile_width = 2,
+    tile_height = 1,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/remnants/express-splitter-remnants.png",
+      line_length = 1,
+      width = 96,
+      height = 96,
+      frame_count = 1,
+      variation_count = 1,
+      axially_symmetrical = false,
+      direction_count = 4,
+      shift = util.by_pixel(4, 1.5),
+      hr_version =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/remnants/hr-express-splitter-remnants.png",
+        line_length = 1,
+        width = 190,
+        height = 190,
+        frame_count = 1,
+        variation_count = 1,
+        axially_symmetrical = false,
+        direction_count = 4,
+        shift = util.by_pixel(3.5, 1.5),
+        scale = 0.5
+      }
+    }
+  },
+  {
+    type = "corpse",
+    name = "ax-matter-splitter-2-corpse",
+    icon = "__aix_matter__/graphics/icons/matter-splitter-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "not-on-map"},
+    subgroup = "belt-remnants",
+    order = "a-i-a",
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    tile_width = 2,
+    tile_height = 1,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/remnants/express-splitter-remnants.png",
+      line_length = 1,
+      width = 96,
+      height = 96,
+      frame_count = 1,
+      variation_count = 1,
+      axially_symmetrical = false,
+      direction_count = 4,
+      shift = util.by_pixel(4, 1.5),
+      hr_version =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/remnants/hr-express-splitter-remnants.png",
+        line_length = 1,
+        width = 190,
+        height = 190,
+        frame_count = 1,
+        variation_count = 1,
+        axially_symmetrical = false,
+        direction_count = 4,
+        shift = util.by_pixel(3.5, 1.5),
+        scale = 0.5
+      }
+    }
+  },
+  {
+    type = "corpse",
+    name = "ax-matter-splitter-3-corpse",
+    icon = "__aix_matter__/graphics/icons/matter-splitter-3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "not-on-map"},
+    subgroup = "belt-remnants",
+    order = "a-i-a",
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    tile_width = 2,
+    tile_height = 1,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/remnants/express-splitter-remnants.png",
+      line_length = 1,
+      width = 96,
+      height = 96,
+      frame_count = 1,
+      variation_count = 1,
+      axially_symmetrical = false,
+      direction_count = 4,
+      shift = util.by_pixel(4, 1.5),
+      hr_version =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/remnants/hr-express-splitter-remnants.png",
+        line_length = 1,
+        width = 190,
+        height = 190,
+        frame_count = 1,
+        variation_count = 1,
+        axially_symmetrical = false,
+        direction_count = 4,
+        shift = util.by_pixel(3.5, 1.5),
+        scale = 0.5
+      }
+    }
+  },
+})
 
-local splitter3 = util.table.deepcopy(data.raw["splitter"]["express-splitter"])
-splitter3.name = "ax-matter-splitter-3"
-splitter3.minable.result = splitter3.name
-splitter3.icon = "__aix_matter__/graphics/icons/matter-splitter-3.png"
-splitter3.icon_size = 32
-splitter3.speed = singleItemSpeed * 6
-splitter3.structure.north.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/splitter-north.png"
-splitter3.structure.north.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-splitter-north.png"
-splitter3.structure.east.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/splitter-east.png"
-splitter3.structure.east.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-splitter-east.png"
-splitter3.structure.south.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/splitter-south.png"
-splitter3.structure.south.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-splitter-south.png"
-splitter3.structure.west.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/splitter-west.png"
-splitter3.structure.west.hr_version.filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-splitter-west.png"
-splitter3.belt_animation_set = transportBelt.belt_animation_set
+local mb_anim_set_1 =
+{
+  animation_set =
+  {
+    filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt.png",
+    priority = "extra-high",
+    width = 64,
+    height = 64,
+    frame_count = 32,
+    direction_count = 20,
+    hr_version =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      frame_count = 32,
+      direction_count = 20
+    }
+  },
+}
+
+local mb_anim_set_2 =
+{
+  animation_set =
+  {
+    filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt-2.png",
+    priority = "extra-high",
+    width = 64,
+    height = 64,
+    frame_count = 32,
+    direction_count = 20,
+    hr_version =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt-2.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      frame_count = 32,
+      direction_count = 20
+    }
+  },
+}
+
+local mb_anim_set_3 =
+{
+  animation_set =
+  {
+    filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/transport-belt-3.png",
+    priority = "extra-high",
+    width = 64,
+    height = 64,
+    frame_count = 32,
+    direction_count = 20,
+    hr_version =
+    {
+      filename = "__aix_matter__/graphics/entity/matter-belt/transport-belt/hr-transport-belt-3.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      frame_count = 32,
+      direction_count = 20
+    }
+  },
+}
+
+data:extend({
+  {
+    type = "splitter",
+    name = "ax-matter-splitter",
+    icon = "__aix_matter__/graphics/icons/matter-splitter.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "ax-matter-splitter"},
+    max_health = 220,
+    corpse = "ax-matter-splitter-corpse",
+    dying_explosion = "express-splitter-explosion",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 60
+      },
+	  {
+        type = "acid",
+        percent = 25
+      }
+    },
+    collision_box = {{-0.9, -0.4}, {0.9, 0.4}},
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    animation_speed_coefficient = 32,
+    structure_animation_speed_coefficient = 1.2,
+    structure_animation_movement_cooldown = 10,
+    belt_animation_set = mb_anim_set_1,
+    fast_replaceable_group = "transport-belt",
+    speed = singleItemSpeed * 4,
+    working_sound = sounds.express_splitter,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    structure =
+    {
+      north =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-north.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 36,
+        shift = util.by_pixel(6, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-north.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 160,
+          height = 70,
+          shift = util.by_pixel(7, 0),
+          scale = 0.5
+        }
+      },
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-east.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(4, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-east.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 84,
+          shift = util.by_pixel(4, 13),
+          scale = 0.5
+        }
+      },
+      south =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-south.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 32,
+        shift = util.by_pixel(4, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-south.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 164,
+          height = 64,
+          shift = util.by_pixel(4, 0),
+          scale = 0.5
+        }
+      },
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-west.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(6, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-west.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 86,
+          shift = util.by_pixel(5, 12),
+          scale = 0.5
+        }
+      }
+    },
+    structure_patch =
+    {
+      north = util.empty_sprite(),
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-east-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 52,
+        shift = util.by_pixel(4, -20),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-east-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 104,
+          shift = util.by_pixel(4, -20),
+          scale = 0.5
+        }
+      },
+      south = util.empty_sprite(),
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/express-splitter-west-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 48,
+        shift = util.by_pixel(6, -18),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/1/hr-express-splitter-west-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 96,
+          shift = util.by_pixel(5, -18),
+          scale = 0.5
+        }
+      }
+    }
+  },
+  {
+    type = "splitter",
+    name = "ax-matter-splitter-2",
+    icon = "__aix_matter__/graphics/icons/matter-splitter-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "ax-matter-splitter-2"},
+    max_health = 220,
+    corpse = "ax-matter-splitter-2-corpse",
+    dying_explosion = "express-splitter-explosion",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 60
+      },
+	  {
+        type = "acid",
+        percent = 25
+      }
+    },
+    collision_box = {{-0.9, -0.4}, {0.9, 0.4}},
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    animation_speed_coefficient = 32,
+    structure_animation_speed_coefficient = 1.2,
+    structure_animation_movement_cooldown = 10,
+    belt_animation_set = mb_anim_set_2,
+    fast_replaceable_group = "transport-belt",
+    speed = singleItemSpeed * 5,
+    working_sound = sounds.express_splitter,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    structure =
+    {
+      north =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-north.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 36,
+        shift = util.by_pixel(6, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-north.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 160,
+          height = 70,
+          shift = util.by_pixel(7, 0),
+          scale = 0.5
+        }
+      },
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-east.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(4, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-east.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 84,
+          shift = util.by_pixel(4, 13),
+          scale = 0.5
+        }
+      },
+      south =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-south.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 32,
+        shift = util.by_pixel(4, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-south.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 164,
+          height = 64,
+          shift = util.by_pixel(4, 0),
+          scale = 0.5
+        }
+      },
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-west.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(6, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-west.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 86,
+          shift = util.by_pixel(5, 12),
+          scale = 0.5
+        }
+      }
+    },
+    structure_patch =
+    {
+      north = util.empty_sprite(),
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-east-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 52,
+        shift = util.by_pixel(4, -20),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-east-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 104,
+          shift = util.by_pixel(4, -20),
+          scale = 0.5
+        }
+      },
+      south = util.empty_sprite(),
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/express-splitter-west-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 48,
+        shift = util.by_pixel(6, -18),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/2/hr-express-splitter-west-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 96,
+          shift = util.by_pixel(5, -18),
+          scale = 0.5
+        }
+      }
+    }
+  },
+  {
+    type = "splitter",
+    name = "ax-matter-splitter-3",
+    icon = "__aix_matter__/graphics/icons/matter-splitter-3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "ax-matter-splitter-3"},
+    max_health = 220,
+    corpse = "ax-matter-splitter-3-corpse",
+    dying_explosion = "express-splitter-explosion",
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 60
+      },
+	  {
+        type = "acid",
+        percent = 25
+      }
+    },
+    collision_box = {{-0.9, -0.4}, {0.9, 0.4}},
+    selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    animation_speed_coefficient = 32,
+    structure_animation_speed_coefficient = 1.2,
+    structure_animation_movement_cooldown = 10,
+    belt_animation_set = mb_anim_set_3,
+    fast_replaceable_group = "transport-belt",
+    speed = singleItemSpeed * 6,
+    working_sound = sounds.express_splitter,
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    structure =
+    {
+      north =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-north.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 36,
+        shift = util.by_pixel(6, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-north.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 160,
+          height = 70,
+          shift = util.by_pixel(7, 0),
+          scale = 0.5
+        }
+      },
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-east.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(4, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-east.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 84,
+          shift = util.by_pixel(4, 13),
+          scale = 0.5
+        }
+      },
+      south =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-south.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 82,
+        height = 32,
+        shift = util.by_pixel(4, 0),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-south.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 164,
+          height = 64,
+          shift = util.by_pixel(4, 0),
+          scale = 0.5
+        }
+      },
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-west.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 44,
+        shift = util.by_pixel(6, 12),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-west.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 86,
+          shift = util.by_pixel(5, 12),
+          scale = 0.5
+        }
+      }
+    },
+    structure_patch =
+    {
+      north = util.empty_sprite(),
+      east =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-east-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 52,
+        shift = util.by_pixel(4, -20),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-east-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 90,
+          height = 104,
+          shift = util.by_pixel(4, -20),
+          scale = 0.5
+        }
+      },
+      south = util.empty_sprite(),
+      west =
+      {
+        filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/express-splitter-west-top_patch.png",
+        frame_count = 32,
+        line_length = 8,
+        priority = "extra-high",
+        width = 46,
+        height = 48,
+        shift = util.by_pixel(6, -18),
+        hr_version =
+        {
+          filename = "__aix_matter__/graphics/entity/matter-belt/splitter/3/hr-express-splitter-west-top_patch.png",
+          frame_count = 32,
+          line_length = 8,
+          priority = "extra-high",
+          width = 94,
+          height = 96,
+          shift = util.by_pixel(5, -18),
+          scale = 0.5
+        }
+      }
+    }
+  },
+})
 
 data:extend(
 	{

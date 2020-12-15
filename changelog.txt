@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2020-12-15
+  Bugfixes:
+    - [+] Fixed the very funky Matter Splitter sprite error
+    - [+] Added Iridium-192 which is a byproduct of the reaction within a Nuclear Reactor, this is used to create the Duplication Liquid
+  Features:
+    - [~] Added Matter Smelting Technology (Furnace)
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 2020-12-11
   Features:

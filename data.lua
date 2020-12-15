@@ -117,6 +117,7 @@ require("prototypes.entities.matter-stone-wall")
 require("prototypes.entities.matter-power")
 require("prototypes.entities.matter-drill")
 require("prototypes.entities.matter-logistics")
+require("prototypes.entities.matter-furnace")
 
 -- Items
 require("prototypes.items.items")
@@ -145,6 +146,7 @@ require("prototypes.recipe.matter-drills")
 require("prototypes.recipe.matter-oil-processing")
 require("prototypes.recipe.matter-logistics")
 require("prototypes.recipe.iridium-coin")
+require("prototypes.recipe.matter-furnace")
 
 -- Technology
 require("prototypes.technology.lab-tech")
@@ -167,6 +169,7 @@ require("prototypes.technology.matter-oil-processing")
 require("prototypes.technology.pure-liquid-matter")
 require("prototypes.technology.matter-materials")
 require("prototypes.technology.matter-duplication")
+require("prototypes.technology.matter-furnace")
 
 if (mods["space-exploration"] == nil ) then
 	require("prototypes.technology.matter-inf-research")

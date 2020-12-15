@@ -336,7 +336,7 @@ data:extend({
         type = "item",
         name = "ax-matter-splitter",
         icon = "__aix_matter__/graphics/icons/matter-splitter.png",
-        icon_size = 32,
+        icon_size = 64, icon_mipmaps = 4,
         subgroup = "aix-matter-logistic",
         order = "a-c-a",
         place_result = "ax-matter-splitter",
@@ -346,7 +346,7 @@ data:extend({
         type = "item",
         name = "ax-matter-splitter-2",
         icon = "__aix_matter__/graphics/icons/matter-splitter-2.png",
-        icon_size = 32,
+        icon_size = 64, icon_mipmaps = 4,
         subgroup = "aix-matter-logistic",
         order = "a-c-b",
         place_result = "ax-matter-splitter-2",
@@ -356,7 +356,7 @@ data:extend({
         type = "item",
         name = "ax-matter-splitter-3",
         icon = "__aix_matter__/graphics/icons/matter-splitter-3.png",
-        icon_size = 32,
+        icon_size = 64, icon_mipmaps = 4,
         subgroup = "aix-matter-logistic",
         order = "a-c-c",
         place_result = "ax-matter-splitter-3",
@@ -390,6 +390,16 @@ data:extend({
         subgroup = "aix-matter-buildings",
         order = "x-c",
         place_result = "ax-matter-drill-mk3",
+        stack_size = 50
+    },
+	{
+        type = "item",
+        name = "ax-matter-furnace",
+        icon = "__aix_matter__/graphics/icons/matter-furnace.png",
+		icon_size = 64, icon_mipmaps = 4,
+        subgroup = "aix-matter-buildings",
+        order = "a",
+        place_result = "ax-matter-furnace",
         stack_size = 50
     },
     {
