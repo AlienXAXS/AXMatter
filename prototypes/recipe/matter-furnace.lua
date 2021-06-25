@@ -3,13 +3,12 @@ data:extend({
         type = "recipe",
         name = "ax-matter-furnace",
         enabled = false,
-        energy_required = 15,
+        energy_required = 12,
         ingredients = {
-            {"electronic-circuit", 20},
-            {"advanced-circuit", 20},
-            {"steel-plate", 10},
+            {"electric-furnace", 1},
+            {"ax-matter-steel-plate", 10},
             {"ax-matter-iron-plate", 24},
-            {"ax-matter-cable", 10}
+            {"ax-matter-cable", 4}
         },
         result = "ax-matter-furnace"
     },

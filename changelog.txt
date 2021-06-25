@@ -1,9 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2021-06-25
+  Bugfixes:
+    - [+] Fixed fatal error when attempting to load Factorio due to fluid index problems.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2020-12-15
+  Bugfixes:
+    - [+] In my haste to release v0.2.2 - I forgot to actually set the correct recipe for the new Furnace. Fixed (oops lol)
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 2020-12-15
   Bugfixes:
     - [+] Fixed the very funky Matter Splitter sprite error
-    - [+] Added Iridium-192 which is a byproduct of the reaction within a Nuclear Reactor, this is used to create the Duplication Liquid
+    - [+] Fixed migration issues
   Features:
     - [~] Added Matter Smelting Technology (Furnace)
 ---------------------------------------------------------------------------------------------------

@@ -312,19 +312,29 @@ for _, recipe in pairs(allRecipies) do
 								
 				addIngredientToRawRecipe(tmpRecipe, "ax-duplication-liquid", recipeDifficuilty, "fluid")
 				
+				-- Remove fluid boxes from our recipies.
+				if ( recipeResultIsFluid ) then
+					if ( tmpRecipe.ingredients ) then
+						for _,recipeIngredient in pairs(tmpRecipe.ingredients) do
+							if ( recipeIngredient.fluidbox_index ) then
+								recipeIngredient.fluidbox_index = nil
+							end
+						end
+					end
+					if ( tmpRecipe.results ) then
+						for _,recipeResult in pairs(tmpRecipe.results) do
+							if ( recipeResult.fluidbox_index ) then
+								recipeResult.fluidbox_index = nil
+							end
+						end
+					end
+				end
+				
 				-- Add our new recipe to the data stage
 				data:extend({tmpRecipe})
 
 				-- Add this result to the Duplication Technology Recipe Unlock
 				LSlib.technology.addRecipeUnlock(AiXDuplicationTechnologyName, tmpRecipe.name)
-				
-				if ( recipe.name == "iron-gear-wheel" ) then
-					log("~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=")
-					log(serpent.block(recipe))
-					log("~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=")
-					log(serpent.block(tmpRecipe))
-					log("~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=")
-				end
 				
 				-- Double our outputs for the added recipe
 				if ( tmpRecipe.result ) then
